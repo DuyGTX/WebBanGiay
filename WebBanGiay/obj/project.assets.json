@@ -8,24 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\LENOVO\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\trung\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\WebBanGiay.csproj",
+      "projectUniqueName": "C:\\Users\\trung\\Source\\Repos\\WebBanGiay\\WebBanGiay\\WebBanGiay.csproj",
       "projectName": "WebBanGiay",
-      "projectPath": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\WebBanGiay.csproj",
-      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\obj\\",
+      "projectPath": "C:\\Users\\trung\\Source\\Repos\\WebBanGiay\\WebBanGiay\\WebBanGiay.csproj",
+      "packagesPath": "C:\\Users\\trung\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\trung\\Source\\Repos\\WebBanGiay\\WebBanGiay\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\trung\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -46,6 +41,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -70,7 +70,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
