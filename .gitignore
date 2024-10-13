@@ -22,3 +22,4 @@ WebBanGiay/obj/Debug/net6.0/WebBanGiay.assets.cache
 .vs/WebBanGiay/v17/.wsuo
 .vs/WebBanGiay/FileContentIndex/08a0e9c8-4022-49dd-aaea-6a67fffda17f.vsidx
 .vs/VSWorkspaceState.json
+/WebBanGiay/Views/Home/ShopDetail.cshtml
