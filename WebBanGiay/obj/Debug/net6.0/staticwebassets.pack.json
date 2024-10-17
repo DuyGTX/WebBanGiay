@@ -1,783 +1,783 @@
 {
   "Files": [
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WebBanGiay.bundle.scp.css",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WebBanGiay.bundle.scp.css",
       "PackagePath": "staticwebassets\\WebBanGiay.bundle.scp.css"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\css\\site.css",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\favicon.ico",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\js\\site.js",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\Magnific-Popup-master.zip",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\Magnific-Popup-master.zip",
       "PackagePath": "staticwebassets\\template\\Source\\Magnific-Popup-master.zip"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\OwlCarousel2-2.3.4.zip",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\OwlCarousel2-2.3.4.zip",
       "PackagePath": "staticwebassets\\template\\Source\\OwlCarousel2-2.3.4.zip"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\SlickNav-master.zip",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\SlickNav-master.zip",
       "PackagePath": "staticwebassets\\template\\Source\\SlickNav-master.zip"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\bootstrap-4.2.1-dist.zip",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\bootstrap-4.2.1-dist.zip",
       "PackagePath": "staticwebassets\\template\\Source\\bootstrap-4.2.1-dist.zip"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\elegant_font.zip",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\elegant_font.zip",
       "PackagePath": "staticwebassets\\template\\Source\\elegant_font.zip"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\font-awesome-4.7.0.zip",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\font-awesome-4.7.0.zip",
       "PackagePath": "staticwebassets\\template\\Source\\font-awesome-4.7.0.zip"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\jquery-nice-select-1.1.0.zip",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\jquery-nice-select-1.1.0.zip",
       "PackagePath": "staticwebassets\\template\\Source\\jquery-nice-select-1.1.0.zip"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\bootstrap.min.css",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\template\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\elegant-icons.css",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\elegant-icons.css",
       "PackagePath": "staticwebassets\\template\\css\\elegant-icons.css"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\font-awesome.min.css",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\font-awesome.min.css",
       "PackagePath": "staticwebassets\\template\\css\\font-awesome.min.css"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\magnific-popup.css",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\magnific-popup.css",
       "PackagePath": "staticwebassets\\template\\css\\magnific-popup.css"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\nice-select.css",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\nice-select.css",
       "PackagePath": "staticwebassets\\template\\css\\nice-select.css"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\owl.carousel.min.css",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\owl.carousel.min.css",
       "PackagePath": "staticwebassets\\template\\css\\owl.carousel.min.css"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\slicknav.min.css",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\slicknav.min.css",
       "PackagePath": "staticwebassets\\template\\css\\slicknav.min.css"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\style.css",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\style.css",
       "PackagePath": "staticwebassets\\template\\css\\style.css"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\style.css.map",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\style.css.map",
       "PackagePath": "staticwebassets\\template\\css\\style.css.map"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\ElegantIcons.eot",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\ElegantIcons.eot",
       "PackagePath": "staticwebassets\\template\\fonts\\ElegantIcons.eot"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\ElegantIcons.svg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\ElegantIcons.svg",
       "PackagePath": "staticwebassets\\template\\fonts\\ElegantIcons.svg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\ElegantIcons.ttf",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\ElegantIcons.ttf",
       "PackagePath": "staticwebassets\\template\\fonts\\ElegantIcons.ttf"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\ElegantIcons.woff",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\ElegantIcons.woff",
       "PackagePath": "staticwebassets\\template\\fonts\\ElegantIcons.woff"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\FontAwesome.otf",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\FontAwesome.otf",
       "PackagePath": "staticwebassets\\template\\fonts\\FontAwesome.otf"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\fontawesome-webfont.eot",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\fontawesome-webfont.eot",
       "PackagePath": "staticwebassets\\template\\fonts\\fontawesome-webfont.eot"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\fontawesome-webfont.svg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\fontawesome-webfont.svg",
       "PackagePath": "staticwebassets\\template\\fonts\\fontawesome-webfont.svg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\fontawesome-webfont.ttf",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\fontawesome-webfont.ttf",
       "PackagePath": "staticwebassets\\template\\fonts\\fontawesome-webfont.ttf"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\fontawesome-webfont.woff",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\fontawesome-webfont.woff",
       "PackagePath": "staticwebassets\\template\\fonts\\fontawesome-webfont.woff"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\fontawesome-webfont.woff2",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\fontawesome-webfont.woff2",
       "PackagePath": "staticwebassets\\template\\fonts\\fontawesome-webfont.woff2"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\about-us.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\about-us.jpg",
       "PackagePath": "staticwebassets\\template\\img\\about\\about-us.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\team-1.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\team-1.jpg",
       "PackagePath": "staticwebassets\\template\\img\\about\\team-1.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\team-2.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\team-2.jpg",
       "PackagePath": "staticwebassets\\template\\img\\about\\team-2.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\team-3.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\team-3.jpg",
       "PackagePath": "staticwebassets\\template\\img\\about\\team-3.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\team-4.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\team-4.jpg",
       "PackagePath": "staticwebassets\\template\\img\\about\\team-4.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\testimonial-author.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\testimonial-author.jpg",
       "PackagePath": "staticwebassets\\template\\img\\about\\testimonial-author.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\testimonial-pic.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\testimonial-pic.jpg",
       "PackagePath": "staticwebassets\\template\\img\\about\\testimonial-pic.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\banner\\banner-1.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\banner\\banner-1.jpg",
       "PackagePath": "staticwebassets\\template\\img\\banner\\banner-1.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\banner\\banner-2.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\banner\\banner-2.jpg",
       "PackagePath": "staticwebassets\\template\\img\\banner\\banner-2.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\banner\\banner-3.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\banner\\banner-3.jpg",
       "PackagePath": "staticwebassets\\template\\img\\banner\\banner-3.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\banner\\jorden1.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\banner\\jorden1.jpg",
       "PackagePath": "staticwebassets\\template\\img\\banner\\jorden1.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-1.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-1.jpg",
       "PackagePath": "staticwebassets\\template\\img\\blog\\blog-1.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-2.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-2.jpg",
       "PackagePath": "staticwebassets\\template\\img\\blog\\blog-2.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-3.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-3.jpg",
       "PackagePath": "staticwebassets\\template\\img\\blog\\blog-3.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-4.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-4.jpg",
       "PackagePath": "staticwebassets\\template\\img\\blog\\blog-4.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-5.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-5.jpg",
       "PackagePath": "staticwebassets\\template\\img\\blog\\blog-5.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-6.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-6.jpg",
       "PackagePath": "staticwebassets\\template\\img\\blog\\blog-6.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-7.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-7.jpg",
       "PackagePath": "staticwebassets\\template\\img\\blog\\blog-7.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-8.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-8.jpg",
       "PackagePath": "staticwebassets\\template\\img\\blog\\blog-8.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-9.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-9.jpg",
       "PackagePath": "staticwebassets\\template\\img\\blog\\blog-9.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\details\\blog-author.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\details\\blog-author.jpg",
       "PackagePath": "staticwebassets\\template\\img\\blog\\details\\blog-author.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\details\\blog-details.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\details\\blog-details.jpg",
       "PackagePath": "staticwebassets\\template\\img\\blog\\details\\blog-details.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\breadcrumb-bg.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\breadcrumb-bg.jpg",
       "PackagePath": "staticwebassets\\template\\img\\breadcrumb-bg.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-1.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-1.png",
       "PackagePath": "staticwebassets\\template\\img\\clients\\client-1.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-2.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-2.png",
       "PackagePath": "staticwebassets\\template\\img\\clients\\client-2.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-3.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-3.png",
       "PackagePath": "staticwebassets\\template\\img\\clients\\client-3.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-4.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-4.png",
       "PackagePath": "staticwebassets\\template\\img\\clients\\client-4.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-5.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-5.png",
       "PackagePath": "staticwebassets\\template\\img\\clients\\client-5.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-6.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-6.png",
       "PackagePath": "staticwebassets\\template\\img\\clients\\client-6.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-7.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-7.png",
       "PackagePath": "staticwebassets\\template\\img\\clients\\client-7.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-8.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-8.png",
       "PackagePath": "staticwebassets\\template\\img\\clients\\client-8.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\footer-logo.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\footer-logo.png",
       "PackagePath": "staticwebassets\\template\\img\\footer-logo.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\footer_logo_cv.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\footer_logo_cv.png",
       "PackagePath": "staticwebassets\\template\\img\\footer_logo_cv.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\hero\\hero-1.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\hero\\hero-1.jpg",
       "PackagePath": "staticwebassets\\template\\img\\hero\\hero-1.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\hero\\hero-2.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\hero\\hero-2.jpg",
       "PackagePath": "staticwebassets\\template\\img\\hero\\hero-2.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\icon\\calendar.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\icon\\calendar.png",
       "PackagePath": "staticwebassets\\template\\img\\icon\\calendar.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\icon\\cart.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\icon\\cart.png",
       "PackagePath": "staticwebassets\\template\\img\\icon\\cart.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\icon\\compare.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\icon\\compare.png",
       "PackagePath": "staticwebassets\\template\\img\\icon\\compare.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\icon\\heart.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\icon\\heart.png",
       "PackagePath": "staticwebassets\\template\\img\\icon\\heart.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\icon\\search.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\icon\\search.png",
       "PackagePath": "staticwebassets\\template\\img\\icon\\search.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\instagram\\instagram-1.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\instagram\\instagram-1.jpg",
       "PackagePath": "staticwebassets\\template\\img\\instagram\\instagram-1.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\instagram\\instagram-2.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\instagram\\instagram-2.jpg",
       "PackagePath": "staticwebassets\\template\\img\\instagram\\instagram-2.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\instagram\\instagram-3.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\instagram\\instagram-3.jpg",
       "PackagePath": "staticwebassets\\template\\img\\instagram\\instagram-3.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\instagram\\instagram-4.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\instagram\\instagram-4.jpg",
       "PackagePath": "staticwebassets\\template\\img\\instagram\\instagram-4.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\instagram\\instagram-5.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\instagram\\instagram-5.jpg",
       "PackagePath": "staticwebassets\\template\\img\\instagram\\instagram-5.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\instagram\\instagram-6.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\instagram\\instagram-6.jpg",
       "PackagePath": "staticwebassets\\template\\img\\instagram\\instagram-6.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\logo.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\logo.png",
       "PackagePath": "staticwebassets\\template\\img\\logo.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\logo_nike.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\logo_nike.png",
       "PackagePath": "staticwebassets\\template\\img\\logo_nike.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\payment.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\payment.png",
       "PackagePath": "staticwebassets\\template\\img\\payment.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product-sale.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product-sale.png",
       "PackagePath": "staticwebassets\\template\\img\\product-sale.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-1.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-1.jpg",
       "PackagePath": "staticwebassets\\template\\img\\product\\product-1.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-10.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-10.jpg",
       "PackagePath": "staticwebassets\\template\\img\\product\\product-10.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-11.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-11.jpg",
       "PackagePath": "staticwebassets\\template\\img\\product\\product-11.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-12.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-12.jpg",
       "PackagePath": "staticwebassets\\template\\img\\product\\product-12.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-13.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-13.jpg",
       "PackagePath": "staticwebassets\\template\\img\\product\\product-13.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-14.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-14.jpg",
       "PackagePath": "staticwebassets\\template\\img\\product\\product-14.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-2.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-2.jpg",
       "PackagePath": "staticwebassets\\template\\img\\product\\product-2.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-3.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-3.jpg",
       "PackagePath": "staticwebassets\\template\\img\\product\\product-3.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-4.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-4.jpg",
       "PackagePath": "staticwebassets\\template\\img\\product\\product-4.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-5.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-5.jpg",
       "PackagePath": "staticwebassets\\template\\img\\product\\product-5.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-6.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-6.jpg",
       "PackagePath": "staticwebassets\\template\\img\\product\\product-6.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-7.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-7.jpg",
       "PackagePath": "staticwebassets\\template\\img\\product\\product-7.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-8.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-8.jpg",
       "PackagePath": "staticwebassets\\template\\img\\product\\product-8.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-9.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-9.jpg",
       "PackagePath": "staticwebassets\\template\\img\\product\\product-9.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\details-payment.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\details-payment.png",
       "PackagePath": "staticwebassets\\template\\img\\shop-details\\details-payment.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\product-big-2.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\product-big-2.png",
       "PackagePath": "staticwebassets\\template\\img\\shop-details\\product-big-2.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\product-big-3.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\product-big-3.png",
       "PackagePath": "staticwebassets\\template\\img\\shop-details\\product-big-3.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\product-big-4.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\product-big-4.png",
       "PackagePath": "staticwebassets\\template\\img\\shop-details\\product-big-4.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\product-big.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\product-big.png",
       "PackagePath": "staticwebassets\\template\\img\\shop-details\\product-big.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\thumb-1.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\thumb-1.png",
       "PackagePath": "staticwebassets\\template\\img\\shop-details\\thumb-1.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\thumb-2.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\thumb-2.png",
       "PackagePath": "staticwebassets\\template\\img\\shop-details\\thumb-2.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\thumb-3.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\thumb-3.png",
       "PackagePath": "staticwebassets\\template\\img\\shop-details\\thumb-3.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\thumb-4.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\thumb-4.png",
       "PackagePath": "staticwebassets\\template\\img\\shop-details\\thumb-4.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shopping-cart\\cart-1.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shopping-cart\\cart-1.jpg",
       "PackagePath": "staticwebassets\\template\\img\\shopping-cart\\cart-1.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shopping-cart\\cart-2.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shopping-cart\\cart-2.jpg",
       "PackagePath": "staticwebassets\\template\\img\\shopping-cart\\cart-2.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shopping-cart\\cart-3.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shopping-cart\\cart-3.jpg",
       "PackagePath": "staticwebassets\\template\\img\\shopping-cart\\cart-3.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shopping-cart\\cart-4.jpg",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shopping-cart\\cart-4.jpg",
       "PackagePath": "staticwebassets\\template\\img\\shopping-cart\\cart-4.jpg"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\vietqr.png",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\vietqr.png",
       "PackagePath": "staticwebassets\\template\\img\\vietqr.png"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\bootstrap.min.js",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\template\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\jquery-3.3.1.min.js",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\jquery-3.3.1.min.js",
       "PackagePath": "staticwebassets\\template\\js\\jquery-3.3.1.min.js"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\jquery.countdown.min.js",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\jquery.countdown.min.js",
       "PackagePath": "staticwebassets\\template\\js\\jquery.countdown.min.js"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\jquery.magnific-popup.min.js",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\jquery.magnific-popup.min.js",
       "PackagePath": "staticwebassets\\template\\js\\jquery.magnific-popup.min.js"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\jquery.nice-select.min.js",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\jquery.nice-select.min.js",
       "PackagePath": "staticwebassets\\template\\js\\jquery.nice-select.min.js"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\jquery.nicescroll.min.js",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\jquery.nicescroll.min.js",
       "PackagePath": "staticwebassets\\template\\js\\jquery.nicescroll.min.js"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\jquery.slicknav.js",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\jquery.slicknav.js",
       "PackagePath": "staticwebassets\\template\\js\\jquery.slicknav.js"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\main.js",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\main.js",
       "PackagePath": "staticwebassets\\template\\js\\main.js"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\mixitup.min.js",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\mixitup.min.js",
       "PackagePath": "staticwebassets\\template\\js\\mixitup.min.js"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\owl.carousel.min.js",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\owl.carousel.min.js",
       "PackagePath": "staticwebassets\\template\\js\\owl.carousel.min.js"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_about.scss",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_about.scss",
       "PackagePath": "staticwebassets\\template\\sass\\_about.scss"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_base.scss",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_base.scss",
       "PackagePath": "staticwebassets\\template\\sass\\_base.scss"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_blog-details.scss",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_blog-details.scss",
       "PackagePath": "staticwebassets\\template\\sass\\_blog-details.scss"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_blog-sidebar.scss",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_blog-sidebar.scss",
       "PackagePath": "staticwebassets\\template\\sass\\_blog-sidebar.scss"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_blog.scss",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_blog.scss",
       "PackagePath": "staticwebassets\\template\\sass\\_blog.scss"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_breadcrumb.scss",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_breadcrumb.scss",
       "PackagePath": "staticwebassets\\template\\sass\\_breadcrumb.scss"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_checkout.scss",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_checkout.scss",
       "PackagePath": "staticwebassets\\template\\sass\\_checkout.scss"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_contact.scss",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_contact.scss",
       "PackagePath": "staticwebassets\\template\\sass\\_contact.scss"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_footer.scss",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_footer.scss",
       "PackagePath": "staticwebassets\\template\\sass\\_footer.scss"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_header.scss",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_header.scss",
       "PackagePath": "staticwebassets\\template\\sass\\_header.scss"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_hero.scss",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_hero.scss",
       "PackagePath": "staticwebassets\\template\\sass\\_hero.scss"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_home-page.scss",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_home-page.scss",
       "PackagePath": "staticwebassets\\template\\sass\\_home-page.scss"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_mixins.scss",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_mixins.scss",
       "PackagePath": "staticwebassets\\template\\sass\\_mixins.scss"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_product.scss",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_product.scss",
       "PackagePath": "staticwebassets\\template\\sass\\_product.scss"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_responsive.scss",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_responsive.scss",
       "PackagePath": "staticwebassets\\template\\sass\\_responsive.scss"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_shop-details.scss",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_shop-details.scss",
       "PackagePath": "staticwebassets\\template\\sass\\_shop-details.scss"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_shop.scss",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_shop.scss",
       "PackagePath": "staticwebassets\\template\\sass\\_shop.scss"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_shopping-cart.scss",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_shopping-cart.scss",
       "PackagePath": "staticwebassets\\template\\sass\\_shopping-cart.scss"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_variable.scss",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_variable.scss",
       "PackagePath": "staticwebassets\\template\\sass\\_variable.scss"
     },
     {
-      "Id": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\style.scss",
+      "Id": "D:\\DO_AN_PHAN_MEM\\THỰC HÀNH\\1710\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\style.scss",
       "PackagePath": "staticwebassets\\template\\sass\\style.scss"
     },
     {
