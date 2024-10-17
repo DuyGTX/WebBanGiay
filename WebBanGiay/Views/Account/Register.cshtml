@@ -1,0 +1,33 @@
+﻿<div class="account">
+    <div class="container">
+        <div class="wrapbox-content-account ">
+            <div class="userbox customers_accountForm">
+                <div class="header-page clearfix">
+                    <h1>Tạo tài khoản</h1>
+                </div>
+
+                @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Username)
+                        @Html.TextBoxFor(m => m.Username, new { @class = "form-control", @Value = username }) <!-- Set the value from the session -->
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Password)
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group" style="display: flex; /* display: contents; */ justify-content: center;">
+                        <button style="height: 47px; width: 123px; " type="submit" class="btncartview btn btn-dark">Đăng ký</button>
+
+                    </div>
+                }
+                <div class="clearfix req_pass text-center" style="margin-top: 25px;">
+                    <a href="/Home">Quay lại trang chủ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

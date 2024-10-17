@@ -1,0 +1,48 @@
+﻿<div class="account">
+    <div class="container">
+        <div class="wrapbox-content-account">
+            <div class="userbox customers_accountForm">
+                <div class="header-page clearfix">
+                    <h1>Đăng nhập</h1>
+                </div>
+                @if (TempData["SuccessMessage"] != null)
+                {
+                    <div class="alert alert-success" style=" text-align: center;">
+                        @TempData["SuccessMessage"]
+                    </div>
+                }
+
+                @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Username)
+                        @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Password)
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group" style=" margin: 0px 130px;justify-content: space-evenly; display: flex; ">
+                        <button style="height: 47px; width: 123px;" type="submit" class="btncartview btn btn-dark">Đăng nhập</button>
+                        <div class="req_pass">
+                            <a href="#" onclick="showRecoverPasswordForm();return false;">Quên mật khẩu?</a><br>
+                            hoặc <a href="/Account/Register" title="Đăng ký">Đăng ký</a>
+                        </div>
+                    </div>
+
+
+                }
+
+
+                <div class="clearfix req_pass text-center" style="margin-top: 25px;">
+                    <a href="/Home">Quay lại trang chủ</a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
