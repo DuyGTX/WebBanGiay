@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/EB9apJPaz0sIoTbQZ9qu6fK0aLY0TlJzcBeIRZZQt0=",
+  "Hash": "vowahUm/pBAScvfiqWWkmdrAZYT4/4phsITIIdGMKPo=",
   "Source": "WebBanGiay",
   "BasePath": "_content/WebBanGiay",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "WebBanGiay\\wwwroot",
       "Source": "WebBanGiay",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\obj\\Debug\\net6.0\\scopedcss\\bundle\\WebBanGiay.styles.css",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\obj\\Debug\\net6.0\\scopedcss\\bundle\\WebBanGiay.styles.css",
       "SourceId": "WebBanGiay",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "WebBanGiay.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\obj\\Debug\\net6.0\\scopedcss\\bundle\\WebBanGiay.styles.css"
+      "OriginalItemSpec": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\obj\\Debug\\net6.0\\scopedcss\\bundle\\WebBanGiay.styles.css"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WebBanGiay.bundle.scp.css",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WebBanGiay.bundle.scp.css",
       "SourceId": "WebBanGiay",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "WebBanGiay.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WebBanGiay.bundle.scp.css"
+      "OriginalItemSpec": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WebBanGiay.bundle.scp.css"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\css\\site.css",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\css\\site.css",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\favicon.ico",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\favicon.ico",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\js\\site.js",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\js\\site.js",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -357,10 +357,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -391,10 +391,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -408,10 +408,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -425,10 +425,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -442,10 +442,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -459,10 +459,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -476,10 +476,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -493,10 +493,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -510,10 +510,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -527,10 +527,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -544,10 +544,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -561,10 +561,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -578,10 +578,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -595,10 +595,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -612,10 +612,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -629,10 +629,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -646,10 +646,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -680,10 +680,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -697,10 +697,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -714,10 +714,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -731,10 +731,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -748,10 +748,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -765,10 +765,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -782,10 +782,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -799,10 +799,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -816,10 +816,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -833,10 +833,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -850,10 +850,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -867,10 +867,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -884,10 +884,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -901,10 +901,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -918,10 +918,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -935,10 +935,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -952,10 +952,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -969,10 +969,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1003,10 +1003,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -1020,10 +1020,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -1037,10 +1037,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -1054,10 +1054,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -1071,10 +1071,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\bootstrap.min.css",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\bootstrap.min.css",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -1088,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\template\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\elegant-icons.css",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\elegant-icons.css",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/css/elegant-icons.css",
       "AssetKind": "All",
@@ -1105,10 +1105,10 @@
       "OriginalItemSpec": "wwwroot\\template\\css\\elegant-icons.css"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\font-awesome.min.css",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\font-awesome.min.css",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/css/font-awesome.min.css",
       "AssetKind": "All",
@@ -1122,10 +1122,10 @@
       "OriginalItemSpec": "wwwroot\\template\\css\\font-awesome.min.css"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\magnific-popup.css",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\magnific-popup.css",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/css/magnific-popup.css",
       "AssetKind": "All",
@@ -1139,10 +1139,10 @@
       "OriginalItemSpec": "wwwroot\\template\\css\\magnific-popup.css"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\nice-select.css",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\nice-select.css",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/css/nice-select.css",
       "AssetKind": "All",
@@ -1156,10 +1156,10 @@
       "OriginalItemSpec": "wwwroot\\template\\css\\nice-select.css"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\owl.carousel.min.css",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\owl.carousel.min.css",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/css/owl.carousel.min.css",
       "AssetKind": "All",
@@ -1173,10 +1173,10 @@
       "OriginalItemSpec": "wwwroot\\template\\css\\owl.carousel.min.css"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\slicknav.min.css",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\slicknav.min.css",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/css/slicknav.min.css",
       "AssetKind": "All",
@@ -1190,10 +1190,10 @@
       "OriginalItemSpec": "wwwroot\\template\\css\\slicknav.min.css"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\style.css",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\style.css",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/css/style.css",
       "AssetKind": "All",
@@ -1207,10 +1207,10 @@
       "OriginalItemSpec": "wwwroot\\template\\css\\style.css"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\style.css.map",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\css\\style.css.map",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/css/style.css.map",
       "AssetKind": "All",
@@ -1224,10 +1224,10 @@
       "OriginalItemSpec": "wwwroot\\template\\css\\style.css.map"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\ElegantIcons.eot",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\ElegantIcons.eot",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/fonts/ElegantIcons.eot",
       "AssetKind": "All",
@@ -1241,10 +1241,10 @@
       "OriginalItemSpec": "wwwroot\\template\\fonts\\ElegantIcons.eot"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\ElegantIcons.svg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\ElegantIcons.svg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/fonts/ElegantIcons.svg",
       "AssetKind": "All",
@@ -1258,10 +1258,10 @@
       "OriginalItemSpec": "wwwroot\\template\\fonts\\ElegantIcons.svg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\ElegantIcons.ttf",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\ElegantIcons.ttf",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/fonts/ElegantIcons.ttf",
       "AssetKind": "All",
@@ -1275,10 +1275,10 @@
       "OriginalItemSpec": "wwwroot\\template\\fonts\\ElegantIcons.ttf"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\ElegantIcons.woff",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\ElegantIcons.woff",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/fonts/ElegantIcons.woff",
       "AssetKind": "All",
@@ -1292,10 +1292,10 @@
       "OriginalItemSpec": "wwwroot\\template\\fonts\\ElegantIcons.woff"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\FontAwesome.otf",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\FontAwesome.otf",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/fonts/FontAwesome.otf",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\template\\fonts\\FontAwesome.otf"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\fontawesome-webfont.eot",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\fontawesome-webfont.eot",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/fonts/fontawesome-webfont.eot",
       "AssetKind": "All",
@@ -1326,10 +1326,10 @@
       "OriginalItemSpec": "wwwroot\\template\\fonts\\fontawesome-webfont.eot"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\fontawesome-webfont.svg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\fontawesome-webfont.svg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/fonts/fontawesome-webfont.svg",
       "AssetKind": "All",
@@ -1343,10 +1343,10 @@
       "OriginalItemSpec": "wwwroot\\template\\fonts\\fontawesome-webfont.svg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\fontawesome-webfont.ttf",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\fontawesome-webfont.ttf",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/fonts/fontawesome-webfont.ttf",
       "AssetKind": "All",
@@ -1360,10 +1360,10 @@
       "OriginalItemSpec": "wwwroot\\template\\fonts\\fontawesome-webfont.ttf"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\fontawesome-webfont.woff",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\fontawesome-webfont.woff",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/fonts/fontawesome-webfont.woff",
       "AssetKind": "All",
@@ -1377,10 +1377,10 @@
       "OriginalItemSpec": "wwwroot\\template\\fonts\\fontawesome-webfont.woff"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\fontawesome-webfont.woff2",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\fonts\\fontawesome-webfont.woff2",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/fonts/fontawesome-webfont.woff2",
       "AssetKind": "All",
@@ -1394,10 +1394,10 @@
       "OriginalItemSpec": "wwwroot\\template\\fonts\\fontawesome-webfont.woff2"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\about-us.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\about-us.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/about/about-us.jpg",
       "AssetKind": "All",
@@ -1411,10 +1411,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\about\\about-us.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\team-1.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\team-1.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/about/team-1.jpg",
       "AssetKind": "All",
@@ -1428,10 +1428,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\about\\team-1.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\team-2.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\team-2.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/about/team-2.jpg",
       "AssetKind": "All",
@@ -1445,10 +1445,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\about\\team-2.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\team-3.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\team-3.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/about/team-3.jpg",
       "AssetKind": "All",
@@ -1462,10 +1462,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\about\\team-3.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\team-4.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\team-4.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/about/team-4.jpg",
       "AssetKind": "All",
@@ -1479,10 +1479,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\about\\team-4.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\testimonial-author.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\testimonial-author.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/about/testimonial-author.jpg",
       "AssetKind": "All",
@@ -1496,10 +1496,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\about\\testimonial-author.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\testimonial-pic.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\about\\testimonial-pic.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/about/testimonial-pic.jpg",
       "AssetKind": "All",
@@ -1513,10 +1513,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\about\\testimonial-pic.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\banner\\banner-1.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\banner\\banner-1.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/banner/banner-1.jpg",
       "AssetKind": "All",
@@ -1530,10 +1530,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\banner\\banner-1.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\banner\\banner-2.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\banner\\banner-2.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/banner/banner-2.jpg",
       "AssetKind": "All",
@@ -1547,10 +1547,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\banner\\banner-2.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\banner\\banner-3.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\banner\\banner-3.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/banner/banner-3.jpg",
       "AssetKind": "All",
@@ -1564,10 +1564,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\banner\\banner-3.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\banner\\jorden1.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\banner\\jorden1.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/banner/jorden1.jpg",
       "AssetKind": "All",
@@ -1581,10 +1581,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\banner\\jorden1.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-1.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-1.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/blog/blog-1.jpg",
       "AssetKind": "All",
@@ -1598,10 +1598,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\blog\\blog-1.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-2.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-2.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/blog/blog-2.jpg",
       "AssetKind": "All",
@@ -1615,10 +1615,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\blog\\blog-2.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-3.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-3.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/blog/blog-3.jpg",
       "AssetKind": "All",
@@ -1632,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\blog\\blog-3.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-4.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-4.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/blog/blog-4.jpg",
       "AssetKind": "All",
@@ -1649,10 +1649,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\blog\\blog-4.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-5.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-5.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/blog/blog-5.jpg",
       "AssetKind": "All",
@@ -1666,10 +1666,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\blog\\blog-5.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-6.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-6.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/blog/blog-6.jpg",
       "AssetKind": "All",
@@ -1683,10 +1683,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\blog\\blog-6.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-7.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-7.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/blog/blog-7.jpg",
       "AssetKind": "All",
@@ -1700,10 +1700,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\blog\\blog-7.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-8.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-8.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/blog/blog-8.jpg",
       "AssetKind": "All",
@@ -1717,10 +1717,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\blog\\blog-8.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-9.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\blog-9.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/blog/blog-9.jpg",
       "AssetKind": "All",
@@ -1734,10 +1734,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\blog\\blog-9.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\details\\blog-author.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\details\\blog-author.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/blog/details/blog-author.jpg",
       "AssetKind": "All",
@@ -1751,10 +1751,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\blog\\details\\blog-author.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\details\\blog-details.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\blog\\details\\blog-details.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/blog/details/blog-details.jpg",
       "AssetKind": "All",
@@ -1768,10 +1768,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\blog\\details\\blog-details.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\breadcrumb-bg.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\breadcrumb-bg.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/breadcrumb-bg.jpg",
       "AssetKind": "All",
@@ -1785,10 +1785,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\breadcrumb-bg.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-1.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-1.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/clients/client-1.png",
       "AssetKind": "All",
@@ -1802,10 +1802,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\clients\\client-1.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-2.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-2.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/clients/client-2.png",
       "AssetKind": "All",
@@ -1819,10 +1819,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\clients\\client-2.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-3.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-3.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/clients/client-3.png",
       "AssetKind": "All",
@@ -1836,10 +1836,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\clients\\client-3.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-4.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-4.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/clients/client-4.png",
       "AssetKind": "All",
@@ -1853,10 +1853,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\clients\\client-4.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-5.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-5.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/clients/client-5.png",
       "AssetKind": "All",
@@ -1870,10 +1870,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\clients\\client-5.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-6.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-6.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/clients/client-6.png",
       "AssetKind": "All",
@@ -1887,10 +1887,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\clients\\client-6.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-7.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-7.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/clients/client-7.png",
       "AssetKind": "All",
@@ -1904,10 +1904,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\clients\\client-7.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-8.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\clients\\client-8.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/clients/client-8.png",
       "AssetKind": "All",
@@ -1921,10 +1921,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\clients\\client-8.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\footer_logo_cv.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\footer_logo_cv.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/footer_logo_cv.png",
       "AssetKind": "All",
@@ -1938,10 +1938,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\footer_logo_cv.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\footer-logo.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\footer-logo.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/footer-logo.png",
       "AssetKind": "All",
@@ -1955,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\footer-logo.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\hero\\hero-1.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\hero\\hero-1.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/hero/hero-1.jpg",
       "AssetKind": "All",
@@ -1972,10 +1972,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\hero\\hero-1.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\hero\\hero-2.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\hero\\hero-2.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/hero/hero-2.jpg",
       "AssetKind": "All",
@@ -1989,10 +1989,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\hero\\hero-2.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\icon\\calendar.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\icon\\calendar.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/icon/calendar.png",
       "AssetKind": "All",
@@ -2006,10 +2006,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\icon\\calendar.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\icon\\cart.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\icon\\cart.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/icon/cart.png",
       "AssetKind": "All",
@@ -2023,10 +2023,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\icon\\cart.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\icon\\compare.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\icon\\compare.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/icon/compare.png",
       "AssetKind": "All",
@@ -2040,10 +2040,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\icon\\compare.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\icon\\heart.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\icon\\heart.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/icon/heart.png",
       "AssetKind": "All",
@@ -2057,10 +2057,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\icon\\heart.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\icon\\search.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\icon\\search.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/icon/search.png",
       "AssetKind": "All",
@@ -2074,10 +2074,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\icon\\search.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\instagram\\instagram-1.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\instagram\\instagram-1.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/instagram/instagram-1.jpg",
       "AssetKind": "All",
@@ -2091,10 +2091,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\instagram\\instagram-1.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\instagram\\instagram-2.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\instagram\\instagram-2.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/instagram/instagram-2.jpg",
       "AssetKind": "All",
@@ -2108,10 +2108,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\instagram\\instagram-2.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\instagram\\instagram-3.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\instagram\\instagram-3.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/instagram/instagram-3.jpg",
       "AssetKind": "All",
@@ -2125,10 +2125,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\instagram\\instagram-3.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\instagram\\instagram-4.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\instagram\\instagram-4.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/instagram/instagram-4.jpg",
       "AssetKind": "All",
@@ -2142,10 +2142,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\instagram\\instagram-4.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\instagram\\instagram-5.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\instagram\\instagram-5.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/instagram/instagram-5.jpg",
       "AssetKind": "All",
@@ -2159,10 +2159,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\instagram\\instagram-5.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\instagram\\instagram-6.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\instagram\\instagram-6.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/instagram/instagram-6.jpg",
       "AssetKind": "All",
@@ -2176,10 +2176,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\instagram\\instagram-6.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\logo.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\logo.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/logo.png",
       "AssetKind": "All",
@@ -2193,10 +2193,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\logo.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\logo_nike.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\logo_nike.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/logo_nike.png",
       "AssetKind": "All",
@@ -2210,10 +2210,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\logo_nike.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\payment.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\payment.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/payment.png",
       "AssetKind": "All",
@@ -2227,10 +2227,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\payment.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-1.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-1.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/product/product-1.jpg",
       "AssetKind": "All",
@@ -2244,10 +2244,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\product\\product-1.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-10.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-10.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/product/product-10.jpg",
       "AssetKind": "All",
@@ -2261,10 +2261,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\product\\product-10.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-11.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-11.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/product/product-11.jpg",
       "AssetKind": "All",
@@ -2278,10 +2278,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\product\\product-11.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-12.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-12.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/product/product-12.jpg",
       "AssetKind": "All",
@@ -2295,10 +2295,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\product\\product-12.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-13.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-13.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/product/product-13.jpg",
       "AssetKind": "All",
@@ -2312,10 +2312,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\product\\product-13.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-14.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-14.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/product/product-14.jpg",
       "AssetKind": "All",
@@ -2329,10 +2329,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\product\\product-14.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-2.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-2.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/product/product-2.jpg",
       "AssetKind": "All",
@@ -2346,10 +2346,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\product\\product-2.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-3.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-3.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/product/product-3.jpg",
       "AssetKind": "All",
@@ -2363,10 +2363,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\product\\product-3.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-4.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-4.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/product/product-4.jpg",
       "AssetKind": "All",
@@ -2380,10 +2380,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\product\\product-4.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-5.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-5.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/product/product-5.jpg",
       "AssetKind": "All",
@@ -2397,10 +2397,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\product\\product-5.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-6.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-6.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/product/product-6.jpg",
       "AssetKind": "All",
@@ -2414,10 +2414,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\product\\product-6.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-7.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-7.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/product/product-7.jpg",
       "AssetKind": "All",
@@ -2431,10 +2431,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\product\\product-7.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-8.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-8.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/product/product-8.jpg",
       "AssetKind": "All",
@@ -2448,10 +2448,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\product\\product-8.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-9.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product\\product-9.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/product/product-9.jpg",
       "AssetKind": "All",
@@ -2465,10 +2465,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\product\\product-9.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product-sale.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\product-sale.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/product-sale.png",
       "AssetKind": "All",
@@ -2482,10 +2482,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\product-sale.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\details-payment.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\details-payment.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/shop-details/details-payment.png",
       "AssetKind": "All",
@@ -2499,10 +2499,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\shop-details\\details-payment.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\product-big.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\product-big.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/shop-details/product-big.png",
       "AssetKind": "All",
@@ -2516,10 +2516,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\shop-details\\product-big.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\product-big-2.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\product-big-2.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/shop-details/product-big-2.png",
       "AssetKind": "All",
@@ -2533,10 +2533,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\shop-details\\product-big-2.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\product-big-3.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\product-big-3.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/shop-details/product-big-3.png",
       "AssetKind": "All",
@@ -2550,10 +2550,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\shop-details\\product-big-3.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\product-big-4.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\product-big-4.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/shop-details/product-big-4.png",
       "AssetKind": "All",
@@ -2567,10 +2567,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\shop-details\\product-big-4.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\thumb-1.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\thumb-1.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/shop-details/thumb-1.png",
       "AssetKind": "All",
@@ -2584,10 +2584,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\shop-details\\thumb-1.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\thumb-2.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\thumb-2.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/shop-details/thumb-2.png",
       "AssetKind": "All",
@@ -2601,10 +2601,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\shop-details\\thumb-2.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\thumb-3.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\thumb-3.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/shop-details/thumb-3.png",
       "AssetKind": "All",
@@ -2618,10 +2618,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\shop-details\\thumb-3.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\thumb-4.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shop-details\\thumb-4.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/shop-details/thumb-4.png",
       "AssetKind": "All",
@@ -2635,10 +2635,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\shop-details\\thumb-4.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shopping-cart\\cart-1.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shopping-cart\\cart-1.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/shopping-cart/cart-1.jpg",
       "AssetKind": "All",
@@ -2652,10 +2652,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\shopping-cart\\cart-1.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shopping-cart\\cart-2.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shopping-cart\\cart-2.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/shopping-cart/cart-2.jpg",
       "AssetKind": "All",
@@ -2669,10 +2669,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\shopping-cart\\cart-2.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shopping-cart\\cart-3.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shopping-cart\\cart-3.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/shopping-cart/cart-3.jpg",
       "AssetKind": "All",
@@ -2686,10 +2686,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\shopping-cart\\cart-3.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shopping-cart\\cart-4.jpg",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\shopping-cart\\cart-4.jpg",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/shopping-cart/cart-4.jpg",
       "AssetKind": "All",
@@ -2703,10 +2703,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\shopping-cart\\cart-4.jpg"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\vietqr.png",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\vietqr.png",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/img/vietqr.png",
       "AssetKind": "All",
@@ -2720,10 +2720,10 @@
       "OriginalItemSpec": "wwwroot\\template\\img\\vietqr.png"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\bootstrap.min.js",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\bootstrap.min.js",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -2737,10 +2737,10 @@
       "OriginalItemSpec": "wwwroot\\template\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\jquery.countdown.min.js",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\jquery.countdown.min.js",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/js/jquery.countdown.min.js",
       "AssetKind": "All",
@@ -2754,10 +2754,10 @@
       "OriginalItemSpec": "wwwroot\\template\\js\\jquery.countdown.min.js"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\jquery.magnific-popup.min.js",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\jquery.magnific-popup.min.js",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/js/jquery.magnific-popup.min.js",
       "AssetKind": "All",
@@ -2771,10 +2771,10 @@
       "OriginalItemSpec": "wwwroot\\template\\js\\jquery.magnific-popup.min.js"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\jquery.nicescroll.min.js",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\jquery.nicescroll.min.js",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/js/jquery.nicescroll.min.js",
       "AssetKind": "All",
@@ -2788,10 +2788,10 @@
       "OriginalItemSpec": "wwwroot\\template\\js\\jquery.nicescroll.min.js"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\jquery.nice-select.min.js",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\jquery.nice-select.min.js",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/js/jquery.nice-select.min.js",
       "AssetKind": "All",
@@ -2805,10 +2805,10 @@
       "OriginalItemSpec": "wwwroot\\template\\js\\jquery.nice-select.min.js"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\jquery.slicknav.js",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\jquery.slicknav.js",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/js/jquery.slicknav.js",
       "AssetKind": "All",
@@ -2822,10 +2822,10 @@
       "OriginalItemSpec": "wwwroot\\template\\js\\jquery.slicknav.js"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\jquery-3.3.1.min.js",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\jquery-3.3.1.min.js",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/js/jquery-3.3.1.min.js",
       "AssetKind": "All",
@@ -2839,10 +2839,10 @@
       "OriginalItemSpec": "wwwroot\\template\\js\\jquery-3.3.1.min.js"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\main.js",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\main.js",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/js/main.js",
       "AssetKind": "All",
@@ -2856,10 +2856,10 @@
       "OriginalItemSpec": "wwwroot\\template\\js\\main.js"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\mixitup.min.js",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\mixitup.min.js",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/js/mixitup.min.js",
       "AssetKind": "All",
@@ -2873,10 +2873,10 @@
       "OriginalItemSpec": "wwwroot\\template\\js\\mixitup.min.js"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\owl.carousel.min.js",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\js\\owl.carousel.min.js",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/js/owl.carousel.min.js",
       "AssetKind": "All",
@@ -2890,10 +2890,10 @@
       "OriginalItemSpec": "wwwroot\\template\\js\\owl.carousel.min.js"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_about.scss",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_about.scss",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/sass/_about.scss",
       "AssetKind": "All",
@@ -2907,10 +2907,10 @@
       "OriginalItemSpec": "wwwroot\\template\\sass\\_about.scss"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_base.scss",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_base.scss",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/sass/_base.scss",
       "AssetKind": "All",
@@ -2924,10 +2924,10 @@
       "OriginalItemSpec": "wwwroot\\template\\sass\\_base.scss"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_blog.scss",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_blog.scss",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/sass/_blog.scss",
       "AssetKind": "All",
@@ -2941,10 +2941,10 @@
       "OriginalItemSpec": "wwwroot\\template\\sass\\_blog.scss"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_blog-details.scss",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_blog-details.scss",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/sass/_blog-details.scss",
       "AssetKind": "All",
@@ -2958,10 +2958,10 @@
       "OriginalItemSpec": "wwwroot\\template\\sass\\_blog-details.scss"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_blog-sidebar.scss",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_blog-sidebar.scss",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/sass/_blog-sidebar.scss",
       "AssetKind": "All",
@@ -2975,10 +2975,10 @@
       "OriginalItemSpec": "wwwroot\\template\\sass\\_blog-sidebar.scss"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_breadcrumb.scss",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_breadcrumb.scss",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/sass/_breadcrumb.scss",
       "AssetKind": "All",
@@ -2992,10 +2992,10 @@
       "OriginalItemSpec": "wwwroot\\template\\sass\\_breadcrumb.scss"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_checkout.scss",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_checkout.scss",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/sass/_checkout.scss",
       "AssetKind": "All",
@@ -3009,10 +3009,10 @@
       "OriginalItemSpec": "wwwroot\\template\\sass\\_checkout.scss"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_contact.scss",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_contact.scss",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/sass/_contact.scss",
       "AssetKind": "All",
@@ -3026,10 +3026,10 @@
       "OriginalItemSpec": "wwwroot\\template\\sass\\_contact.scss"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_footer.scss",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_footer.scss",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/sass/_footer.scss",
       "AssetKind": "All",
@@ -3043,10 +3043,10 @@
       "OriginalItemSpec": "wwwroot\\template\\sass\\_footer.scss"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_header.scss",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_header.scss",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/sass/_header.scss",
       "AssetKind": "All",
@@ -3060,10 +3060,10 @@
       "OriginalItemSpec": "wwwroot\\template\\sass\\_header.scss"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_hero.scss",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_hero.scss",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/sass/_hero.scss",
       "AssetKind": "All",
@@ -3077,10 +3077,10 @@
       "OriginalItemSpec": "wwwroot\\template\\sass\\_hero.scss"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_home-page.scss",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_home-page.scss",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/sass/_home-page.scss",
       "AssetKind": "All",
@@ -3094,10 +3094,10 @@
       "OriginalItemSpec": "wwwroot\\template\\sass\\_home-page.scss"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_mixins.scss",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_mixins.scss",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/sass/_mixins.scss",
       "AssetKind": "All",
@@ -3111,10 +3111,10 @@
       "OriginalItemSpec": "wwwroot\\template\\sass\\_mixins.scss"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_product.scss",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_product.scss",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/sass/_product.scss",
       "AssetKind": "All",
@@ -3128,10 +3128,10 @@
       "OriginalItemSpec": "wwwroot\\template\\sass\\_product.scss"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_responsive.scss",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_responsive.scss",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/sass/_responsive.scss",
       "AssetKind": "All",
@@ -3145,10 +3145,10 @@
       "OriginalItemSpec": "wwwroot\\template\\sass\\_responsive.scss"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_shop.scss",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_shop.scss",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/sass/_shop.scss",
       "AssetKind": "All",
@@ -3162,10 +3162,10 @@
       "OriginalItemSpec": "wwwroot\\template\\sass\\_shop.scss"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_shop-details.scss",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_shop-details.scss",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/sass/_shop-details.scss",
       "AssetKind": "All",
@@ -3179,10 +3179,10 @@
       "OriginalItemSpec": "wwwroot\\template\\sass\\_shop-details.scss"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_shopping-cart.scss",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_shopping-cart.scss",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/sass/_shopping-cart.scss",
       "AssetKind": "All",
@@ -3196,10 +3196,10 @@
       "OriginalItemSpec": "wwwroot\\template\\sass\\_shopping-cart.scss"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_variable.scss",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\_variable.scss",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/sass/_variable.scss",
       "AssetKind": "All",
@@ -3213,10 +3213,10 @@
       "OriginalItemSpec": "wwwroot\\template\\sass\\_variable.scss"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\style.scss",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\sass\\style.scss",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/sass/style.scss",
       "AssetKind": "All",
@@ -3230,10 +3230,10 @@
       "OriginalItemSpec": "wwwroot\\template\\sass\\style.scss"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\bootstrap-4.2.1-dist.zip",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\bootstrap-4.2.1-dist.zip",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/Source/bootstrap-4.2.1-dist.zip",
       "AssetKind": "All",
@@ -3247,10 +3247,10 @@
       "OriginalItemSpec": "wwwroot\\template\\Source\\bootstrap-4.2.1-dist.zip"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\elegant_font.zip",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\elegant_font.zip",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/Source/elegant_font.zip",
       "AssetKind": "All",
@@ -3264,10 +3264,10 @@
       "OriginalItemSpec": "wwwroot\\template\\Source\\elegant_font.zip"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\font-awesome-4.7.0.zip",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\font-awesome-4.7.0.zip",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/Source/font-awesome-4.7.0.zip",
       "AssetKind": "All",
@@ -3281,10 +3281,10 @@
       "OriginalItemSpec": "wwwroot\\template\\Source\\font-awesome-4.7.0.zip"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\jquery-nice-select-1.1.0.zip",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\jquery-nice-select-1.1.0.zip",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/Source/jquery-nice-select-1.1.0.zip",
       "AssetKind": "All",
@@ -3298,10 +3298,10 @@
       "OriginalItemSpec": "wwwroot\\template\\Source\\jquery-nice-select-1.1.0.zip"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\Magnific-Popup-master.zip",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\Magnific-Popup-master.zip",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/Source/Magnific-Popup-master.zip",
       "AssetKind": "All",
@@ -3315,10 +3315,10 @@
       "OriginalItemSpec": "wwwroot\\template\\Source\\Magnific-Popup-master.zip"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\OwlCarousel2-2.3.4.zip",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\OwlCarousel2-2.3.4.zip",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/Source/OwlCarousel2-2.3.4.zip",
       "AssetKind": "All",
@@ -3332,10 +3332,10 @@
       "OriginalItemSpec": "wwwroot\\template\\Source\\OwlCarousel2-2.3.4.zip"
     },
     {
-      "Identity": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\SlickNav-master.zip",
+      "Identity": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\Source\\SlickNav-master.zip",
       "SourceId": "WebBanGiay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\QuangDuy\\BAITAP\\NAM 3\\HK1\\Do An Phan Mem\\WebBanGiay\\WebBanGiay\\wwwroot\\",
+      "ContentRoot": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\",
       "BasePath": "_content/WebBanGiay",
       "RelativePath": "template/Source/SlickNav-master.zip",
       "AssetKind": "All",

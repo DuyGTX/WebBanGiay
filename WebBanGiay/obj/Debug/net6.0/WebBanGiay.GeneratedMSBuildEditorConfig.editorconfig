@@ -16,8 +16,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\3.WebBanGiay\WebBanGiay\WebBanGiay
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Home/Home.cshtml]
-build_metadata.AdditionalFiles.TargetPath = SG9tZVxIb21lLmNzaHRtbA==
+[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Views/Home/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGVja291dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Views/Home/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Views/Shared/Error.cshtml]
