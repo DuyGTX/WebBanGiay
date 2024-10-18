@@ -7,7 +7,9 @@ public partial class Size
 {
     public int SizeId { get; set; }
 
+    public int MaSp { get; set; }
+
     public string Size1 { get; set; } = null!;
 
-    public virtual ICollection<SanPham> SanPhams { get; } = new List<SanPham>();
+    public virtual SanPham MaSpNavigation { get; set; } = null!;
 }

@@ -7,6 +7,8 @@ public partial class SanPham
 {
     public int MaSp { get; set; }
 
+    public int MaDm { get; set; }
+
     public string TenSp { get; set; } = null!;
 
     public double GiaTien { get; set; }
@@ -14,8 +16,6 @@ public partial class SanPham
     public double Giasale { get; set; }
 
     public string? ChitietSp { get; set; }
-
-    public int MaDm { get; set; }
 
     public int? Giamgia { get; set; }
 
@@ -29,10 +29,6 @@ public partial class SanPham
 
     public DateTime Ngaytao { get; set; }
 
-    public int? SizeId { get; set; }
-
-    public int? MauId { get; set; }
-
     public virtual ICollection<ChiTietDonHang> ChiTietDonHangs { get; } = new List<ChiTietDonHang>();
 
     public virtual ICollection<ChiTietGioHang> ChiTietGioHangs { get; } = new List<ChiTietGioHang>();
@@ -41,7 +37,7 @@ public partial class SanPham
 
     public virtual DanhMuc MaDmNavigation { get; set; } = null!;
 
-    public virtual Mau? Mau { get; set; }
+    public virtual ICollection<Mau> Maus { get; } = new List<Mau>();
 
-    public virtual Size? Size { get; set; }
+    public virtual ICollection<Size> Sizes { get; } = new List<Size>();
 }

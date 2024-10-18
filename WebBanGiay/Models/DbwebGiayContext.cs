@@ -72,7 +72,7 @@ public partial class DbwebGiayContext : DbContext
 
         modelBuilder.Entity<ChiTietGioHang>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__ChiTietG__3213E83F076F6FEB");
+            entity.HasKey(e => e.Id).HasName("PK__ChiTietG__3213E83FD3E8F4AC");
 
             entity.ToTable("ChiTietGioHang");
 
@@ -103,7 +103,7 @@ public partial class DbwebGiayContext : DbContext
 
         modelBuilder.Entity<DanhMuc>(entity =>
         {
-            entity.HasKey(e => e.MaDm).HasName("PK__DanhMuc__7A3EF408D6E8588B");
+            entity.HasKey(e => e.MaDm).HasName("PK__DanhMuc__7A3EF40835ABBF49");
 
             entity.ToTable("DanhMuc");
 
@@ -150,7 +150,7 @@ public partial class DbwebGiayContext : DbContext
 
         modelBuilder.Entity<GioHang>(entity =>
         {
-            entity.HasKey(e => e.MaGioHang).HasName("PK__GioHang__2C76D203A1D758C3");
+            entity.HasKey(e => e.MaGioHang).HasName("PK__GioHang__2C76D203770A79AA");
 
             entity.ToTable("GioHang");
 
@@ -161,7 +161,7 @@ public partial class DbwebGiayContext : DbContext
 
         modelBuilder.Entity<HinhAnh>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__HinhAnh__3213E83F4DFE710F");
+            entity.HasKey(e => e.Id).HasName("PK__HinhAnh__3213E83FFB96C728");
 
             entity.ToTable("HinhAnh");
 
@@ -178,14 +178,20 @@ public partial class DbwebGiayContext : DbContext
 
         modelBuilder.Entity<Mau>(entity =>
         {
-            entity.HasKey(e => e.MauId).HasName("PK__Mau__1CF0C9D5819B0503");
+            entity.HasKey(e => e.MauId).HasName("PK__Mau__1CF0C9D58460E70B");
 
             entity.ToTable("Mau");
 
             entity.Property(e => e.MauId).HasColumnName("mauID");
+            entity.Property(e => e.MaSp).HasColumnName("maSP");
             entity.Property(e => e.TenMau)
-                .HasMaxLength(2)
+                .HasMaxLength(10)
                 .HasColumnName("tenMau");
+
+            entity.HasOne(d => d.MaSpNavigation).WithMany(p => p.Maus)
+                .HasForeignKey(d => d.MaSp)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Mau_SanPham");
         });
 
         modelBuilder.Entity<NguoiDung>(entity =>
@@ -219,7 +225,7 @@ public partial class DbwebGiayContext : DbContext
 
         modelBuilder.Entity<PhanQuyen>(entity =>
         {
-            entity.HasKey(e => e.RoleId).HasName("PK__PhanQuye__CD98460A2ED68926");
+            entity.HasKey(e => e.RoleId).HasName("PK__PhanQuye__CD98460AE0B85E6B");
 
             entity.ToTable("PhanQuyen");
 
@@ -231,7 +237,7 @@ public partial class DbwebGiayContext : DbContext
 
         modelBuilder.Entity<SanPham>(entity =>
         {
-            entity.HasKey(e => e.MaSp).HasName("PK__SanPham__7A227A7AB91E3B8F");
+            entity.HasKey(e => e.MaSp).HasName("PK__SanPham__7A227A7AB1C5CB63");
 
             entity.ToTable("SanPham");
 
@@ -255,12 +261,10 @@ public partial class DbwebGiayContext : DbContext
                 .HasMaxLength(700)
                 .HasColumnName("hinhAnh4");
             entity.Property(e => e.MaDm).HasColumnName("maDM");
-            entity.Property(e => e.MauId).HasColumnName("mauID");
             entity.Property(e => e.Ngaytao)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime")
                 .HasColumnName("ngaytao");
-            entity.Property(e => e.SizeId).HasColumnName("sizeID");
             entity.Property(e => e.TenSp)
                 .HasMaxLength(700)
                 .HasColumnName("tenSP");
@@ -269,26 +273,24 @@ public partial class DbwebGiayContext : DbContext
                 .HasForeignKey(d => d.MaDm)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_SanPham_DanhMuc");
-
-            entity.HasOne(d => d.Mau).WithMany(p => p.SanPhams)
-                .HasForeignKey(d => d.MauId)
-                .HasConstraintName("FK_SanPham_Mau");
-
-            entity.HasOne(d => d.Size).WithMany(p => p.SanPhams)
-                .HasForeignKey(d => d.SizeId)
-                .HasConstraintName("FK_SanPham_Size");
         });
 
         modelBuilder.Entity<Size>(entity =>
         {
-            entity.HasKey(e => e.SizeId).HasName("PK__Size__55B1E577527A6525");
+            entity.HasKey(e => e.SizeId).HasName("PK__Size__55B1E57773232686");
 
             entity.ToTable("Size");
 
             entity.Property(e => e.SizeId).HasColumnName("sizeID");
+            entity.Property(e => e.MaSp).HasColumnName("maSP");
             entity.Property(e => e.Size1)
                 .HasMaxLength(2)
                 .HasColumnName("size");
+
+            entity.HasOne(d => d.MaSpNavigation).WithMany(p => p.Sizes)
+                .HasForeignKey(d => d.MaSp)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Size_SanPham");
         });
 
         OnModelCreatingPartial(modelBuilder);
