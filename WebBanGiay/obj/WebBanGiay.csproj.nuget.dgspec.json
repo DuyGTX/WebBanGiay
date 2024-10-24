@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\WebBanGiay.csproj": {}
+    "C:\\Users\\FPT\\Desktop\\New folder\\WebBanGiay\\WebBanGiay\\WebBanGiay.csproj": {}
   },
   "projects": {
-    "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\WebBanGiay.csproj": {
+    "C:\\Users\\FPT\\Desktop\\New folder\\WebBanGiay\\WebBanGiay\\WebBanGiay.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\WebBanGiay.csproj",
+        "projectUniqueName": "C:\\Users\\FPT\\Desktop\\New folder\\WebBanGiay\\WebBanGiay\\WebBanGiay.csproj",
         "projectName": "WebBanGiay",
-        "projectPath": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\WebBanGiay.csproj",
-        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\obj\\",
+        "projectPath": "C:\\Users\\FPT\\Desktop\\New folder\\WebBanGiay\\WebBanGiay\\WebBanGiay.csproj",
+        "packagesPath": "C:\\Users\\FPT\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\FPT\\Desktop\\New folder\\WebBanGiay\\WebBanGiay\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\FPT\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -39,6 +39,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -79,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

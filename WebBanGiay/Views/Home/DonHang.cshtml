@@ -1,0 +1,146 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    ViewBag.Title = "DonHang";
+    Layout = "~/Views/Shared/header-footer.cshtml";
+}
+
+<style>
+
+
+    .my-bill {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .bill-title {
+        text-align: center;
+        font-size: 22px;
+        font-weight: bolder;
+    }
+
+    .bill-item {
+        width: 900px;
+
+        margin: 20px auto;
+        padding: 40px;
+        border-bottom: 1px #808080 solid;
+    }
+
+    .item {
+        height: 120px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .img-product {
+        width: 100px;
+        height: 100px;
+    }
+
+        .img-product img {
+            width: 100%;
+            height: 100%;
+        }
+
+    .info {
+        width: calc(100% - 60px);
+        padding: 10px 10px;
+        font-size: 15px;
+    }
+
+        .info span {
+            font-weight: bolder;
+        }
+
+        .info div + div {
+            margin: 6px 0;
+        }
+
+    .total-money {
+        font-size: 22px;
+        padding: 20px;
+    }
+
+        .total-money span {
+            font-weight: bolder;
+        }
+    .donhang{
+        border:1px solid #333;
+        padding:5px 10px;
+    }
+    .maDH{
+        font-weight:bolder;
+    }
+</style>
+
+
+<div class="container">
+    <div class="my-bill">
+        <h1 class="bill-title">DANH SÁCH ĐƠN HÀNG</h1>
+
+
+        <div class="list-bill mb-2">
+
+            @foreach (var item in Model)
+            {
+                <div class="donhang">
+                    <div class="maDH">Mã đơn hàng: #@item.maDH</div>
+                    @foreach (var i in item.ChiTietDonHang)
+                    {
+                        <div class="bill-item">
+
+                            <div class="item">
+                                <div class="img-product">
+                                    <img src="~/UploadFile/@i.SanPham.hinhAnh1" alt="" />
+                                </div>
+                                <div class="info">
+                                    <div class="info-name"><span>Tên sản phẩm:  </span>@i.SanPham.tenSP</div>
+                                    <div class="info-price"><span>Giá: </span>@i.SanPham.giaTien,000đ</div>
+                                    <div class="info-qty"><span>Số lượng: </span> @i.soLuong</div>
+                                    <div class="info-total"><span>Tổng: </span> @i.tongTien,000đ</div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    }
+
+
+
+                    <div class="total-money"><span>Tổng cộng:</span> @item.tongTien,000đ</div>
+                    <div class="total-money"><span>Trạng thái đơn hàng:</span> @item.trangThai</div>
+                    @if (@item.trangThai == "Đang chờ" || item.trangThai == "Đã xác nhận")
+                    {
+                        <button maDH="@item.maDH" class="btn btnHuyDonHang ml-4 btn-danger" type="button">Hủy đơn hàng</button>
+                    }
+                </div>
+
+
+            }
+        </div>
+
+
+
+    </div>
+
+</div>
+
+<script>
+
+    var btnHuyDonHang = document.querySelectorAll(".btnHuyDonHang");
+    btnHuyDonHang.forEach(item => {
+
+        item.addEventListener('click', e => {
+            var madh = item.getAttribute("madh");
+            confirm('Bạn có chắc muốn hủy đơn hàng này');
+            window.location =`/Home/HuyDonHang?maDH=${madh}`
+
+        })
+    })
+</script>
+
