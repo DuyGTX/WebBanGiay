@@ -6,7 +6,7 @@ using WebBanGiay.Models.Dto;
 
 namespace WebBanGiay.Areas.Admins.Controllers
 {
-    [Area("Admins")] // Đảm bảo dòng này có trong controller
+    [Area("Admins")]
     public class CategoryController : Controller
     {
         private readonly DbwebGiayOnlineContext context;
@@ -135,6 +135,21 @@ namespace WebBanGiay.Areas.Admins.Controllers
 				TempData["ErrorMessage"] = $"Có lỗi xảy ra: {ex.Message}";
 				return View(categoryDto);
 			}
+		}
+
+		
+		public IActionResult Delete(int id)
+		{
+			var category = context.ShoeCategories.Find(id);
+			if (category == null)
+			{
+				return RedirectToAction("Index", "Category");
+
+			}
+			
+			context.ShoeCategories.Remove(category);
+			context.SaveChanges(true);
+			return RedirectToAction("Index", "Category");
 		}
 
 	}
