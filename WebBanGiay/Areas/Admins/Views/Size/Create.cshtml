@@ -1,0 +1,107 @@
+﻿@using WebBanGiay.Models.Dto;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using Microsoft.EntityFrameworkCore
+@model SizeDto
+
+@{
+	Layout = "~/Views/Shared/header-footer-admin.cshtml";
+	<script defer src="~/assets/plugins/fontawesome/js/all.min.js"></script>
+
+	<!-- App CSS -->
+	<link id="theme-style" rel="stylesheet" href="~/assets/css/portal.css">
+	<link id="style" rel="stylesheet" href="~/css/site.css">
+	<!-- Javascript -->
+	<script src="~/assets/plugins/popper.min.js"></script>
+	<script src="~/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Page Specific JS -->
+	<script src="~/assets/js/app.js"></script>
+}
+<body class="app">
+	<div class="app-wrapper">
+		<div class="app-content pt-3 p-md-3 p-lg-4">
+			<div class="container-xl">
+				<h1 class="app-page-title">New Brand</h1>
+				<hr class="mb-4">
+				<div class="row g-4 settings-section">
+
+
+					<div class="app-card app-card-settings shadow-sm p-4">
+
+						<div class="app-card-body">
+							<form class="settings-form" method="post" enctype="multipart/form-data">
+								@if (TempData["ErrorMessage"] != null)
+								{
+									<div class="alert alert-danger alert-dismissible fade show" role="alert">
+										<div class="d-flex">
+											<div class="me-2">
+												<!-- Icon cảnh báo -->
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0" viewBox="0 0 16 16">
+													<path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+												</svg>
+											</div>
+											<div>
+												<h4 class="alert-heading">Lỗi!</h4>
+												<p class="mb-0">@TempData["ErrorMessage"]</p>
+											</div>
+										</div>
+										<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+									</div>
+								}
+								<!-- Thông báo lỗi -->
+
+
+								<div class="row mb-3">
+									<label for="setting-input-1" class="form-label">
+										Size<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+												<circle cx="8" cy="4.5" r="1" />
+											</svg>
+										</span>
+									</label>
+
+									<input asp-for="SizeName" type="text" class="form-control" id="setting-input-1" required>
+									<span asp-validation-for="SizeName" class="text-danger"></span>
+								</div>
+								<div class="row mb-3">
+									<label for="setting-input-1" class="form-label">
+										Sort Order<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+												<circle cx="8" cy="4.5" r="1" />
+											</svg>
+										</span>
+									</label>
+
+									<input asp-for="SortOrder" type="text" class="form-control" id="setting-input-1" required>
+									<span asp-validation-for="SortOrder" class="text-danger"></span>
+								</div>
+
+								<div class="row justify-content-center">
+									<div class="col-sm-2 d-grid">
+										<button type="submit" class="btn btn-sm app-btn-primary">Xác nhận</button>
+									</div>
+									<div class="col-sm-2 d-grid">
+										<a asp-area="Admins" asp-controller="Size" asp-action="Index"
+										   class="btn btn-sm app-btn-primary"
+										   style="background: #d26d69; color: #fff; border-color: #d26d69;" role="button">
+											Hủy
+										</a>
+									</div>
+								</div>
+
+
+							</form>
+						</div><!--//app-card-body-->
+
+					</div><!--//app-card-->
+
+				</div><!--//row-->
+
+			</div><!--//container-fluid-->
+		</div><!--//app-content-->
+	</div><!--//app-content-->
+</body>

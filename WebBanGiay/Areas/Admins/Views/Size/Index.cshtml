@@ -1,0 +1,143 @@
+﻿@using WebBanGiay.Models;
+@model List<Size>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+
+	Layout = "~/Views/Shared/header-footer-admin.cshtml";
+}
+<head>
+	<title>Admin</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta name="description" content="Admin">
+	<meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- FontAwesome JS-->
+	<script defer src="~/assets/plugins/fontawesome/js/all.min.js"></script>
+
+	<!-- App CSS -->
+	<link id="theme-style" rel="stylesheet" href="~/assets/css/portal.css">
+
+
+
+</head>
+<body class="app">
+
+
+	<div class="app-wrapper">
+
+		<div class="app-content pt-3 p-md-3 p-lg-4">
+			<div class="container-xl">
+
+				<div class="row g-3 mb-4 align-items-center justify-content-between">
+					<div class="col-auto">
+						<h1 class="app-page-title mb-0">Category</h1>
+					</div>
+					<div class="col-auto">
+						<div class="page-utilities">
+							<div class="row g-2 justify-content-start justify-content-md-end align-items-center">
+								<div class="col-auto">
+									<form class="table-search-form row gx-1 align-items-center">
+										<div class="col-auto">
+											<input type="text" id="search-orders" name="searchorders" class="form-control search-orders" placeholder="Search">
+										</div>
+										<div class="col-auto">
+											<button type="submit" class="btn app-btn-secondary">Search</button>
+										</div>
+									</form>
+
+								</div><!--//col-->
+								<div class="col-auto">
+									<a class="btn app-btn-secondary" asp-area="Admins" asp-controller="Size" asp-action="Create">
+										<svg width="1em" height="1em" viewBox="0 0 23 23" class="bi bi-download me-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" d="m5,10.5c0-.276.224-.5.5-.5h4.5v-4.5c0-.276.224-.5.5-.5s.5.224.5.5v4.5h4.5c.276,0,.5.224.5.5s-.224.5-.5.5h-4.5v4.5c0,.276-.224.5-.5.5s-.5-.224-.5-.5v-4.5h-4.5c-.276,0-.5-.224-.5-.5Zm19-2v11c0,2.481-2.019,4.5-4.5,4.5h-11c-1.928,0-3.611-1.23-4.236-3.024-2.37-.125-4.264-2.075-4.264-4.476V4.5C0,2.019,2.019,0,4.5,0h12c2.401,0,4.351,1.894,4.476,4.264,1.793.625,3.024,2.307,3.024,4.236ZM4.5,20h12c1.93,0,3.5-1.57,3.5-3.5V4.5c0-1.93-1.57-3.5-3.5-3.5H4.5c-1.93,0-3.5,1.57-3.5,3.5v12c0,1.93,1.57,3.5,3.5,3.5Zm18.5-11.5c0-1.371-.798-2.588-2-3.158v11.158c0,2.481-2.019,4.5-4.5,4.5H5.342c.57,1.202,1.787,2,3.158,2h11c1.93,0,3.5-1.57,3.5-3.5v-11Z" />
+										</svg>
+										Thêm Size
+									</a>
+								</div>
+
+
+							</div><!--//row-->
+						</div><!--//table-utilities-->
+					</div><!--//col-auto-->
+				</div><!--//row-->
+				<div class="tab-content" id="orders-table-tab-content">
+					<div class="tab-pane fade show active" id="orders-all" role="tabpanel" aria-labelledby="orders-all-tab">
+						<div class="app-card app-card-orders-table shadow-sm mb-5">
+							<div class="app-card-body">
+								<div class="table-responsive">
+									<table class="table app-table-hover mb-0 text-left">
+										<thead>
+											<tr>
+												<th class="cell">ID</th>
+												<th class="cell">Name</th>
+												<th class="cell">Sort Order</th>	
+												<th class="cell"></th>
+											</tr>
+										</thead>
+										<tbody>
+											@foreach (var size in Model)
+											{
+												<tr>
+													<td class="cell">@size.SizeId</td>
+													<td class="cell"><span class="truncate">@size.SizeName</span></td>
+													<td class="cell">@size.SortOrder</td>
+
+													<td class="cell">
+														@* <a class="btn-sm app-btn-primary" href="#">View</a> *@
+														<a asp-controller="Size" asp-action="Edit" asp-route-id="@size.SizeId" class="btn-sm app-btn-primary" style="background: #0d6efd; color: #fff; border-color: #0d6efd;">Edit</a>
+														<a asp-controller="Size" asp-action="Delete" asp-route-id="@size.SizeId" class="btn-sm app-btn-primary" style="background: #d26d69; color: #fff; border-color: #d26d69;" onclick="return confirm('Xóa danh mục này?')">Delete</a>
+
+
+
+													</td>
+
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div><!--//table-responsive-->
+
+							</div><!--//app-card-body-->
+						</div><!--//app-card-->
+						<nav class="app-pagination">
+							<ul class="pagination justify-content-center">
+								<li class="page-item disabled">
+									<a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+								</li>
+								<li class="page-item active"><a class="page-link" href="#">1</a></li>
+								<li class="page-item"><a class="page-link" href="#">2</a></li>
+								<li class="page-item"><a class="page-link" href="#">3</a></li>
+								<li class="page-item">
+									<a class="page-link" href="#">Next</a>
+								</li>
+							</ul>
+						</nav><!--//app-pagination-->
+
+					</div><!--//tab-pane-->
+
+
+				</div><!--//tab-content-->
+
+
+
+			</div><!--//container-fluid-->
+		</div><!--//app-content-->
+
+
+
+	</div><!--//app-wrapper-->
+	<!-- Javascript -->
+	<script src="~/assets/plugins/popper.min.js"></script>
+	<script src="~/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+	<!-- Page Specific JS -->
+	<script src="~/assets/js/app.js"></script>
+
+</body>

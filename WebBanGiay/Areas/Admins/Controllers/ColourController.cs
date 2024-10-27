@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebBanGiay.Models.Dto;
 using WebBanGiay.Models;
+using Microsoft.EntityFrameworkCore;
+using System.Drawing.Drawing2D;
 
 namespace WebBanGiay.Areas.Admins.Controllers
 {
