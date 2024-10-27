@@ -22,6 +22,8 @@
     
     <!-- App CSS -->  
     <link id="theme-style" rel="stylesheet" href="~/assets/css/portal.css">
+	
+
 
 </head> 
 
@@ -80,26 +82,31 @@
 											<tr>
 												<th class="cell">ID</th>
 												<th class="cell">Name</th>
-												<th class="cell">BrandID</th>											
+												@* <th class="cell">BrandID</th>	 *@
+												<th class="cell">Brand</th>
 												<th class="cell"></th>
 											</tr>
 										</thead>
 										<tbody>
-											
-											<tr>
-												@* Hiển thị dữ liệu *@
-												@foreach (var categoris in Model)
-												{
+											@foreach (var categoris in Model)
+											{
+												<tr>
 													<td class="cell">@categoris.CategoryId</td>
 													<td class="cell"><span class="truncate">@categoris.CategoryName</span></td>
-													<td class="cell">@categoris.BrandId</td>
+													@* <td class="cell">@categoris.BrandId</td> *@
+													<td class="cell">@categoris.Brand?.BrandName</td>
+													<td class="cell">
+														<a class="btn-sm app-btn-secondary" href="#">View</a>
+														<a asp-controller="Category" asp-action="Edit" asp-route-id="@categoris.CategoryId" style="color: #0d6efd;border: 1px solid #0d6efd;" class="btn-sm app-btn-secondary">Edit</a>
+														<a asp-controller="Category" asp-action="Delete" asp-route-id="@categoris.CategoryId" class="btn-sm app-btn-secondary" style="color: #d26d69;border: 1px solid #d26d69;">Delete</a>
 
-													<td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>
-												}
-												
-											</tr>
-											
-		
+														
+														
+													
+													</td>
+										
+												</tr>
+											}
 										</tbody>
 									</table>
 						        </div><!--//table-responsive-->
