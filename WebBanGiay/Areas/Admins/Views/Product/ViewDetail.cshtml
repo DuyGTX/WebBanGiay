@@ -1,0 +1,314 @@
+﻿@using WebBanGiay.Models;
+@using System.Drawing.Drawing2D;
+@model List<Shoe>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+	Layout = "~/Views/Shared/header-footer-admin.cshtml";
+	<script defer src="~/assets/plugins/fontawesome/js/all.min.js"></script>
+
+	<!-- App CSS -->
+	<link id="theme-style" rel="stylesheet" href="~/assets/css/portal.css">
+	<link id="style" rel="stylesheet" href="~/css/site.css">
+
+	<!-- Javascript -->
+	<script src="~/assets/plugins/popper.min.js"></script>
+	<script src="~/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Page Specific JS -->
+	<script src="~/assets/js/app.js"></script>
+
+}
+<body class="app">
+	<div class="app-wrapper">
+		<div class="app-content pt-3 p-md-3 p-lg-4">
+			<div class="container-xl">
+			@foreach (var shoe in Model)
+			{
+
+				<h1 class="app-page-title">@shoe.ShoeName</h1>
+				<hr class="mb-4">
+				<div class="row g-4 settings-section">
+
+
+					<div class="app-card app-card-settings shadow-sm p-4">
+
+						<div class="app-card-body">
+							<form class="settings-form" method="post" enctype="multipart/form-data">
+
+									<div class="row mb-3">
+										<label for="setting-input-1" class="form-label">
+											ID<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+												<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+													<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+													<circle cx="8" cy="4.5" r="1" />
+												</svg>
+											</span>
+										</label>
+										
+										<input value="@shoe.ShoeId" class="form-control" readonly />
+
+									
+										<input asp-for="@shoe.ShoeId" type="hidden" />
+									</div>
+									<div class="row mb-3">
+										<label for="setting-input-1" class="form-label">
+											Shoe Name<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+												<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+													<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+													<circle cx="8" cy="4.5" r="1" />
+												</svg>
+											</span>
+										</label>
+										<!-- Input readonly để hiển thị -->
+										<input value="@shoe.ShoeName" class="form-control" readonly />
+
+										<!-- Input hidden để truyền giá trị -->
+										<input asp-for="@shoe.ShoeName" type="hidden" />
+									</div>
+									<div class="row mb-3">
+									<label for="setting-input-1" class="form-label">
+										Category Name<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+												<circle cx="8" cy="4.5" r="1" />
+											</svg>
+										</span>
+									</label>
+										@{
+											var categoryName = shoe.Category != null ? shoe.Category.CategoryName : "N/A";
+										}
+										<input value="@categoryName" class="form-control" readonly />
+
+										<!-- Sử dụng name attribute thay vì asp-for vì asp-for không hỗ trợ ?. -->
+										<input name="CategoryName" value="@categoryName" type="hidden" />
+
+
+
+									</div>
+									
+									<div class="row mb-3">
+										<label for="setting-input-1" class="form-label">
+											Brand Name<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+												<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
+													<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+													<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+													<circle cx="8" cy="4.5" r="1" />
+												</svg>
+											</span>
+										</label>
+										@{
+											var brandName = shoe.Brand != null ? shoe.Brand.BrandName : "N/A";
+										}
+										<input value="@brandName" class="form-control" readonly />
+
+										
+										<input name="BrandName" value="@brandName" type="hidden" />
+										
+										
+									</div>
+									<div class="row mb-3">
+										<label for="setting-input-1" class="form-label">
+											Price<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+												<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
+													<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+													<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+													<circle cx="8" cy="4.5" r="1" />
+												</svg>
+											</span>
+										</label>
+										<!-- Input readonly để hiển thị -->
+										@{
+
+											var price =shoe.ShoeItems.FirstOrDefault()?.Price?.ToString("N0") ?? "N/A";
+										}
+										<input value="@price" class="form-control" readonly />
+
+										<!-- Sử dụng name attribute thay vì asp-for vì asp-for không hỗ trợ ?. -->
+										<input name="Price" value="@price" type="hidden" />
+									</div>
+									<div class="row mb-3">
+										<label for="setting-input-1" class="form-label">
+											Price Sale
+											<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+												<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
+													<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+													<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+													<circle cx="8" cy="4.5" r="1" />
+												</svg>
+											</span>
+										</label>
+										@{
+											var salePrice = shoe.ShoeItems.FirstOrDefault()?.SalePrice?.ToString("N0") ?? "N/A"; // Xóa dấu ; cuối cùng
+										}
+										<input value="@salePrice" class="form-control" readonly />
+
+										<!-- Sử dụng name attribute thay vì asp-for vì asp-for không hỗ trợ ?. -->
+										<input name="SalePrice" value="@salePrice" type="hidden" />
+
+									</div>
+									
+									
+
+									<div class="row mb-3">
+										<label for="setting-input-1" class="form-label">
+											Colour
+											<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+												<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
+													<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+													<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+													<circle cx="8" cy="4.5" r="1" />
+												</svg>
+											</span>
+										</label>
+										@{
+											var colour = shoe.ShoeItems.FirstOrDefault()?.Colour?.ColourName != null ? shoe.ShoeItems.FirstOrDefault()?.Colour?.ColourName : "N/A";
+										}
+										<input value="@colour" class="form-control" readonly />
+
+										<!-- Sử dụng name attribute thay vì asp-for vì asp-for không hỗ trợ ?. -->
+										<input name="Colour" value="@colour" type="hidden" />
+
+									</div>
+
+									<div class="row mb-3">
+										<label for="setting-input-1" class="form-label">
+											Size
+											<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+												<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
+													<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+													<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+													<circle cx="8" cy="4.5" r="1" />
+												</svg>
+											</span>
+										</label>
+										@{
+											var size = shoe.ShoeItems.FirstOrDefault()?.Size?.SizeName != null ? shoe.ShoeItems.FirstOrDefault()?.Size?.SizeName : "N/A";
+										}
+										<input value="@size" class="form-control" readonly />
+
+										<!-- Sử dụng name attribute thay vì asp-for vì asp-for không hỗ trợ ?. -->
+										<input name="Size" value="@size" type="hidden" />
+									</div>
+									<div class="row mb-3">
+										<label for="setting-input-1" class="form-label">
+											ImageURL
+											<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+												<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+													<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+													<circle cx="8" cy="4.5" r="1" />
+												</svg>
+											</span>
+										</label>
+
+										@{
+											var images = shoe.ShoeImages; // Lấy tất cả hình ảnh
+										}
+										
+										
+
+										<div class="image-container d-flex flex-wrap">
+											@foreach (var image in images)
+											{
+												<img class="thumb-image me-2" src="@image.ImageUrl" alt="@shoe.ShoeName" style="max-width: 150px; height: auto;" />
+											}
+										</div>
+									</div>
+
+
+
+									<div class="row mb-3">
+										<label for="setting-input-1" class="form-label">
+											SKU
+											<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+												<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
+													<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+													<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+													<circle cx="8" cy="4.5" r="1" />
+												</svg>
+											</span>
+										</label>
+										@{
+											var sku = shoe.ShoeItems.FirstOrDefault()?.Sku != null ? shoe.ShoeItems.FirstOrDefault()?.Sku : "N/A";
+										}
+										<input value="@sku" class="form-control" readonly />
+
+										<!-- Sử dụng name attribute thay vì asp-for vì asp-for không hỗ trợ ?. -->
+										<input name="SKU" value="@sku" type="hidden" />
+									</div>
+									<div class="row mb-3">
+										<label for="setting-input-1" class="form-label">
+											Description<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+												<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
+													<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+													<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+													<circle cx="8" cy="4.5" r="1" />
+												</svg>
+											</span>
+										</label>
+
+										<input value="@shoe.ShoeDescription" class="form-control" readonly />
+
+
+										<input asp-for="@shoe.ShoeDescription" type="hidden" />
+									</div>
+									<div class="row mb-3">
+										<label for="setting-input-1" class="form-label">
+											CareInstructions<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+												<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
+													<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+													<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+													<circle cx="8" cy="4.5" r="1" />
+												</svg>
+											</span>
+										</label>
+										<!-- Input readonly để hiển thị -->
+										@{
+											var creInstructions = shoe.CareInstructions != null ? shoe.CareInstructions : "N/A";
+										}
+										<input value="@shoe.CareInstructions" class="form-control" readonly />
+
+
+										<input asp-for="@shoe.CareInstructions" type="hidden" />
+									</div>
+
+
+								
+								<div class="row justify-content-center">
+									
+									<div class="col-sm-2 d-grid">
+										<a asp-area="Admins" asp-controller="Product" asp-action="Index"
+										   class="btn btn-sm app-btn-primary"
+										   role="button">
+											Thoát
+										</a>
+									</div>
+								</div>
+								
+							</form>
+						</div><!--//app-card-body-->
+
+					</div><!--//app-card-->
+			
+				</div><!--//row-->
+			}
+			</div><!--//container-fluid-->
+		</div><!--//app-content-->
+	</div><!--//app-content-->
+</body>
+<!-- Script để tự động ẩn thông báo sau 5 giây -->
+<!-- CSS để thêm animation -->
+<!-- Script để tự động ẩn thông báo sau 5 giây -->
+<script>
+	setTimeout(function () {
+		var alerts = document.querySelectorAll('.alert');
+		alerts.forEach(function (alert) {
+			var bsAlert = new bootstrap.Alert(alert);
+			bsAlert.close();
+		});
+	}, 5000);
+</script>
