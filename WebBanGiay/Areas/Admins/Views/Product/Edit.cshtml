@@ -1,0 +1,506 @@
+﻿@using WebBanGiay.Models.Dto;
+@using System.Drawing.Drawing2D;
+@model ProductDto
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+	Layout = "~/Views/Shared/header-footer-admin.cshtml";
+	<script defer src="~/assets/plugins/fontawesome/js/all.min.js"></script>
+
+	<!-- App CSS -->
+	<link id="theme-style" rel="stylesheet" href="~/assets/css/portal.css">
+	<link id="style" rel="stylesheet" href="~/css/site.css">
+
+	<!-- Javascript -->
+	<script src="~/assets/plugins/popper.min.js"></script>
+	<script src="~/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Page Specific JS -->
+	<script src="~/assets/js/app.js"></script>
+
+
+}
+<body class="app">
+	<div class="app-wrapper">
+		<div class="app-content pt-3 p-md-3 p-lg-4">
+			<div class="container-xl">
+
+
+				<h1 class="app-page-title">Edit Product</h1>
+				<hr class="mb-4">
+				<div class="row g-4 settings-section">
+
+
+					<div class="app-card app-card-settings shadow-sm p-4">
+
+						<div class="app-card-body">
+							<form class="settings-form" method="post" enctype="multipart/form-data">
+								<div class="row mb-3">
+									<label for="setting-input-1" class="form-label">
+										ID<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+												<circle cx="8" cy="4.5" r="1" />
+											</svg>
+										</span>
+									</label>
+									<input value="@Model.ShoeId" class="form-control" readonly />
+
+									<!-- Input hidden để truyền giá trị -->
+									<input asp-for="ShoeId" type="hidden" />
+
+								</div>
+
+
+								<div class="row mb-3">
+									<label for="setting-input-1" class="form-label">
+										Shoe Name<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+												<circle cx="8" cy="4.5" r="1" />
+											</svg>
+										</span>
+									</label>
+									<!-- Input readonly để hiển thị -->
+									<input asp-for="ShoeName" class="form-control" />
+									<span asp-validation-for="ShoeName" class="text-danger"></span>
+									
+								</div>
+								<div class="row mb-3">
+									<label for="setting-input-1" class="form-label">
+										Brand Name<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+												<circle cx="8" cy="4.5" r="1" />
+											</svg>
+										</span>
+									</label>
+
+									<select asp-for="BrandId" class="form-select" asp-items="@(new SelectList(ViewBag.Brands, "BrandId", "BrandName"))">
+										<option value="">-- Chọn thương hiệu --</option>
+									</select>
+									<span asp-validation-for="BrandId" class="text-danger"></span>
+									
+
+
+
+								</div>
+
+								<div class="row mb-3">
+									<label for="CategoryId" class="form-label">
+										Category Name
+										<span class="ms-2" data-bs-container="body" data-bs-toggle="popover"
+											  data-bs-trigger="hover focus" data-bs-placement="top"
+											  data-bs-content="Không vượt quá 100 ký tự.">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle"
+												 fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd"
+													  d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+												<circle cx="8" cy="4.5" r="1" />
+											</svg>
+										</span>
+									</label>
+									<select asp-for="CategoryId" class="form-select" asp-items="@(new SelectList(ViewBag.Categories, "CategoryId", "CategoryName"))">
+										<option value="">-- Chọn danh mục --</option>
+									</select>
+									<span asp-validation-for="CategoryId" class="text-danger"></span>
+								</div>
+								
+								<div class="row mb-3">
+									<label for="price" class="form-label">Price</label>
+									@if (Model.ShoeItems != null && Model.ShoeItems.Any())
+									{
+										
+										foreach (var item in Model.ShoeItems)
+										{
+											<div class="input-group mb-2">
+												<input asp-for="ShoeItems[0].Price" type="text" class="form-control" value="@(item.Price?.ToString("N0")) VNĐ" />
+												<input type="hidden" name="ShoeItems[].Price" value="@item.Price" />
+												<div class="input-group-text">
+													<i class="bi bi-currency-dollar"></i>
+												</div>
+											</div>
+										}
+									}
+									else
+									{
+										<p class="text-muted">Không có thông tin giá</p>
+									}
+								</div>
+
+								<div class="row mb-3">
+									<label for="price" class="form-label">Sale Price</label>
+									@if (Model.ShoeItems != null && Model.ShoeItems.Any())
+									{
+
+										foreach (var item in Model.ShoeItems)
+										{
+											<div class="input-group mb-2">
+												<input asp-for="ShoeItems[0].SalePrice" type="text" class="form-control" value="@(item.SalePrice?.ToString("N0")) VNĐ" />
+												<input type="hidden" name="ShoeItems[].SalePrice" value="@item.SalePrice" />
+												<div class="input-group-text">
+													<i class="bi bi-currency-dollar"></i>
+												</div>
+											</div>
+										}
+									}
+									else
+									{
+										<p class="text-muted">Không có thông tin giá</p>
+									}
+								</div>
+
+
+
+								<div class="row mb-3">
+									<label for="setting-input-1" class="form-label">
+										Colour
+										<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+												<circle cx="8" cy="4.5" r="1" />
+											</svg>
+										</span>
+									</label>
+									<select asp-for="ShoeItems[0].ColourId" class="form-control"
+											asp-items="@(new SelectList(ViewBag.Colours, "ColourId", "ColourName"))">
+										<option value="">-- Chọn màu --</option>
+									</select>
+									<span asp-validation-for="ShoeItems[0].ColourId" class="text-danger"></span>
+
+									
+
+								</div>
+								<div class="row mb-3">
+									<label for="setting-input-1" class="form-label">
+										Size
+										<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+												<circle cx="8" cy="4.5" r="1" />
+											</svg>
+										</span>
+									</label>
+									<select asp-for="ShoeItems[0].SizeId" class="form-control" asp-items="@(new SelectList(ViewBag.Sizes, "SizeId", "SizeName"))">
+										<option value="">-- Chọn size --</option>
+									</select>
+									<span asp-validation-for="ShoeItems[0].SizeId" class="text-danger"></span>
+									
+
+								</div>
+								<div class="row mb-3">
+									<label for="setting-input-1" class="form-label">
+										Quantity
+										<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+												<circle cx="8" cy="4.5" r="1" />
+											</svg>
+										</span>
+									</label>
+									@if (Model.ShoeItems != null && Model.ShoeItems.Any())
+									{
+										foreach (var item in Model.ShoeItems)
+										{
+											<div class="input-group mb-2">
+												<input asp-for="ShoeItems[0].StockQuantity" type="number" class="form-control" value="@item.StockQuantity" />
+												<input type="hidden" name="ShoeItems[].StockQuantity" value="@item.StockQuantity" />
+											</div>
+										}
+									}
+									else
+									{
+										<p class="text-muted">Không có thông tin</p>
+									}
+								</div>
+
+								<div class="row mb-3">
+									<label class="form-label">
+										Images
+										<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Thêm đường dẫn hình ảnh">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+												<circle cx="8" cy="4.5" r="1" />
+											</svg>
+										</span>
+									</label>
+
+									<div id="imageUrlsContainer">
+										@if (Model.ImageUrls != null && Model.ImageUrls.Any())
+										{
+											foreach (var imageUrl in Model.ImageUrls)
+											{
+												<div class="image-url-group mb-2">
+													<div class="input-group">
+														<input type="text" name="ImageUrls" class="form-control image-url-input" value="@imageUrl" placeholder="Nhập link hình ảnh" />
+														<button type="button" class="btn btn-danger remove-image">Xóa</button>
+													</div>
+													<img src="@imageUrl" class="thumb-image mt-2" style="max-width: 150px; height: auto;" />
+												</div>
+											}
+										}
+										else
+										{
+											<p class="text-muted">Không có hình ảnh nào.</p>
+										}
+									</div>
+
+									<div class="mt-2">
+										<button type="button" class="btn btn-primary" id="addImageUrl">Thêm hình ảnh</button>
+									</div>
+								</div>
+
+
+
+
+								<div class="row mb-3">
+									<label for="setting-input-1" class="form-label">
+										SKU<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+												<circle cx="8" cy="4.5" r="1" />
+											</svg>
+										</span>
+									</label>
+									<!-- Input readonly để hiển thị -->
+									<input asp-for="ShoeItems[0].Sku" class="form-control" />
+									<span asp-validation-for="ShoeItems[0].Sku" class="text-danger"></span>
+
+								</div>
+								
+								<div class="row mb-3">
+									<label for="setting-input-1" class="form-label">
+										Description<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+												<circle cx="8" cy="4.5" r="1" />
+											</svg>
+										</span>
+									</label>
+									<input asp-for="ShoeDescription" type="text" class="form-control">
+									<span asp-validation-for="ShoeDescription" class="text-danger" />
+
+
+								</div>
+								<div class="row mb-3">
+									<label for="setting-input-1" class="form-label">
+										CareInstructions<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+												<circle cx="8" cy="4.5" r="1" />
+											</svg>
+										</span>
+									</label>
+									<!-- Input readonly để hiển thị -->
+									<input asp-for="CareInstructions" type="text" class="form-control">
+									<span asp-validation-for="CareInstructions" class="text-danger" />
+								</div>
+
+								<div class="row justify-content-center">
+									<div class="col-sm-2 d-grid">
+										<button type="submit" class="btn btn-sm app-btn-primary">Xác nhận</button>
+									</div>
+									<div class="col-sm-2 d-grid">
+										<a asp-area="Admins" asp-controller="Product" asp-action="Index"
+										   class="btn btn-sm app-btn-primary"
+										   style="background: #d26d69; color: #fff; border-color: #d26d69;" role="button">
+											Hủy
+										</a>
+									</div>
+								</div>
+
+							</form>
+						</div><!--//app-card-body-->
+
+					</div><!--//app-card-->
+
+				</div>
+
+				<!--//row-->
+
+			</div><!--//container-fluid-->
+		</div><!--//app-content-->
+	</div><!--//app-content-->
+</body>
+
+
+@section Scripts {
+	<script>
+		$(document).ready(function () {
+			// Thêm loading spinner
+			function showLoading(select) {
+				$(select).prop('disabled', true);
+				$(select).after('<div class="spinner-border spinner-border-sm ms-2" role="status"></div>');
+			}
+
+			function hideLoading(select) {
+				$(select).prop('disabled', false);
+				$(select).siblings('.spinner-border').remove();
+			}
+
+			$("#BrandId").change(function () {
+				var brandId = $(this).val();
+				var categorySelect = $("#CategoryId");
+
+				// Reset category dropdown
+				categorySelect.empty();
+				categorySelect.append('<option value="">-- Chọn danh mục --</option>');
+
+				if (brandId) {
+					showLoading(categorySelect);
+
+					$.ajax({
+						url: '/Admins/Product/GetCategoriesByBrand',
+						type: 'GET',
+						data: { brandId: brandId },
+						success: function (data) {
+							if (data && data.length > 0) {
+								$.each(data, function (index, item) {
+									categorySelect.append(
+										$('<option></option>')
+											.val(item.categoryId)
+											.text(item.categoryName)
+									);
+								});
+							} else {
+								categorySelect.append(
+									$('<option></option>')
+										.val("")
+										.text("Không có danh mục cho thương hiệu này")
+								);
+							}
+						},
+						error: function (xhr, status, error) {
+							console.error('Error:', error);
+							categorySelect.append(
+								$('<option></option>')
+									.val("")
+									.text("Lỗi khi tải danh mục")
+							);
+						},
+						complete: function () {
+							hideLoading(categorySelect);
+						}
+					});
+				}
+			});
+		});
+	</script>
+	<script>
+		$(document).ready(function () {
+			let variantCount = 0;
+
+			$("#addVariant").click(function () {
+				variantCount++;
+				let template = $(".shoe-item-template").first().clone();
+
+				// Update indices in name attributes
+				template.find("[name]").each(function () {
+					let name = $(this).attr("name");
+					$(this).attr("name", name.replace("[0]", `[${variantCount}]`));
+				});
+
+				$("#shoeItems").append(template);
+			});
+		});
+	</script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const container = document.getElementById('imageUrlsContainer');
+			const addButton = document.getElementById('addImageUrl');
+
+			function createImageUrlGroup() {
+				const div = document.createElement('div');
+				div.className = 'image-url-group mb-2';
+				div.innerHTML = `
+							<div class="input-group">
+								<input type="text" name="ImageUrls" class="form-control image-url-input" placeholder="Nhập link hình ảnh" />
+								<button type="button" class="btn btn-danger remove-image">Xóa</button>
+							</div>
+							<img class="thumb-image mt-2" style="max-width: 150px; height: auto; display: none;" />
+						`;
+				return div;
+			}
+
+			function updateImagePreview(input, imgElement) {
+				if (input.value) {
+					imgElement.src = input.value;
+					imgElement.style.display = 'block';
+					imgElement.onerror = function () {
+						this.style.display = 'none';
+					};
+				} else {
+					imgElement.style.display = 'none';
+				}
+			}
+
+			// Xử lý sự kiện thêm hình ảnh mới
+			addButton.addEventListener('click', function () {
+				const newGroup = createImageUrlGroup();
+				container.appendChild(newGroup);
+
+				// Cập nhật hiển thị nút xóa
+				updateRemoveButtons();
+			});
+
+			// Xử lý sự kiện xóa hình ảnh
+			container.addEventListener('click', function (e) {
+				if (e.target.classList.contains('remove-image')) {
+					e.target.closest('.image-url-group').remove();
+					updateRemoveButtons();
+				}
+			});
+
+			// Xử lý sự kiện nhập URL
+			container.addEventListener('input', function (e) {
+				if (e.target.classList.contains('image-url-input')) {
+					const imgElement = e.target.closest('.image-url-group').querySelector('.thumb-image');
+					updateImagePreview(e.target, imgElement);
+				}
+			});
+
+			function updateRemoveButtons() {
+				const groups = container.querySelectorAll('.image-url-group');
+				groups.forEach(group => {
+					const removeBtn = group.querySelector('.remove-image');
+					removeBtn.style.display = groups.length > 1 ? 'block' : 'none';
+				});
+			}
+
+			// Khởi tạo group đầu tiên nếu chưa có
+			if (container.children.length === 0) {
+				container.appendChild(createImageUrlGroup());
+				updateRemoveButtons();
+			}
+		});
+	</script>
+
+	<style>
+		.image-url-group {
+			position: relative;
+		}
+
+		.remove-image {
+			white-space: nowrap;
+		}
+
+		.thumb-image {
+			border: 1px solid #ddd;
+			border-radius: 4px;
+			padding: 5px;
+		}
+	</style>
+
+
+}

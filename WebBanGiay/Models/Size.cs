@@ -7,7 +7,9 @@ public partial class Size
 {
     public int SizeId { get; set; }
 
-    public string Size1 { get; set; } = null!;
+    public string? SizeName { get; set; }
 
-    public virtual ICollection<SanPham> SanPhams { get; } = new List<SanPham>();
+    public int? SortOrder { get; set; }
+
+    public virtual ICollection<ShoeItem> ShoeItems { get; } = new List<ShoeItem>();
 }
