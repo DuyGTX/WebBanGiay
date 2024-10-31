@@ -1,6 +1,6 @@
-﻿@using WebBanGiay.Models;
+﻿@using WebBanGiay.Models.Dto;
 @using System.Drawing.Drawing2D;
-@model List<Shoe>
+@model ProductDto
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
@@ -23,10 +23,7 @@
 	<div class="app-wrapper">
 		<div class="app-content pt-3 p-md-3 p-lg-4">
 			<div class="container-xl">
-			@foreach (var shoe in Model)
-			{
-
-				<h1 class="app-page-title">@shoe.ShoeName</h1>
+				<h1 class="app-page-title">@Model.ShoeName</h1>
 				<hr class="mb-4">
 				<div class="row g-4 settings-section">
 
@@ -36,41 +33,9 @@
 						<div class="app-card-body">
 							<form class="settings-form" method="post" enctype="multipart/form-data">
 
-									<div class="row mb-3">
-										<label for="setting-input-1" class="form-label">
-											ID<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
-												<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-													<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-													<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
-													<circle cx="8" cy="4.5" r="1" />
-												</svg>
-											</span>
-										</label>
-										
-										<input value="@shoe.ShoeId" class="form-control" readonly />
-
-									
-										<input asp-for="@shoe.ShoeId" type="hidden" />
-									</div>
-									<div class="row mb-3">
-										<label for="setting-input-1" class="form-label">
-											Shoe Name<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
-												<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-													<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-													<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
-													<circle cx="8" cy="4.5" r="1" />
-												</svg>
-											</span>
-										</label>
-										<!-- Input readonly để hiển thị -->
-										<input value="@shoe.ShoeName" class="form-control" readonly />
-
-										<!-- Input hidden để truyền giá trị -->
-										<input asp-for="@shoe.ShoeName" type="hidden" />
-									</div>
-									<div class="row mb-3">
+								<div class="row mb-3">
 									<label for="setting-input-1" class="form-label">
-										Category Name<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+										ID<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
 											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
 												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
@@ -78,124 +43,184 @@
 											</svg>
 										</span>
 									</label>
-										@{
-											var categoryName = shoe.Category != null ? shoe.Category.CategoryName : "N/A";
+
+
+									<input value="@Model.ShoeId" class="form-control" readonly />
+
+									<!-- Input hidden để truyền giá trị -->
+									<input asp-for="ShoeId" type="hidden" />
+								</div>
+								<div class="row mb-3">
+									<label for="setting-input-1" class="form-label">
+										Shoe Name<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+												<circle cx="8" cy="4.5" r="1" />
+											</svg>
+										</span>
+									</label>
+									<!-- Input readonly để hiển thị -->
+									<input value="@Model.ShoeName" class="form-control" readonly />
+
+									<!-- Input hidden để truyền giá trị -->
+									<input asp-for="@Model.ShoeName" type="hidden" />
+								</div>
+								<div class="row mb-3">
+									<label for="setting-input-1" class="form-label">
+										Category Name
+										<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+												<circle cx="8" cy="4.5" r="1" />
+											</svg>
+										</span>
+									</label>
+									<input value="@ViewBag.CategoryName" class="form-control" readonly />
+									<!-- Input hidden để truyền giá trị -->
+									<input asp-for="@Model.CategoryId" type="hidden" />
+								</div>
+
+								<div class="row mb-3">
+									<label for="setting-input-1" class="form-label">
+										Brand Name<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+												<circle cx="8" cy="4.5" r="1" />
+											</svg>
+										</span>
+									</label>
+									<input value="@ViewBag.BrandName" class="form-control" readonly />
+									<!-- Input hidden để truyền giá trị -->
+									<input asp-for="@Model.BrandId" type="hidden" />
+								</div>
+								<div class="row mb-3">
+									<label for="price" class="form-label">Price</label>
+									@if (Model.ShoeItems != null && Model.ShoeItems.Any())
+									{
+										foreach (var item in Model.ShoeItems)
+										{
+											<div class="input-group mb-2">
+												<input type="text" class="form-control" value="@(item.Price?.ToString("N0")) VNĐ" readonly />
+												<input type="hidden" name="ShoeItems[].Price" value="@item.Price" />
+												<div class="input-group-text">
+													<i class="bi bi-currency-dollar"></i>
+												</div>
+											</div>
 										}
-										<input value="@categoryName" class="form-control" readonly />
+									}
+									else
+									{
+										<p class="text-muted">Không có thông tin giá</p>
+									}
+								</div>
+								<div class="row mb-3">
+									<label for="price" class="form-label">Sale Price</label>
+									@if (Model.ShoeItems != null && Model.ShoeItems.Any())
+									{
+										foreach (var item in Model.ShoeItems)
+										{
+											<div class="input-group mb-2">
+												<input type="text" class="form-control" value="@(item.SalePrice?.ToString("N0")) VNĐ" readonly />
+												<input type="hidden" name="ShoeItems[].SalePrice" value="@item.SalePrice" />
+												<div class="input-group-text">
+													<i class="bi bi-currency-dollar"></i>
+												</div>
+											</div>
+										}
+									}
+									else
+									{
+										<p class="text-muted">Không có thông tin giá</p>
+									}
+								</div>
 
-										<!-- Sử dụng name attribute thay vì asp-for vì asp-for không hỗ trợ ?. -->
-										<input name="CategoryName" value="@categoryName" type="hidden" />
+								<div class="row mb-3">
+									<label for="setting-input-1" class="form-label">
+										Colour
+										<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+												<circle cx="8" cy="4.5" r="1" />
+											</svg>
+										</span>
+									</label>
+									@if (Model.ShoeItems != null && Model.ShoeItems.Any())
+									{
+										foreach (var item in Model.ShoeItems)
+										{
+											<div class="input-group mb-2">
+												<input type="text" class="form-control" value="@item.ColourName" readonly />
+												<input type="hidden" name="ShoeItems[].ColourId" value="@item.ColourId" />
+											</div>
+										}
+									}
+									else
+									{
+										<p class="text-muted">Không có thông tin</p>
+									}
 
+								</div>
+								<div class="row mb-3">
+									<label for="setting-input-1" class="form-label">
+										Size
+										<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+												<circle cx="8" cy="4.5" r="1" />
+											</svg>
+										</span>
+									</label>
+									@if (Model.ShoeItems != null && Model.ShoeItems.Any())
+									{
+										foreach (var item in Model.ShoeItems)
+										{
+											<div class="input-group mb-2">
+												<input type="text" class="form-control" value="@item.SizeName" readonly />
+												<input type="hidden" name="ShoeItems[].SizeId" value="@item.SizeId" />
+											</div>
+										}
+									}
+									else
+									{
+										<p class="text-muted">Không có thông tin</p>
+									}
 
+								</div>
+								<div class="row mb-3">
+									<label for="setting-input-1" class="form-label">
+										Quantity
+										<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+												<circle cx="8" cy="4.5" r="1" />
+											</svg>
+										</span>
+									</label>
+									@if (Model.ShoeItems != null && Model.ShoeItems.Any())
+									{
+										foreach (var item in Model.ShoeItems)
+										{
+											<div class="input-group mb-2">
+												<input type="text" class="form-control" value="@item.StockQuantity" readonly />
+												<input type="hidden" name="ShoeItems[].StockQuantity" value="@item.StockQuantity" />
+											</div>
+										}
+									}
+									else
+									{
+										<p class="text-muted">Không có thông tin</p>
+									}
 
-									</div>
-									
+								</div>
 									<div class="row mb-3">
 										<label for="setting-input-1" class="form-label">
-											Brand Name<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
-												<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
-													<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-													<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
-													<circle cx="8" cy="4.5" r="1" />
-												</svg>
-											</span>
-										</label>
-										@{
-											var brandName = shoe.Brand != null ? shoe.Brand.BrandName : "N/A";
-										}
-										<input value="@brandName" class="form-control" readonly />
-
-										
-										<input name="BrandName" value="@brandName" type="hidden" />
-										
-										
-									</div>
-									<div class="row mb-3">
-										<label for="setting-input-1" class="form-label">
-											Price<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
-												<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
-													<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-													<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
-													<circle cx="8" cy="4.5" r="1" />
-												</svg>
-											</span>
-										</label>
-										<!-- Input readonly để hiển thị -->
-										@{
-
-											var price =shoe.ShoeItems.FirstOrDefault()?.Price?.ToString("N0") ?? "N/A";
-										}
-										<input value="@price" class="form-control" readonly />
-
-										<!-- Sử dụng name attribute thay vì asp-for vì asp-for không hỗ trợ ?. -->
-										<input name="Price" value="@price" type="hidden" />
-									</div>
-									<div class="row mb-3">
-										<label for="setting-input-1" class="form-label">
-											Price Sale
-											<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
-												<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
-													<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-													<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
-													<circle cx="8" cy="4.5" r="1" />
-												</svg>
-											</span>
-										</label>
-										@{
-											var salePrice = shoe.ShoeItems.FirstOrDefault()?.SalePrice?.ToString("N0") ?? "N/A"; // Xóa dấu ; cuối cùng
-										}
-										<input value="@salePrice" class="form-control" readonly />
-
-										<!-- Sử dụng name attribute thay vì asp-for vì asp-for không hỗ trợ ?. -->
-										<input name="SalePrice" value="@salePrice" type="hidden" />
-
-									</div>
-									
-									
-
-									<div class="row mb-3">
-										<label for="setting-input-1" class="form-label">
-											Colour
-											<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
-												<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
-													<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-													<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
-													<circle cx="8" cy="4.5" r="1" />
-												</svg>
-											</span>
-										</label>
-										@{
-											var colour = shoe.ShoeItems.FirstOrDefault()?.Colour?.ColourName != null ? shoe.ShoeItems.FirstOrDefault()?.Colour?.ColourName : "N/A";
-										}
-										<input value="@colour" class="form-control" readonly />
-
-										<!-- Sử dụng name attribute thay vì asp-for vì asp-for không hỗ trợ ?. -->
-										<input name="Colour" value="@colour" type="hidden" />
-
-									</div>
-
-									<div class="row mb-3">
-										<label for="setting-input-1" class="form-label">
-											Size
-											<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
-												<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
-													<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-													<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
-													<circle cx="8" cy="4.5" r="1" />
-												</svg>
-											</span>
-										</label>
-										@{
-											var size = shoe.ShoeItems.FirstOrDefault()?.Size?.SizeName != null ? shoe.ShoeItems.FirstOrDefault()?.Size?.SizeName : "N/A";
-										}
-										<input value="@size" class="form-control" readonly />
-
-										<!-- Sử dụng name attribute thay vì asp-for vì asp-for không hỗ trợ ?. -->
-										<input name="Size" value="@size" type="hidden" />
-									</div>
-									<div class="row mb-3">
-										<label for="setting-input-1" class="form-label">
-											ImageURL
+											Images
 											<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
 												<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 													<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
@@ -205,61 +230,64 @@
 											</span>
 										</label>
 
-										@{
-											var images = shoe.ShoeImages; // Lấy tất cả hình ảnh
-										}
-										
-										
-
-										<div class="image-container d-flex flex-wrap">
-											@foreach (var image in images)
-											{
-												<img class="thumb-image me-2" src="@image.ImageUrl" alt="@shoe.ShoeName" style="max-width: 150px; height: auto;" />
-											}
+									@if (Model.ShoeImages != null && Model.ShoeImages.Any())
+									{
+										<div class="image-gallery">
+											<div class="main-image mb-3">
+												<img id="selectedImage" src="@Model.ShoeImages.First().ImageUrl" alt="Main Image" class="img-fluid rounded" />
+											</div>
+											<div class="image-thumbnails d-flex flex-wrap gap-2">
+												@foreach (var image in Model.ShoeImages)
+												{
+													<div class="thumbnail-wrapper">
+														<img src="@image.ImageUrl"
+															 alt="Product Image"
+															 class="thumb-image"
+															 onclick="selectImage(this.src)"
+															 data-image-id="@image.ImageId" />
+													</div>
+												}
+											</div>
 										</div>
+									}
+									else
+									{
+										<p class="text-muted">Không có hình ảnh</p>
+									}
 									</div>
+									
 
 
-
-									<div class="row mb-3">
-										<label for="setting-input-1" class="form-label">
-											SKU
-											<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
-												<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
-													<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-													<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
-													<circle cx="8" cy="4.5" r="1" />
-												</svg>
-											</span>
-										</label>
-										@{
-											var sku = shoe.ShoeItems.FirstOrDefault()?.Sku != null ? shoe.ShoeItems.FirstOrDefault()?.Sku : "N/A";
+								<div class="row mb-3">
+									<label for="setting-input-1" class="form-label">
+										SKU
+										<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+												<circle cx="8" cy="4.5" r="1" />
+											</svg>
+										</span>
+									</label>
+									@if (Model.ShoeItems != null && Model.ShoeItems.Any())
+									{
+										foreach (var item in Model.ShoeItems)
+										{
+											<div class="input-group mb-2">
+												<input type="text" class="form-control" value="@item.Sku" readonly />
+												<input type="hidden" name="ShoeItems[].Sku" value="@item.Sku" />
+											</div>
 										}
-										<input value="@sku" class="form-control" readonly />
+									}
+									else
+									{
+										<p class="text-muted">Không có thông tin</p>
+									}
 
-										<!-- Sử dụng name attribute thay vì asp-for vì asp-for không hỗ trợ ?. -->
-										<input name="SKU" value="@sku" type="hidden" />
-									</div>
 									<div class="row mb-3">
 										<label for="setting-input-1" class="form-label">
 											Description<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
-												<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
-													<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-													<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
-													<circle cx="8" cy="4.5" r="1" />
-												</svg>
-											</span>
-										</label>
-
-										<input value="@shoe.ShoeDescription" class="form-control" readonly />
-
-
-										<input asp-for="@shoe.ShoeDescription" type="hidden" />
-									</div>
-									<div class="row mb-3">
-										<label for="setting-input-1" class="form-label">
-											CareInstructions<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
-												<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
+												<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 													<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
 													<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
 													<circle cx="8" cy="4.5" r="1" />
@@ -267,13 +295,26 @@
 											</span>
 										</label>
 										<!-- Input readonly để hiển thị -->
-										@{
-											var creInstructions = shoe.CareInstructions != null ? shoe.CareInstructions : "N/A";
-										}
-										<input value="@shoe.CareInstructions" class="form-control" readonly />
+										<input value="@Model.ShoeDescription" class="form-control" readonly />
 
+										<!-- Input hidden để truyền giá trị -->
+										<input asp-for="@Model.ShoeDescription" type="hidden" />
+									</div>
+									<div class="row mb-3">
+										<label for="setting-input-1" class="form-label">
+											Care Instructions<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+												<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+													<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+													<circle cx="8" cy="4.5" r="1" />
+												</svg>
+											</span>
+										</label>
+										<!-- Input readonly để hiển thị -->
+										<input value="@Model.CareInstructions" class="form-control" readonly />
 
-										<input asp-for="@shoe.CareInstructions" type="hidden" />
+										<!-- Input hidden để truyền giá trị -->
+										<input asp-for="@Model.CareInstructions" type="hidden" />
 									</div>
 
 
@@ -311,4 +352,81 @@
 			bsAlert.close();
 		});
 	}, 5000);
+</script>
+<style>
+	.image-gallery {
+		max-width: 800px;
+	}
+
+	.main-image {
+		width: 100%;
+		height: 400px;
+		overflow: hidden;
+		border-radius: 8px;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	}
+
+		.main-image img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+
+	.thumbnail-wrapper {
+		width: 100px;
+		height: 100px;
+		overflow: hidden;
+		border-radius: 4px;
+		cursor: pointer;
+		transition: transform 0.2s;
+	}
+
+		.thumbnail-wrapper:hover {
+			transform: scale(1.05);
+		}
+
+	.thumb-image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border: 2px solid transparent;
+	}
+
+		.thumb-image.selected {
+			border-color: #007bff;
+		}
+
+	.image-thumbnails {
+		overflow-x: auto;
+		padding: 10px 0;
+	}
+</style>
+
+<script>
+	function selectImage(src) {
+		// Cập nhật hình ảnh chính
+		document.getElementById('selectedImage').src = src;
+
+		// Cập nhật trạng thái selected cho thumbnails
+		document.querySelectorAll('.thumb-image').forEach(img => {
+			img.classList.remove('selected');
+			if (img.src === src) {
+				img.classList.add('selected');
+			}
+		});
+	}
+
+	// Khởi tạo Popover của Bootstrap
+	var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+	var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+		return new bootstrap.Popover(popoverTriggerEl);
+	});
+
+	// Chọn hình ảnh đầu tiên khi trang load
+	document.addEventListener('DOMContentLoaded', function () {
+		const firstThumb = document.querySelector('.thumb-image');
+		if (firstThumb) {
+			firstThumb.classList.add('selected');
+		}
+	});
 </script>
