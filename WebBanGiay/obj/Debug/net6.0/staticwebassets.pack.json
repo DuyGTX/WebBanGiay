@@ -9329,6 +9329,10 @@
       "PackagePath": "staticwebassets\\assets\\scss\\portal.scss"
     },
     {
+      "Id": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\css\\button.css",
+      "PackagePath": "staticwebassets\\css\\button.css"
+    },
+    {
       "Id": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

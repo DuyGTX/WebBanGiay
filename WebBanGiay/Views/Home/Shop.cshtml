@@ -1,4 +1,7 @@
-﻿
+﻿@using WebBanGiay.Models;
+@using System.Drawing.Drawing2D;
+@model List<Shoe>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     ViewData["Title"] = "Shop";
     Layout = "~/Views/Shared/header-footer.cshtml";
@@ -244,43 +247,51 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="~/template/img/product/product-2.jpg">
-                                <ul class="product__hover">
-                                    <li><a href="#"><img src="~/template/img/icon/heart.png" alt=""></a></li>
-                                    <li>
-                                        <a href="#"><img src="~/template/img/icon/compare.png" alt=""> <span>Compare</span></a>
-                                    </li>
-                                    <li><a href="#"><img src="~/template/img/icon/search.png" alt=""></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6>Piqué Biker Jacket</h6>
-                                <a href="#" class="add-cart">+ Add To Cart</a>
-                                <div class="rating">
-                                    <i class="fa fa-star-o"></i>
-                                    <i class="fa fa-star-o"></i>
-                                    <i class="fa fa-star-o"></i>
-                                    <i class="fa fa-star-o"></i>
-                                    <i class="fa fa-star-o"></i>
+                    @foreach (var shoe in Model)
+                    {
+                        <div class="col-lg-4 col-md-6 col-sm-6" >
+                            <div class="product__item">
+                               
+                                <div class="product__item__pic set-bg" data-setbg="@(shoe.ShoeImages.FirstOrDefault()?.ImageUrl)" alt="@shoe.ShoeName">
+                                    
+                                    <ul class="product__hover">
+                                        <li><a href="#"><img src="~/template/img/icon/heart.png" alt=""></a></li>
+                                        <li>
+                                            <a href="#"><img src="~/template/img/icon/compare.png" alt=""> <span>Compare</span></a>
+                                        </li>
+                                        
+                                        <li><a asp-controller ="Home" asp-action="ShopDetail" asp-route-id="@shoe.ShoeId"><img src="~/template/img/icon/search.png" alt=""></a>
+
+                        </li>
+                                    </ul>
                                 </div>
-                                <h5>$67.24</h5>
-                                <div class="product__color__select">
-                                    <label for="pc-4">
-                                        <input type="radio" id="pc-4">
-                                    </label>
-                                    <label class="active black" for="pc-5">
-                                        <input type="radio" id="pc-5">
-                                    </label>
-                                    <label class="grey" for="pc-6">
-                                        <input type="radio" id="pc-6">
-                                    </label>
+                                <div class="product__item__text">
+                                    <h6 asp-controller="Product" asp-action="ViewDetail" asp-route-id="@shoe.ShoeId">@shoe.ShoeName</h6>
+                                    <a href="#" class="add-cart">+ Add To Cart</a>
+                                    <div class="rating">
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </div>
+                                    <h5>@(shoe.ShoeItems.FirstOrDefault()?.Price?.ToString("N0") ?? "N/A")đ</h5>
+                                    <div class="product__color__select">
+                                        <label for="pc-4">
+                                            <input type="radio" id="pc-4">
+                                        </label>
+                                        <label class="active black" for="pc-5">
+                                            <input type="radio" id="pc-5">
+                                        </label>
+                                        <label class="grey" for="pc-6">
+                                            <input type="radio" id="pc-6">
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
+                    }
+                    @* <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="product__item sale">
                             <div class="product__item__pic set-bg" data-setbg="~/template/img/product/product-3.jpg">
                                 <span class="label">Sale</span>
@@ -679,7 +690,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> *@
                 </div>
                 <div class="row">
                     <div class="col-lg-12">

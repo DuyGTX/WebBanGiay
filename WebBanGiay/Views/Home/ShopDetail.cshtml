@@ -1,4 +1,7 @@
-﻿
+﻿@using WebBanGiay.Models.Dto;
+@using System.Drawing.Drawing2D;
+@model ProductDto
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     ViewData["Title"] = "ShopDetail";
     Layout = "~/Views/Shared/header-footer.cshtml";
@@ -40,63 +43,35 @@
                     <div class="product__details__breadcrumb">
                         <a asp-area="" asp-controller="Home" asp-action="Home">Home</a>
                         <a asp-area="" asp-controller="Home" asp-action="Shop">Shop</a>
-                        <span>Product Details</span>
+                        <span>@Model.ShoeName</span>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-3 col-md-3">
                     <ul class="nav nav-tabs" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">
-                                <div class="product__thumb__pic set-bg" data-setbg="img/shop-details/thumb-1.png">
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">
-                                <div class="product__thumb__pic set-bg" data-setbg="img/shop-details/thumb-2.png">
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab">
-                                <div class="product__thumb__pic set-bg" data-setbg="img/shop-details/thumb-3.png">
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#tabs-4" role="tab">
-                                <div class="product__thumb__pic set-bg" data-setbg="img/shop-details/thumb-4.png">
-                                    <i class="fa fa-play"></i>
-                                </div>
-                            </a>
-                        </li>
+                        @for (int i = 0; i < Model.ShoeImages.Count; i++)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link @(i == 0 ? "active" : "")" data-toggle="tab" href="#tabs-@(i+1)" role="tab">
+                                    <div class="product__thumb__pic set-bg" data-setbg="@Model.ShoeImages[i].ImageUrl">
+                                    </div>
+                                </a>
+                            </li>
+                        }
                     </ul>
                 </div>
+
                 <div class="col-lg-6 col-md-9">
                     <div class="tab-content">
-                        <div class="tab-pane active" id="tabs-1" role="tabpanel">
-                            <div class="product__details__pic__item">
-                                <img src="img/shop-details/product-big-2.png" alt="">
+                        @for (int i = 0; i < Model.ShoeImages.Count; i++)
+                        {
+                            <div class="tab-pane @(i == 0 ? "active" : "")" id="tabs-@(i+1)" role="tabpanel">
+                                <div class="product__details__pic__item">
+                                    <img src="@Model.ShoeImages[i].ImageUrl" alt="@Model.ShoeName">
+                                </div>
                             </div>
-                        </div>
-                        <div class="tab-pane" id="tabs-2" role="tabpanel">
-                            <div class="product__details__pic__item">
-                                <img src="img/shop-details/product-big-3.png" alt="">
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="tabs-3" role="tabpanel">
-                            <div class="product__details__pic__item">
-                                <img src="img/shop-details/product-big.png" alt="">
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="tabs-4" role="tabpanel">
-                            <div class="product__details__pic__item">
-                                <img src="img/shop-details/product-big-4.png" alt="">
-                                <a href="https://www.youtube.com/watch?v=8PJ3_p7VqHw&list=RD8PJ3_p7VqHw&start_radio=1" class="video-popup"><i class="fa fa-play"></i></a>
-                            </div>
-                        </div>
+                        }
                     </div>
                 </div>
             </div>
@@ -107,40 +82,51 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-8">
                     <div class="product__details__text">
-                        <h4>Hooded thermal anorak</h4>
+                        <h4>@Model.ShoeName</h4>
                         <div class="rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                            <span> - 5 Reviews</span>
+                            <span> - 0 Reviews</span>
                         </div>
-                        <h3>$270.00 <span>70.00</span></h3>
-                        <p>
-                            Coat with quilted lining and an adjustable hood. Featuring long sleeves with adjustable
-                            cuff tabs, adjustable asymmetric hem with elastic side tabs and a front zip fastening
-                            with placket.
-                        </p>
+                       
+                        <h5 class="product-price">
+                            @if (Model.ShoeItems.Any())
+                            {
+                                var firstItem = Model.ShoeItems.First();
+                                @if (firstItem.SalePrice != null && firstItem.SalePrice < firstItem.Price)
+                                {
+                                    <span class="regular-price text-decoration-line-through">@(firstItem.Price?.ToString("#,##0")) VNĐ</span>
+                                    <span class="sale-price">@(firstItem.SalePrice?.ToString("#,##0")) VNĐ</span>
+                                }
+                                else
+                                {
+                                    <span class="regular-price">@(firstItem.Price?.ToString("#,##0")) VNĐ</span>
+                                }
+                            }
+                        </h5>
+
+                        
                         <div class="product__details__option">
                             <div class="product__details__option__size">
                                 <span>Size:</span>
-                                <label for="xxl">
-                                    xxl
-                                    <input type="radio" id="xxl">
-                                </label>
-                                <label class="active" for="xl">
-                                    xl
-                                    <input type="radio" id="xl">
-                                </label>
-                                <label for="l">
-                                    l
-                                    <input type="radio" id="l">
-                                </label>
-                                <label for="sm">
-                                    s
-                                    <input type="radio" id="sm">
-                                </label>
+                                @{
+                                    var availableSizes = Model.ShoeItems
+                                    .Where(s => s.StockQuantity > 0)
+                                    .Select(s => new { s.SizeId, s.SizeName, s.Price })
+                                    .Distinct()
+                                    .OrderBy(s => s.SizeName);
+                                }
+
+                                @foreach (var size in availableSizes)
+                                {
+                                    <label class="size-option" for="size_@size.SizeId" data-size-id="@size.SizeId" data-price="@size.Price">
+                                        @size.SizeName
+                                        <input type="radio" name="SelectedSize" id="size_@size.SizeId" value="@size.SizeId">
+                                    </label>
+                                }
                             </div>
                             <div class="product__details__option__color">
                                 <span>Color:</span>
@@ -175,11 +161,15 @@
                         </div>
                         <div class="product__details__last__option">
                             <h5><span>Guaranteed Safe Checkout</span></h5>
-                            <img src="img/shop-details/details-payment.png" alt="">
+                            <div style="max-width:30%;    place-self: center;">
+                                <a><img style="max-width:30%;" src="~/template/img/vietqr.png" alt=""></a>
+                                <a><img style="max-width:20%;" src="https://upload.wikimedia.org/wikipedia/vi/f/fe/MoMo_Logo.png" alt=""></a>
+                           </div>
+                           
                             <ul>
-                                <li><span>SKU:</span> 3812912</li>
-                                <li><span>Categories:</span> Clothes</li>
-                                <li><span>Tag:</span> Clothes, Skin, Body</li>
+                                <li><span>SKU:</span> @ViewBag.Sku</li>
+                                <li><span>Categories:</span> @ViewBag.CategoryName</li>
+                                <li><span>Brand:</span> @ViewBag.BrandName</li>
                             </ul>
                         </div>
                     </div>
@@ -196,46 +186,28 @@
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#tabs-6" role="tab">
                                     Customer
-                                    Previews(5)
+                                    Previews(0)
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-7" role="tab">
-                                    Additional
-                                    information
-                                </a>
-                            </li>
+                            
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="tabs-5" role="tabpanel">
                                 <div class="product__details__tab__content">
-                                    <p class="note">
+                                    @* <p class="note">
                                         Nam tempus turpis at metus scelerisque placerat nulla deumantos
                                         solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis
                                         ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo
                                         pharetras loremos.
-                                    </p>
+                                    </p> *@
                                     <div class="product__details__tab__content__item">
                                         <h5>Products Infomation</h5>
                                         <p>
-                                            A Pocket PC is a handheld computer, which features many of the same
-                                            capabilities as a modern PC. These handy little devices allow
-                                            individuals to retrieve and store e-mail messages, create a contact
-                                            file, coordinate appointments, surf the internet, exchange text messages
-                                            and more. Every product that is labeled as a Pocket PC must be
-                                            accompanied with specific software to operate the unit and must feature
-                                            a touchscreen and touchpad.
+                                            @Model.ShoeDescription
                                         </p>
-                                        <p>
-                                            As is the case with any new technology product, the cost of a Pocket PC
-                                            was substantial during it’s early release. For approximately $700.00,
-                                            consumers could purchase one of top-of-the-line Pocket PCs in 2003.
-                                            These days, customers are finding that prices have become much more
-                                            reasonable now that the newness is wearing off. For approximately
-                                            $350.00, a new Pocket PC can now be purchased.
-                                        </p>
+                                        
                                     </div>
-                                    <div class="product__details__tab__content__item">
+                                    @* <div class="product__details__tab__content__item">
                                         <h5>Material used</h5>
                                         <p>
                                             Polyester is deemed lower quality due to its none natural quality’s. Made
@@ -246,7 +218,7 @@
                                             breathable. Velvet is a great choice for dinner party jacket and can be
                                             worn all year round.
                                         </p>
-                                    </div>
+                                    </div> *@
                                 </div>
                             </div>
                             <div class="tab-pane" id="tabs-6" role="tabpanel">
@@ -498,3 +470,74 @@
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/main.js"></script>
 
+<script>
+    $(document).ready(function() {
+        // Xử lý set-bg cho hình ảnh
+        $('.set-bg').each(function() {
+            var bg = $(this).data('setbg');
+            $(this).css('background-image', 'url(' + bg + ')');
+        });
+
+        // Xử lý tab
+        $('.nav-link').on('click', function(e) {
+            e.preventDefault();
+            $(this).tab('show');
+        });
+    });
+</script>
+
+
+<style>
+    .product-price {
+        margin: 10px 0;
+    }
+
+        .product-price .regular-price {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+            /* Chỉ áp dụng decoration line-through khi có giá sale */
+            .product-price .sale-price + .regular-price,
+            .product-price .regular-price.text-decoration-line-through {
+                font-size: 1rem;
+                color: #999;
+                text-decoration: line-through;
+            }
+
+        .product-price .sale-price {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #ff0000;
+            margin-left: 10px;
+        }
+</style>
+<script>
+    $(document).ready(function () {
+        // Xử lý chọn size
+        $('.size-option input[type="radio"]').on('change', function () {
+            const $label = $(this).closest('label');
+            const sizeId = $label.data('size-id');
+            const price = $label.data('price');
+
+            // Cập nhật active class
+            $('.size-option').removeClass('active');
+            $label.addClass('active');
+
+            // Cập nhật giá hiển thị
+            $('#product-price').text(formatPrice(price) + ' VNĐ');
+
+            // Cập nhật hidden input cho form (nếu cần)
+            $('#SelectedSizeId').val(sizeId);
+        });
+
+        // Format giá tiền
+        function formatPrice(price) {
+            return new Intl.NumberFormat('vi-VN').format(price);
+        }
+
+        // Tự động chọn size đầu tiên
+        $('.size-option input[type="radio"]:first').prop('checked', true).trigger('change');
+    });
+</script>
