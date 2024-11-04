@@ -11,7 +11,7 @@ using WebBanGiay.Models;
 
 namespace WebBanGiay.Migrations
 {
-    [DbContext(typeof(DbwebGiayOnlineContext))]
+    [DbContext(typeof(DBWebGiayOnlineContext))]
     [Migration("20241024073113_FirstMigration")]
     partial class FirstMigration
     {

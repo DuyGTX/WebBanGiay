@@ -9,7 +9,5 @@ public partial class Size
 
     public string? SizeName { get; set; }
 
-    public int? SortOrder { get; set; }
-
-    public virtual ICollection<ShoeItem> ShoeItems { get; } = new List<ShoeItem>();
+    public virtual ICollection<ShoeItemSize> ShoeItemSizes { get; } = new List<ShoeItemSize>();
 }

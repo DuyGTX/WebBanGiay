@@ -21,9 +21,9 @@ public partial class Shoe
 
     public virtual ShoeCategory? Category { get; set; }
 
+    public virtual ICollection<ShoeItem> ShoeItems { get; } = new List<ShoeItem>();
+
     public virtual ICollection<ShoeAttribute> ShoeAttributes { get; } = new List<ShoeAttribute>();
 
     public virtual ICollection<ShoeImage> ShoeImages { get; } = new List<ShoeImage>();
-
-    public virtual ICollection<ShoeItem> ShoeItems { get; } = new List<ShoeItem>();
 }

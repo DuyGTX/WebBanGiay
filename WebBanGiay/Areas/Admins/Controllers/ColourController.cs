@@ -9,10 +9,10 @@ namespace WebBanGiay.Areas.Admins.Controllers
 	[Area("Admins")]
 	public class ColourController : Controller
 	{
-		private readonly DbwebGiayOnlineContext context;
+		private readonly DBWebGiayOnlineContext context;
 		private readonly IWebHostEnvironment environment;
 
-		public ColourController(DbwebGiayOnlineContext context, IWebHostEnvironment environment)
+		public ColourController(DBWebGiayOnlineContext context, IWebHostEnvironment environment)
 		{
 			this.context = context;
 			this.environment = environment;

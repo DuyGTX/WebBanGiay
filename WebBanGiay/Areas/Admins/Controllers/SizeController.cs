@@ -9,10 +9,10 @@ namespace WebBanGiay.Areas.Admins.Controllers
 	[Area("Admins")]
 	public class SizeController : Controller
 	{
-		private readonly DbwebGiayOnlineContext context;
+		private readonly DBWebGiayOnlineContext context;
 		private readonly IWebHostEnvironment environment;
 
-		public SizeController(DbwebGiayOnlineContext context, IWebHostEnvironment environment)
+		public SizeController(DBWebGiayOnlineContext context, IWebHostEnvironment environment)
 		{
 			this.context = context;
 			this.environment = environment;
@@ -48,7 +48,7 @@ namespace WebBanGiay.Areas.Admins.Controllers
 			Size size = new Size()
 			{
 				SizeName = sizeDto.SizeName,
-				SortOrder = sizeDto.SortOrder,
+				
 			};
 			// Kiểm tra nếu đã tồn tại
 			var existingCategory = context.Sizes
@@ -121,7 +121,7 @@ namespace WebBanGiay.Areas.Admins.Controllers
 
 				// Cập nhật thông tin
 				size.SizeName = sizeDto.SizeName;
-				size.SortOrder = sizeDto.SortOrder;
+				
 
 				context.Sizes.Update(size);
 				context.SaveChanges();

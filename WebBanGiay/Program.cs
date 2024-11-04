@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 // Configure DbContext with connection string
-builder.Services.AddDbContext<DbwebGiayOnlineContext>(options =>
+builder.Services.AddDbContext<DBWebGiayOnlineContext>(options =>
 {
     var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
     options.UseSqlServer(connectionString);

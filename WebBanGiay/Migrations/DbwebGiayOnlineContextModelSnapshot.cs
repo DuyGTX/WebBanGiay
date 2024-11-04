@@ -10,7 +10,7 @@ using WebBanGiay.Models;
 
 namespace WebBanGiay.Migrations
 {
-    [DbContext(typeof(DbwebGiayOnlineContext))]
+    [DbContext(typeof(DBWebGiayOnlineContext))]
     partial class DbwebGiayOnlineContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

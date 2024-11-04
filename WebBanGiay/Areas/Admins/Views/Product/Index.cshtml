@@ -99,7 +99,7 @@
 										<ul class="list-unstyled mb-0">
 											<li><span class="text-muted">ID:</span> @shoe.ShoeId</li>
 											<li><span class="text-muted">Price:</span> @(shoe.ShoeItems.FirstOrDefault()?.Price?.ToString("N0") ?? "N/A")đ</li>
-											<li><span class="text-muted">Size:</span> @(shoe.ShoeItems.FirstOrDefault()?.Size?.SizeName ?? "N/A")</li>
+											@* <li><span class="text-muted">Size:</span> @(shoe.ShoeItems.FirstOrDefault()?.Size?.SizeName ?? "N/A")</li> *@
 											<li><span class="text-muted">Brand:</span> @(shoe.Brand?.BrandName ?? "N/A")</li>
 										</ul>
 									</div><!--//app-doc-meta-->

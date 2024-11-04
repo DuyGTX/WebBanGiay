@@ -8,10 +8,10 @@ namespace WebBanGiay.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly DbwebGiayOnlineContext context;
+        private readonly DBWebGiayOnlineContext context;
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger, DbwebGiayOnlineContext context)
+        public HomeController(ILogger<HomeController> logger, DBWebGiayOnlineContext context)
         {
             _logger = logger;
             this.context = context;
@@ -28,7 +28,7 @@ namespace WebBanGiay.Controllers
         public IActionResult Shop()
         {
             var product = context.Shoes
-                .Include(s => s.ShoeItems).ThenInclude(si => si.Size)
+                .Include(s => s.ShoeItems)
                 .Include(s => s.Brand)
                 .Include(s => s.ShoeImages) // Thêm Include ShoeImages
                 .OrderBy(s => s.ShoeId)
@@ -41,9 +41,7 @@ namespace WebBanGiay.Controllers
                  .Include(s => s.Brand)
                  .Include(s => s.Category)
                  .Include(s => s.ShoeItems)
-                     .ThenInclude(si => si.Colour)
-                 .Include(s => s.ShoeItems)
-                     .ThenInclude(si => si.Size)
+               
                  .Include(s => s.ShoeImages)
                  .FirstOrDefault(s => s.ShoeId == id);
 
@@ -62,13 +60,10 @@ namespace WebBanGiay.Controllers
                 CategoryId = shoe.CategoryId,
                 ShoeItems = shoe.ShoeItems.Select(si => new ShoeItemDetail
                 {
-                    ColourId = si.ColourId,
-                    ColourName = si.Colour?.ColourName,  // Thêm ColourName
-                    SizeId = si.SizeId,
-                    SizeName = si.Size?.SizeName,
+                   
                     Price = si.Price,
                     SalePrice = si.SalePrice,
-                    StockQuantity = si.StockQuantity,
+            
                     Sku = si.Sku
                 }).ToList(),
                 ShoeImages = shoe.ShoeImages.Select(si => new ShoeImageDetail
