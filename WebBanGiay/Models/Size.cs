@@ -9,5 +9,5 @@ public partial class Size
 
     public string? SizeName { get; set; }
 
-    public virtual ICollection<ShoeItemSize> ShoeItemSizes { get; } = new List<ShoeItemSize>();
+    public virtual ICollection<ShoeSize> ShoeSizes { get; } = new List<ShoeSize>();
 }

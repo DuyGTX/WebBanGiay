@@ -9,6 +9,6 @@ namespace WebBanGiay.Models.Dto
 		[Required,MaxLength(10)]
 		public string? SizeName { get; set; } = "";
 
-		public int? SortOrder { get; set; }
+		
 	}
 }

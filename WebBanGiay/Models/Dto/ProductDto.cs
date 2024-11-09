@@ -11,23 +11,15 @@ namespace WebBanGiay.Models.Dto
         public string? CareInstructions { get; set; }
         public int? BrandId { get; set; }
         public int? CategoryId { get; set; }
-
-        public List<ShoeItemDetail> ShoeItems { get; set; } = new List<ShoeItemDetail>();
-        public List<ShoeImageDetail> ShoeImages { get; set; } = new List<ShoeImageDetail>();
-        public List<string?> ImageUrls { get; set; } = new List<string?>();
-    }
-
-	public class ShoeItemDetail
-	{
-		public int ShoeItemId { get; set; }
-        // Thay đổi từ single colour sang list of colours
-        public int? SizeId { get; set; }
-        public List<ColourDetail> Colours { get; set; } = new List<ColourDetail>();
-        public List<SizeDetail> Sizes { get; set; } = new List<SizeDetail>();
         public decimal? Price { get; set; }
         public decimal? SalePrice { get; set; }
-        public string? Sku { get; set; }
-	}
+        public string? Sku { get; set; }    
+        public List<ShoeImageDetail> ShoeImages { get; set; } = new List<ShoeImageDetail>();
+        public List<string?> ImageUrls { get; set; } = new List<string?>();
+        public List<ColourDetail> Colours { get; set; } = new List<ColourDetail>();
+        public List<SizeDetail> Sizes { get; set; } = new List<SizeDetail>();
+    }
+
 	public class ShoeImageDetail
 	{
 		public int ImageId { get; set; }
@@ -35,14 +27,16 @@ namespace WebBanGiay.Models.Dto
 	}
     public class ColourDetail
     {
-        public int ColourId { get; set; }
+		
+		public int ColourId { get; set; }
         public string? ColourName { get; set; }
         public int? StockQuantity { get; set; }
     }
 
     public class SizeDetail
     {
-        public int SizeId { get; set; }
+		
+		public int SizeId { get; set; }
         public string? SizeName { get; set; }
         public int? StockQuantity { get; set; }
     }

@@ -1,0 +1,112 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using WebBanGiay.Models;
+using WebBanGiay.Models.ViewModels;
+using WebBanGiay.Repository;
+
+namespace WebBanGiay.Controllers
+{
+    public class CartController : Controller
+    {
+        private readonly DbwebGiayOnlineContext _dataContext;
+        public CartController(DbwebGiayOnlineContext _context) 
+        {
+            _dataContext = _context;
+        }
+        public IActionResult Index()
+        {
+            List<CartItemModel> cartItems = HttpContext.Session.GetJson<List<CartItemModel>>("Cart") ?? new List<CartItemModel>();
+            CartItemViewModel cartVM = new()
+            {
+
+                CartItems = cartItems,
+
+                GrandTotal = cartItems.Sum(x => x.Quantity * x.Price)
+            };
+
+        
+            return View(cartVM);
+        }
+        public ActionResult Checkout ()
+        {
+            return View("~/Views/Home/Checkout.cshtml");
+        }
+        public async Task<IActionResult>Add(int id)
+        {
+            Shoe shoes = await _dataContext.Shoes.FindAsync(id);
+            List<CartItemModel> cart = HttpContext.Session.GetJson<List<CartItemModel>>("Cart") ?? new List<CartItemModel>();
+            CartItemModel cartItems = cart.Where(c=>c.ShoeId==id).FirstOrDefault();
+
+            if(cartItems == null)
+            {
+                cart.Add(new CartItemModel(shoes));
+            } else
+            {
+                cartItems.Quantity += 1;
+            }
+
+            HttpContext.Session.SetJson("Cart", cart);
+            return Redirect(Request.Headers["Referer"].ToString());
+        }
+        public async Task<IActionResult> Decrease(int id)
+        {
+            List<CartItemModel> cart = HttpContext.Session.GetJson<List<CartItemModel>>("Cart");
+
+            CartItemModel cartItem = cart.Where(c=>c.ShoeId== id).FirstOrDefault();
+            if(cartItem.Quantity >1)
+            {
+                --cartItem.Quantity;
+            }
+            else
+            {
+                cart.RemoveAll(p=>p.ShoeId == id);
+            }
+            if(cart.Count == 0) {
+                HttpContext.Session.Remove("Cart");
+            }
+            else
+            {
+                HttpContext.Session.SetJson("Cart", cart);
+            }
+            return RedirectToAction("Index");
+        }
+        public async Task<IActionResult> Increase(int id)
+        {
+            List<CartItemModel> cart = HttpContext.Session.GetJson<List<CartItemModel>>("Cart");
+
+            CartItemModel cartItem = cart.FirstOrDefault(c => c.ShoeId == id);
+            if (cartItem != null && cartItem.Quantity < 10) // Max quantity is 10
+            {
+                ++cartItem.Quantity;
+            }
+
+            if (cart.Count == 0)
+            {
+                HttpContext.Session.Remove("Cart");
+            }
+            else
+            {
+                HttpContext.Session.SetJson("Cart", cart);
+            }
+
+            return RedirectToAction("Index");
+        }
+        public async Task<IActionResult> Remove(int id)
+        {
+            List<CartItemModel> cart = HttpContext.Session.GetJson<List<CartItemModel>>("Cart");
+
+            cart.RemoveAll(p=>p.ShoeId == id);
+           
+
+            if (cart.Count == 0)
+            {
+                HttpContext.Session.Remove("Cart");
+            }
+            else
+            {
+                HttpContext.Session.SetJson("Cart", cart);
+            }
+
+            return RedirectToAction("Index");
+        }
+    }
+}

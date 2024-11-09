@@ -112,93 +112,26 @@
 								
 								<div class="row mb-3">
 									<label for="price" class="form-label">Price</label>
-									@if (Model.ShoeItems != null && Model.ShoeItems.Any())
-									{
-										
-										foreach (var item in Model.ShoeItems)
-										{
-											<div class="input-group mb-2">
-												<input asp-for="ShoeItems[0].Price" type="text" class="form-control" value="@(item.Price?.ToString("N0")) VNĐ" />
-												<input type="hidden" name="ShoeItems[].Price" value="@item.Price" />
-												<div class="input-group-text">
-													<i class="bi bi-currency-dollar"></i>
-												</div>
-											</div>
-										}
-									}
-									else
-									{
-										<p class="text-muted">Không có thông tin giá</p>
-									}
+									<div class="input-group mb-2">
+										<input asp-for="Price" type="text" class="form-control" value="@Model.Price?.ToString("N0") VNĐ" />
+
+										<input type="hidden" name="Price" value="Price" />
+										<div class="input-group-text">
+											<i class="bi bi-currency-dollar"></i>
+										</div>
+									</div>
 								</div>
 
 								<div class="row mb-3">
 									<label for="price" class="form-label">Sale Price</label>
-									@if (Model.ShoeItems != null && Model.ShoeItems.Any())
-									{
-
-										foreach (var item in Model.ShoeItems)
-										{
-											<div class="input-group mb-2">
-												<input asp-for="ShoeItems[0].SalePrice" type="text" class="form-control" value="@(item.SalePrice?.ToString("N0")) VNĐ" />
-												<input type="hidden" name="ShoeItems[].SalePrice" value="@item.SalePrice" />
-												<div class="input-group-text">
-													<i class="bi bi-currency-dollar"></i>
-												</div>
-											</div>
-										}
-									}
-									else
-									{
-										<p class="text-muted">Không có thông tin giá</p>
-									}
-								</div>
-
-
-
-								<div class="row mb-3">
-									<div class="col-md-6">
-										<label class="form-label">Colour</label>
-										@if (Model.ShoeItems != null && Model.ShoeItems.Any())
-										{
-											<select id="colourSelect" class="form-select">
-												<option value="">Chọn màu sắc</option>
-												@foreach (var shoeItem in Model.ShoeItems)
-												{
-													@foreach (var colour in shoeItem.Colours)
-													{
-														<option value="@colour.ColourId">@colour.ColourName</option>
-													}
-												}
-											</select>
-										}
+									<div class="input-group mb-2">
+										<input asp-for="SalePrice" type="text" class="form-control" value="@Model.SalePrice?.ToString("N0") VNĐ" />
+										<input type="hidden" name="ShoeItems[].SalePrice" value="SalePrice" />
+										<div class="input-group-text">
+											<i class="bi bi-currency-dollar"></i>
+										</div>
 									</div>
-
-									<div class="col-md-6">
-										<label class="form-label">Size</label>
-										@if (Model.ShoeItems != null && Model.ShoeItems.Any())
-										{
-											<select id="sizeSelect" class="form-select">
-												<option value="">Chọn kích thước</option>
-												@foreach (var shoeItem in Model.ShoeItems)
-												{
-													@foreach (var size in shoeItem.Sizes)
-													{
-														<option value="@size.SizeId">@size.SizeName</option>
-													}
-												}
-											</select>
-										}
-									</div>
-								</div>
-
-								<div class="row mb-3">
-									<div class="col-md-12">
-										<label class="form-label">Số lượng tồn kho</label>
-										<input type="text" id="stockQuantity" class="form-control" readonly value="Vui lòng chọn màu và size" />
-									</div>
-								</div>
-								
+								</div>																				
 
 								<div class="row mb-3">
 									<label class="form-label">
@@ -251,8 +184,8 @@
 										</span>
 									</label>
 									<!-- Input readonly để hiển thị -->
-									<input asp-for="ShoeItems[0].Sku" class="form-control" />
-									<span asp-validation-for="ShoeItems[0].Sku" class="text-danger"></span>
+									<input asp-for="Sku" class="form-control" />
+									<span asp-validation-for="Sku" class="text-danger"></span>
 
 								</div>
 								
@@ -377,24 +310,6 @@
 		});
 	</script>
 	<script>
-		$(document).ready(function () {
-			let variantCount = 0;
-
-			$("#addVariant").click(function () {
-				variantCount++;
-				let template = $(".shoe-item-template").first().clone();
-
-				// Update indices in name attributes
-				template.find("[name]").each(function () {
-					let name = $(this).attr("name");
-					$(this).attr("name", name.replace("[0]", `[${variantCount}]`));
-				});
-
-				$("#shoeItems").append(template);
-			});
-		});
-	</script>
-	<script>
 		document.addEventListener('DOMContentLoaded', function () {
 			const container = document.getElementById('imageUrlsContainer');
 			const addButton = document.getElementById('addImageUrl');
@@ -464,35 +379,7 @@
 			}
 		});
 	</script>
-	<script>
-		const shoeItems = @Json.Serialize(Model.ShoeItems);
-
-		function updateStockQuantity() {
-			const selectedColourId = parseInt(document.getElementById('colourSelect').value);
-			const selectedSizeId = parseInt(document.getElementById('sizeSelect').value);
-			const stockQuantityInput = document.getElementById('stockQuantity');
-
-			if (!selectedColourId || !selectedSizeId) {
-				stockQuantityInput.value = "Vui lòng chọn màu và size";
-				return;
-			}
-
-			for (const shoeItem of shoeItems) {
-				const colour = shoeItem.Colours.find(c => c.ColourId === selectedColourId);
-				const size = shoeItem.Sizes.find(s => s.SizeId === selectedSizeId);
-
-				if (colour && size) {
-					stockQuantityInput.value = `${colour.StockQuantity || 0}`;
-					return;
-				}
-			}
-
-			stockQuantityInput.value = "Không có sản phẩm";
-		}
-
-		document.getElementById('colourSelect').addEventListener('change', updateStockQuantity);
-		document.getElementById('sizeSelect').addEventListener('change', updateStockQuantity);
-	</script>
+	
 
 
 	<style>

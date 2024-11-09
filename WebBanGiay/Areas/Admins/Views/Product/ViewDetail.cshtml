@@ -98,80 +98,61 @@
 								</div>
 								<div class="row mb-3">
 									<label for="price" class="form-label">Price</label>
-									@if (Model.ShoeItems != null && Model.ShoeItems.Any())
-									{
-										foreach (var item in Model.ShoeItems)
-										{
-											<div class="input-group mb-2">
-												<input type="text" class="form-control" value="@(item.Price?.ToString("N0")) VNĐ" readonly />
-												<input type="hidden" name="ShoeItems[].Price" value="@item.Price" />
-												<div class="input-group-text">
-													<i class="bi bi-currency-dollar"></i>
-												</div>
-											</div>
-										}
-									}
-									else
-									{
-										<p class="text-muted">Không có thông tin giá</p>
-									}
+									<div class="input-group mb-2">
+										<input type="text" class="form-control" value="@(Model.Price?.ToString("N0")) VNĐ" readonly />
+										<input type="hidden" name="ShoeItems[].Price" value="@Model.Price" />
+										<div class="input-group-text">
+											<i class="bi bi-currency-dollar"></i>
+										</div>
+									</div>
 								</div>
 								<div class="row mb-3">
 									<label for="price" class="form-label">Sale Price</label>
-									@if (Model.ShoeItems != null && Model.ShoeItems.Any())
-									{
-										foreach (var item in Model.ShoeItems)
-										{
-											<div class="input-group mb-2">
-												<input type="text" class="form-control" value="@(item.SalePrice?.ToString("N0")) VNĐ" readonly />
-												<input type="hidden" name="ShoeItems[].SalePrice" value="@item.SalePrice" />
-												<div class="input-group-text">
-													<i class="bi bi-currency-dollar"></i>
-												</div>
-											</div>
-										}
-									}
-									else
-									{
-										<p class="text-muted">Không có thông tin giá</p>
-									}
+									<div class="input-group mb-2">
+										<input type="text" class="form-control" value="@(Model.SalePrice?.ToString("N0")) VNĐ" readonly />
+										<input type="hidden" name="ShoeItems[].SalePrice" value="@Model.SalePrice" />
+										<div class="input-group-text">
+											<i class="bi bi-currency-dollar"></i>
+										</div>
+									</div>
 								</div>
 
 								<div class="row mb-3">
 									<div class="col-12">
 										<label class="form-label">Size</label>
 										<div class="size-grid">
-											@if (Model.ShoeItems != null && Model.ShoeItems.Any() && Model.ShoeItems.SelectMany(s => s.Sizes).Any())
+											@if (Model.Sizes != null && Model.Sizes.Any())
 											{
-												var uniqueSizes = Model.ShoeItems
-												.SelectMany(s => s.Sizes)
-												.DistinctBy(s => s.SizeId)
-												.OrderBy(s => s.SizeName)
+												var uniqueSizes = Model.Sizes
+												.DistinctBy(s => s.SizeId)  // Lọc các kích thước duy nhất theo SizeId
+												.OrderBy(s => s.SizeName)   // Sắp xếp theo SizeName
 												.ToList();
 
 												@foreach (var size in uniqueSizes)
 												{
-													<div class="size-box" onclick="selectSize(@size.SizeId, this)">
+													<div class="size-box" onclick="selectSize(@size.SizeId, '@size.SizeName')">
 														@size.SizeName
 													</div>
 												}
 											}
 										</div>
+
+
 									</div>
 
 									<div class="col-12 mt-3">
 										<label class="form-label">Colour</label>
 										<div class="color-grid">
-											@if (Model.ShoeItems != null && Model.ShoeItems.Any() && Model.ShoeItems.SelectMany(s => s.Colours).Any())
+											@if (Model.Colours != null && Model.Colours.Any())
 											{
-												var uniqueColours = Model.ShoeItems
-												.SelectMany(s => s.Colours)
-												.DistinctBy(c => c.ColourId)
+												var uniqueColours = Model.Colours
+												.DistinctBy(s => s.ColourId)  // Lọc các kích thước duy nhất theo SizeId
+												.OrderBy(s => s.ColourName)   // Sắp xếp theo SizeName
 												.ToList();
 
 												@foreach (var colour in uniqueColours)
 												{
-													<div class="color-box" onclick="selectColor(@colour.ColourId, this)">
+													<div class="size-box" onclick="selectSize(@colour.ColourId, '@colour.ColourName')">
 														@colour.ColourName
 													</div>
 												}
@@ -180,12 +161,7 @@
 									</div>
 								</div>
 
-								<div class="row mb-3 mt-3">
-									<div class="col-12">
-										<label class="form-label">Số lượng tồn kho</label>
-										<input type="text" id="stockQuantity" class="form-control" readonly value="Vui lòng chọn màu và size" />
-									</div>
-								</div>
+								
 								
 									<div class="row mb-3">
 										<label for="setting-input-1" class="form-label">
@@ -238,20 +214,10 @@
 											</svg>
 										</span>
 									</label>
-									@if (Model.ShoeItems != null && Model.ShoeItems.Any())
-									{
-										foreach (var item in Model.ShoeItems)
-										{
-											<div class="input-group mb-2">
-												<input type="text" class="form-control" value="@item.Sku" readonly />
-												<input type="hidden" name="ShoeItems[].Sku" value="@item.Sku" />
-											</div>
-										}
-									}
-									else
-									{
-										<p class="text-muted">Không có thông tin</p>
-									}
+									<input value="@Model.Sku" class="form-control" readonly />
+
+									<!-- Input hidden để truyền giá trị -->
+									<input asp-for="@Model.Sku" type="hidden" />
 
 									<div class="row mb-3">
 										<label for="setting-input-1" class="form-label">
@@ -285,6 +251,7 @@
 										<!-- Input hidden để truyền giá trị -->
 										<input asp-for="@Model.CareInstructions" type="hidden" />
 									</div>
+								</div>
 
 
 								
@@ -305,7 +272,7 @@
 					</div><!--//app-card-->
 			
 				</div><!--//row-->
-			}
+			
 			</div><!--//container-fluid-->
 		</div><!--//app-content-->
 	</div><!--//app-content-->
@@ -315,140 +282,96 @@
 
 
 @section Scripts {
-	<script>
-		const shoeItems = @Html.Raw(Json.Serialize(Model.ShoeItems));
-		let selectedSizeId = null;
-		let selectedColorId = null;
-
-		function selectSize(sizeId, element) {
-			// Remove selected class from all size boxes
-			document.querySelectorAll('.size-box').forEach(box => box.classList.remove('selected'));
-			// Add selected class to clicked element
-			element.classList.add('selected');
-			selectedSizeId = sizeId;
-			updateStockQuantity();
-		}
-
-		function selectColor(colorId, element) {
-			// Remove selected class from all color boxes
-			document.querySelectorAll('.color-box').forEach(box => box.classList.remove('selected'));
-			// Add selected class to clicked element
-			element.classList.add('selected');
-			selectedColorId = colorId;
-			updateStockQuantity();
-		}
-
-		function updateStockQuantity() {
-			const stockQuantityInput = document.getElementById('stockQuantity');
-
-			if (!selectedColorId || !selectedSizeId) {
-				stockQuantityInput.value = "Vui lòng chọn màu và size";
-				return;
-			}
-
-			for (const shoeItem of shoeItems) {
-				const colour = shoeItem.Colours.find(c => c.ColourId === selectedColorId);
-				const size = shoeItem.Sizes.find(s => s.SizeId === selectedSizeId);
-
-				if (colour && size) {
-					const stockQuantity = colour.StockQuantity || 0;
-					stockQuantityInput.value = `${stockQuantity} sản phẩm`;
-					return;
-				}
-			}
-
-			stockQuantityInput.value = "Không có sản phẩm";
-		}
-	</script>
+	
 	<!-- Script để tự động ẩn thông báo sau 5 giây -->
-	<!-- CSS để thêm animation -->
-	<!-- Script để tự động ẩn thông báo sau 5 giây -->
-	<script>
-		setTimeout(function () {
-			var alerts = document.querySelectorAll('.alert');
-			alerts.forEach(function (alert) {
-				var bsAlert = new bootstrap.Alert(alert);
-				bsAlert.close();
-			});
-		}, 5000);
-	</script>
-	<style>
-		.image-gallery {
-			max-width: 800px;
-		}
+<!-- CSS để thêm animation -->
+<!-- Script để tự động ẩn thông báo sau 5 giây -->
+<script>
+	setTimeout(function () {
+		var alerts = document.querySelectorAll('.alert');
+		alerts.forEach(function (alert) {
+			var bsAlert = new bootstrap.Alert(alert);
+			bsAlert.close();
+		});
+	}, 5000);
+</script>
+<style>
+	.image-gallery {
+		max-width: 800px;
+	}
 
-		.main-image {
-			width: 100%;
-			height: 400px;
-			overflow: hidden;
-			border-radius: 8px;
-			box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-		}
+	.main-image {
+		width: 100%;
+		height: 400px;
+		overflow: hidden;
+		border-radius: 8px;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	}
 
-			.main-image img {
-				width: 100%;
-				height: 100%;
-				object-fit: contain;
-			}
-
-		.thumbnail-wrapper {
-			width: 100px;
-			height: 100px;
-			overflow: hidden;
-			border-radius: 4px;
-			cursor: pointer;
-			transition: transform 0.2s;
-		}
-
-			.thumbnail-wrapper:hover {
-				transform: scale(1.05);
-			}
-
-		.thumb-image {
+		.main-image img {
 			width: 100%;
 			height: 100%;
-			object-fit: cover;
-			border: 2px solid transparent;
+			object-fit: contain;
 		}
 
-			.thumb-image.selected {
-				border-color: #007bff;
+	.thumbnail-wrapper {
+		width: 100px;
+		height: 100px;
+		overflow: hidden;
+		border-radius: 4px;
+		cursor: pointer;
+		transition: transform 0.2s;
+	}
+
+		.thumbnail-wrapper:hover {
+			transform: scale(1.05);
+		}
+
+	.thumb-image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border: 2px solid transparent;
+	}
+
+		.thumb-image.selected {
+			border-color: #007bff;
+		}
+
+	.image-thumbnails {
+		overflow-x: auto;
+		padding: 10px 0;
+	}
+</style>
+
+<script>
+	function selectImage(src) {
+		// Cập nhật hình ảnh chính
+		document.getElementById('selectedImage').src = src;
+
+		// Cập nhật trạng thái selected cho thumbnails
+		document.querySelectorAll('.thumb-image').forEach(img => {
+			img.classList.remove('selected');
+			if (img.src === src) {
+				img.classList.add('selected');
 			}
-
-		.image-thumbnails {
-			overflow-x: auto;
-			padding: 10px 0;
-		}
-	</style>
-
-	<script>
-		function selectImage(src) {
-			// Cập nhật hình ảnh chính
-			document.getElementById('selectedImage').src = src;
-
-			// Cập nhật trạng thái selected cho thumbnails
-			document.querySelectorAll('.thumb-image').forEach(img => {
-				img.classList.remove('selected');
-				if (img.src === src) {
-					img.classList.add('selected');
-				}
-			});
-		}
-
-		// Khởi tạo Popover của Bootstrap
-		var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-		var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-			return new bootstrap.Popover(popoverTriggerEl);
 		});
+	}
 
-		// Chọn hình ảnh đầu tiên khi trang load
-		document.addEventListener('DOMContentLoaded', function () {
-			const firstThumb = document.querySelector('.thumb-image');
-			if (firstThumb) {
-				firstThumb.classList.add('selected');
-			}
-		});
-	</script>
+	// Khởi tạo Popover của Bootstrap
+	var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+	var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+		return new bootstrap.Popover(popoverTriggerEl);
+	});
+
+	// Chọn hình ảnh đầu tiên khi trang load
+	document.addEventListener('DOMContentLoaded', function () {
+		const firstThumb = document.querySelector('.thumb-image');
+		if (firstThumb) {
+			firstThumb.classList.add('selected');
+		}
+	});
+</script>
 
 	<style>
 		.size-grid, .color-grid {

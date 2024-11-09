@@ -16,6 +16,7 @@
           rel="stylesheet">
 
     <!-- Css Styles -->
+
     <link rel="stylesheet" href="~/template/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="~/template/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="~/template/css/elegant-icons.css" type="text/css">
@@ -37,17 +38,10 @@
     <div class="offcanvas-menu-wrapper">
         <div class="offcanvas__option">
             <div class="offcanvas__links">
-                <a href="#">Sign in</a>
-                <a href="#">FAQs</a>
+                <a asp-area="" asp-controller="Account" asp-action="Login">Đăng nhập</a>
+                
             </div>
-            <div class="offcanvas__top__hover">
-                <span>Usd <i class="arrow_carrot-down"></i></span>
-                <ul>
-                    <li>USD</li>
-                    <li>EUR</li>
-                    <li>USD</li>
-                </ul>
-            </div>
+    
         </div>
         <div class="offcanvas__nav__option">
             <a href="#" class="search-switch"><img src="~/template/img/icon/search.png" alt=""></a>
@@ -57,7 +51,7 @@
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__text">
-            <p>Free shipping, 30-day return or refund guarantee.</p>
+            <p>Miễn phí giao hàng, hoàn trả trong vòng 15 ngày.</p>
         </div>
     </div>
     <!-- Offcanvas Menu End -->
@@ -68,23 +62,16 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-7">
                         <div class="header__top__left">
-                            <p>Free shipping, 30-day return or refund guarantee.</p>
+                            <p>Miễn phí giao hàng, hoàn trả trong vòng 15 ngày.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-5">
                         <div class="header__top__right">
                             <div class="header__top__links">
-                                <a href="#">Sign in</a>
-                                <a href="#">FAQs</a>
+                                <a asp-area="" asp-controller="Account" asp-action="Login">Đăng nhập</a>
+                                
                             </div>
-                            <div class="header__top__hover">
-                                <span>Usd <i class="arrow_carrot-down"></i></span>
-                                <ul>
-                                    <li>USD</li>
-                                    <li>EUR</li>
-                                    <li>USD</li>
-                                </ul>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -107,7 +94,7 @@
                                 <ul class="dropdown">
                                     <li><a asp-area="" asp-controller="Home" asp-action="About">About Us</a></li>
                                     <li><a asp-area="" asp-controller="Home" asp-action="ShopDetail">Shop Details</a></li>
-                                    <li><a asp-area="" asp-controller="Home" asp-action="ShoppingCart">Shopping Cart</a></li>
+                                    <li><a asp-area="" asp-controller="Cart" asp-action="Index">Shopping Cart</a></li>
                                     <li><a asp-area="" asp-controller="Home" asp-action="Checkout">Check Out</a></li>
                                     <li><a asp-area="" asp-controller="Home" asp-action="Blog">Blog Details</a></li>
                                 </ul>
@@ -122,7 +109,7 @@
                     <div class="header__nav__option">
                         <a href="#" class="search-switch"><img src="~/template/img/icon/search.png" alt=""></a>
                         <a href="#"><img src="~/template/img/icon/heart.png" alt=""></a>
-                        <a asp-area="" asp-controller="Home" asp-action="ShoppingCart"><img src="~/template/img/icon/cart.png" alt=""> <span>0</span></a>
+                        <a asp-area="" asp-controller="Cart" asp-action="Index"><img src="~/template/img/icon/cart.png" alt=""> <span>0</span></a>
                         <div class="price">$0.00</div>
                     </div>
                 </div>
@@ -209,6 +196,8 @@
     </div>
     <!-- Search End -->
     <!-- Js Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="~/template/js/jquery-3.3.1.min.js"></script>
     <script src="~/template/js/bootstrap.min.js"></script>
     <script src="~/template/js/jquery.nice-select.min.js"></script>
@@ -219,6 +208,8 @@
     <script src="~/template/js/mixitup.min.js"></script>
     <script src="~/template/js/owl.carousel.min.js"></script>
     <script src="~/template/js/main.js"></script>
+
+
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {

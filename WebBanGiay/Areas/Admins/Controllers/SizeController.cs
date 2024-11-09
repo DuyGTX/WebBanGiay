@@ -9,10 +9,10 @@ namespace WebBanGiay.Areas.Admins.Controllers
 	[Area("Admins")]
 	public class SizeController : Controller
 	{
-		private readonly DBWebGiayOnlineContext context;
+		private readonly DbwebGiayOnlineContext context;
 		private readonly IWebHostEnvironment environment;
 
-		public SizeController(DBWebGiayOnlineContext context, IWebHostEnvironment environment)
+		public SizeController(DbwebGiayOnlineContext context, IWebHostEnvironment environment)
 		{
 			this.context = context;
 			this.environment = environment;

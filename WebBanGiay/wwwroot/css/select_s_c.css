@@ -1,0 +1,54 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+
+.option-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.option-label {
+    font-size: 16px;
+    margin-right: 15px;
+    min-width: 50px;
+}
+
+/* Options container */
+.options-container {
+    display: flex;
+    gap: 10px;
+}
+
+/* Common styles for both size and color options */
+.size-option,
+.color-option {
+    padding: 8px 20px;
+    min-width: 45px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    background: white;
+    transition: all 0.2s;
+}
+
+    .size-option:hover,
+    .color-option:hover {
+        border-color: #999;
+    }
+
+    .size-option.selected {
+        border-color: #000;
+    }
+
+    .color-option.selected {
+        background: #000;
+        color: white;
+        border-color: #000;
+    }
+

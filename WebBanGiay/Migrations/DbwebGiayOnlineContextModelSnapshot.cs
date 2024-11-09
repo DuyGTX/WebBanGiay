@@ -10,7 +10,7 @@ using WebBanGiay.Models;
 
 namespace WebBanGiay.Migrations
 {
-    [DbContext(typeof(DBWebGiayOnlineContext))]
+    [DbContext(typeof(DbwebGiayOnlineContext))]
     partial class DbwebGiayOnlineContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
@@ -566,10 +566,6 @@ namespace WebBanGiay.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ShoeItemId"));
 
-                    b.Property<int?>("ColourId")
-                        .HasColumnType("int")
-                        .HasColumnName("colour_id");
-
                     b.Property<decimal?>("Price")
                         .HasColumnType("decimal(10, 2)")
                         .HasColumnName("price");
@@ -578,33 +574,65 @@ namespace WebBanGiay.Migrations
                         .HasColumnType("decimal(10, 2)")
                         .HasColumnName("sale_price");
 
-                    b.Property<int?>("ShoeId")
+                    b.Property<int>("ShoeId")
                         .HasColumnType("int")
                         .HasColumnName("shoe_id");
-
-                    b.Property<int?>("SizeId")
-                        .HasColumnType("int")
-                        .HasColumnName("size_id");
 
                     b.Property<string>("Sku")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)")
                         .HasColumnName("sku");
 
+                    b.HasKey("ShoeItemId")
+                        .HasName("PK__shoe_ite__9ECD427BA415457D");
+
+                    b.HasIndex("ShoeId");
+
+                    b.ToTable("shoe_item", (string)null);
+                });
+
+            modelBuilder.Entity("WebBanGiay.Models.ShoeItemColour", b =>
+                {
+                    b.Property<int>("ShoeItemId")
+                        .HasColumnType("int")
+                        .HasColumnName("shoe_item_id");
+
+                    b.Property<int>("ColourId")
+                        .HasColumnType("int")
+                        .HasColumnName("colour_id");
+
                     b.Property<int?>("StockQuantity")
                         .HasColumnType("int")
                         .HasColumnName("stock_quantity");
 
-                    b.HasKey("ShoeItemId")
-                        .HasName("PK__shoe_ite__9ECD427BA415457D");
+                    b.HasKey("ShoeItemId", "ColourId")
+                        .HasName("PK__shoe_ite__AD441779031EC862");
 
                     b.HasIndex("ColourId");
 
-                    b.HasIndex("ShoeId");
+                    b.ToTable("shoe_item_colour", (string)null);
+                });
+
+            modelBuilder.Entity("WebBanGiay.Models.ShoeItemSize", b =>
+                {
+                    b.Property<int>("ShoeItemId")
+                        .HasColumnType("int")
+                        .HasColumnName("shoe_item_id");
+
+                    b.Property<int>("SizeId")
+                        .HasColumnType("int")
+                        .HasColumnName("size_id");
+
+                    b.Property<int?>("StockQuantity")
+                        .HasColumnType("int")
+                        .HasColumnName("stock_quantity");
+
+                    b.HasKey("ShoeItemId", "SizeId")
+                        .HasName("PK__shoe_ite__9E11EE98D3C88260");
 
                     b.HasIndex("SizeId");
 
-                    b.ToTable("shoe_item", (string)null);
+                    b.ToTable("shoe_item_size", (string)null);
                 });
 
             modelBuilder.Entity("WebBanGiay.Models.Size", b =>
@@ -620,10 +648,6 @@ namespace WebBanGiay.Migrations
                         .HasMaxLength(10)
                         .HasColumnType("nvarchar(10)")
                         .HasColumnName("size_name");
-
-                    b.Property<int?>("SortOrder")
-                        .HasColumnType("int")
-                        .HasColumnName("sort_order");
 
                     b.HasKey("SizeId")
                         .HasName("PK__size__0DCACE31C597D616");
@@ -783,24 +807,49 @@ namespace WebBanGiay.Migrations
 
             modelBuilder.Entity("WebBanGiay.Models.ShoeItem", b =>
                 {
-                    b.HasOne("WebBanGiay.Models.Colour", "Colour")
-                        .WithMany("ShoeItems")
-                        .HasForeignKey("ColourId")
-                        .HasConstraintName("FK__shoe_item__colou__44FF419A");
-
                     b.HasOne("WebBanGiay.Models.Shoe", "Shoe")
                         .WithMany("ShoeItems")
                         .HasForeignKey("ShoeId")
-                        .HasConstraintName("FK__shoe_item__shoe___440B1D61");
+                        .IsRequired()
+                        .HasConstraintName("FK__shoe_item__shoe___44FF419A");
 
-                    b.HasOne("WebBanGiay.Models.Size", "Size")
-                        .WithMany("ShoeItems")
-                        .HasForeignKey("SizeId")
-                        .HasConstraintName("FK__shoe_item__size___45F365D3");
+                    b.Navigation("Shoe");
+                });
+
+            modelBuilder.Entity("WebBanGiay.Models.ShoeItemColour", b =>
+                {
+                    b.HasOne("WebBanGiay.Models.Colour", "Colour")
+                        .WithMany("ShoeItemColours")
+                        .HasForeignKey("ColourId")
+                        .IsRequired()
+                        .HasConstraintName("FK__shoe_item__colou__3D2915A8");
+
+                    b.HasOne("WebBanGiay.Models.ShoeItem", "ShoeItem")
+                        .WithMany("ShoeItemColours")
+                        .HasForeignKey("ShoeItemId")
+                        .IsRequired()
+                        .HasConstraintName("FK__shoe_item__shoe___3C34F16F");
 
                     b.Navigation("Colour");
 
-                    b.Navigation("Shoe");
+                    b.Navigation("ShoeItem");
+                });
+
+            modelBuilder.Entity("WebBanGiay.Models.ShoeItemSize", b =>
+                {
+                    b.HasOne("WebBanGiay.Models.ShoeItem", "ShoeItem")
+                        .WithMany("ShoeItemSizes")
+                        .HasForeignKey("ShoeItemId")
+                        .IsRequired()
+                        .HasConstraintName("FK__shoe_item__shoe___40058253");
+
+                    b.HasOne("WebBanGiay.Models.Size", "Size")
+                        .WithMany("ShoeItemSizes")
+                        .HasForeignKey("SizeId")
+                        .IsRequired()
+                        .HasConstraintName("FK__shoe_item__size___40F9A68C");
+
+                    b.Navigation("ShoeItem");
 
                     b.Navigation("Size");
                 });
@@ -819,7 +868,7 @@ namespace WebBanGiay.Migrations
 
             modelBuilder.Entity("WebBanGiay.Models.Colour", b =>
                 {
-                    b.Navigation("ShoeItems");
+                    b.Navigation("ShoeItemColours");
                 });
 
             modelBuilder.Entity("WebBanGiay.Models.Coupon", b =>
@@ -880,11 +929,15 @@ namespace WebBanGiay.Migrations
             modelBuilder.Entity("WebBanGiay.Models.ShoeItem", b =>
                 {
                     b.Navigation("OrderItems");
+
+                    b.Navigation("ShoeItemColours");
+
+                    b.Navigation("ShoeItemSizes");
                 });
 
             modelBuilder.Entity("WebBanGiay.Models.Size", b =>
                 {
-                    b.Navigation("ShoeItems");
+                    b.Navigation("ShoeItemSizes");
                 });
 #pragma warning restore 612, 618
         }

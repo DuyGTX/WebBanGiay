@@ -7,6 +7,7 @@
     Layout = "~/Views/Shared/header-footer.cshtml";
 }
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -23,6 +24,7 @@
           rel="stylesheet">
 
     <!-- Css Styles -->
+    <link rel="stylesheet" href="~/css/select_s_c.css" type="text/css">
     <link rel="stylesheet" href="~/css/button.css" type="text/css">
     <link rel="stylesheet" href="~/template/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="~/template/css/font-awesome.min.css" type="text/css">
@@ -93,83 +95,98 @@
                         </div>
                        
                         <h5 class="product-price">
-                            @if (Model.ShoeItems.Any())
+                            @if (Model != null)
                             {
-                                var firstItem = Model.ShoeItems.First();
+                                var firstItem = Model;
                                 @if (firstItem.SalePrice != null && firstItem.SalePrice < firstItem.Price)
                                 {
-                                    <span class="regular-price text-decoration-line-through">@(firstItem.Price?.ToString("#,##0")) VNĐ</span>
-                                    <span class="sale-price">@(firstItem.SalePrice?.ToString("#,##0")) VNĐ</span>
+                                    <span class="regular-price text-decoration-line-through">
+                                        @(firstItem.Price?.ToString("#,##0") ?? "N/A") VNĐ
+                                    </span>
+                                    <span class="sale-price">
+                                        @(firstItem.SalePrice?.ToString("#,##0") ?? "N/A") VNĐ
+                                    </span>
                                 }
                                 else
                                 {
-                                    <span class="regular-price">@(firstItem.Price?.ToString("#,##0")) VNĐ</span>
+                                    <span class="regular-price">
+                                        @(firstItem.Price?.ToString("#,##0") ?? "N/A") VNĐ
+                                    </span>
                                 }
                             }
                         </h5>
 
-                        
-                        @* <div class="product__details__option">
-                            <div class="product__details__option__size">
-                                <span>Size:</span>
-                                @{
-                                    var availableSizes = Model.ShoeItems
-                                    .Where(s => s.StockQuantity > 0)
-                                    .Select(s => new { s.SizeId, s.SizeName, s.Price })
-                                    .Distinct()
-                                    .OrderBy(s => s.SizeName);
-                                }
 
-                                @foreach (var size in availableSizes)
-                                {
-                                    <label class="size-option" for="size_@size.SizeId" data-size-id="@size.SizeId" data-price="@size.Price">
-                                        @size.SizeName
-                                        <input type="radio" name="SelectedSize" id="size_@size.SizeId" value="@size.SizeId">
-                                    </label>
-                                }
+
+                        <div class="product__details__option" style="display: inline-flex; justify-content: space-between;">
+                            <!-- Size Row -->
+                            <div class="option-row">
+                                <span class="option-label">Size:</span>
+                                <div class="options-container">
+                                    @if (Model.Sizes != null && Model.Sizes.Any())
+                                    {
+                                        var uniqueSizes = Model.Sizes
+                                        .DistinctBy(s => s.SizeId)  // Lọc các kích thước duy nhất theo SizeId
+                                        .OrderBy(s => s.SizeName)   // Sắp xếp theo SizeName
+                                        .ToList();
+
+                                        @foreach (var size in uniqueSizes)
+                                        {
+                                            <div class="size-option" data-size-id="@size.SizeId" onclick="selectSize(@size.SizeId, '@size.SizeName')">
+                                                @size.SizeName
+                                            </div>
+                                        }
+                                    }
+                                </div>
                             </div>
-                            <div class="product__details__option__color">
-                                <span>Color:</span>
-                                <label class="c-1" for="sp-1">
-                                    <input type="radio" id="sp-1">
-                                </label>
-                                <label class="c-2" for="sp-2">
-                                    <input type="radio" id="sp-2">
-                                </label>
-                                <label class="c-3" for="sp-3">
-                                    <input type="radio" id="sp-3">
-                                </label>
-                                <label class="c-4" for="sp-4">
-                                    <input type="radio" id="sp-4">
-                                </label>
-                                <label class="c-9" for="sp-9">
-                                    <input type="radio" id="sp-9">
-                                </label>
+
+                            <!-- Color Row -->
+                            <div class="option-row">
+                                <span style="margin-left: 50px;" class="option-label">Color:</span>
+                                <div class="options-container">
+                                    @if (Model.Colours != null && Model.Colours.Any())
+                                    {
+                                        var uniqueColours = Model.Colours
+                                        .DistinctBy(s => s.ColourId)  // Lọc các màu sắc duy nhất theo ColourId
+                                        .OrderBy(s => s.ColourName)   // Sắp xếp theo ColourName
+                                        .ToList();
+
+                                        @foreach (var colour in uniqueColours)
+                                        {
+                                            <div class="color-option" data-color-id="@colour.ColourId" onclick="selectColor(@colour.ColourId, '@colour.ColourName')">
+                                                @colour.ColourName
+                                            </div>
+                                        }
+                                    }
+                                </div>
                             </div>
-                        </div> *@
+                        </div>
+
+
                         <div class="product__details__cart__option">
                             <div class="quantity">
                                 <div class="pro-qty">
                                     <input type="text" value="1">
                                 </div>
                             </div>
-                            <a href="#" class="primary-btn">add to cart</a>
+                            <a asp-controller="Cart" asp-action="Add" asp-route-id="@Model.ShoeId" id="add-to-cart" class="primary-btn">Thêm vào giỏ hàng</a>
                         </div>
-                        <div class="product__details__btns__option">
+                       @*  <div class="product__details__btns__option">
                             <a href="#"><i class="fa fa-heart"></i> add to wishlist</a>
                             <a href="#"><i class="fa fa-exchange"></i> Add To Compare</a>
-                        </div>
+                        </div> *@
                         <div class="product__details__last__option">
-                            <h5><span>Guaranteed Safe Checkout</span></h5>
+                            <h5><span>Đảm bao thanh toán an toàn</span></h5>
                             <div style="max-width:30%;    place-self: center;">
                                 <a><img style="max-width:30%;" src="~/template/img/vietqr.png" alt=""></a>
                                 <a><img style="max-width:20%;" src="https://upload.wikimedia.org/wikipedia/vi/f/fe/MoMo_Logo.png" alt=""></a>
                            </div>
                            
                             <ul>
+                                <li><span>Thương hiệu:</span> @ViewBag.BrandName</li>
+                                <li><span>Danh mục:</span> @ViewBag.CategoryName</li>
+                                
                                 <li><span>SKU:</span> @ViewBag.Sku</li>
-                                <li><span>Categories:</span> @ViewBag.CategoryName</li>
-                                <li><span>Brand:</span> @ViewBag.BrandName</li>
                             </ul>
                         </div>
                     </div>
@@ -181,14 +198,14 @@
                         <ul class="nav nav-tabs" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" data-toggle="tab" href="#tabs-5"
-                                   role="tab">Description</a>
+                                   role="tab">Nội dung</a>
                             </li>
-                            <li class="nav-item">
+                            @* <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#tabs-6" role="tab">
                                     Customer
                                     Previews(0)
                                 </a>
-                            </li>
+                            </li> *@
                             
                         </ul>
                         <div class="tab-content">
@@ -201,7 +218,7 @@
                                         pharetras loremos.
                                     </p> *@
                                     <div class="product__details__tab__content__item">
-                                        <h5>Products Infomation</h5>
+                                        <h5>Thông tin sản phẩm</h5>
                                         <p>
                                             @Model.ShoeDescription
                                         </p>
@@ -223,7 +240,7 @@
                             </div>
                             <div class="tab-pane" id="tabs-6" role="tabpanel">
                                 <div class="product__details__tab__content">
-                                    <div class="product__details__tab__content__item">
+                                   @*  <div class="product__details__tab__content__item">
                                         <h5>Products Infomation</h5>
                                         <p>
                                             A Pocket PC is a handheld computer, which features many of the same
@@ -254,7 +271,7 @@
                                             breathable. Velvet is a great choice for dinner party jacket and can be
                                             worn all year round.
                                         </p>
-                                    </div>
+                                    </div> *@
                                 </div>
                             </div>
                             <div class="tab-pane" id="tabs-7" role="tabpanel">
@@ -458,33 +475,101 @@
     </div>
 </section>
 <!-- Related Section End -->
-<!-- Js Plugins -->
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.nice-select.min.js"></script>
-<script src="js/jquery.nicescroll.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/jquery.countdown.min.js"></script>
-<script src="js/jquery.slicknav.js"></script>
-<script src="js/mixitup.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/main.js"></script>
+<!-- ~/template/js Plugins -->
+
+
+
+<script src="~/template/js/jquery-3.3.1.min.js"></script>
+<script src="~/template/js/bootstrap.min.js"></script>
+<script src="~/template/js/jquery.nice-select.min.js"></script>
+<script src="~/template/js/jquery.nicescroll.min.js"></script>
+<script src="~/template/js/jquery.magnific-popup.min.js"></script>
+<script src="~/template/js/jquery.countdown.min.js"></script>
+<script src="~/template/js/jquery.slicknav.js"></script>
+<script src="~/template/js/mixitup.min.js"></script>
+<script src="~/template/js/owl.carousel.min.js"></script>
+<script src="~/template/js/main.js"></script>
 
 <script>
-    $(document).ready(function() {
+
+
+
+
+    // Hàm chọn màu
+    function selectColor(colorId, colorName) {
+        if (!colorId || !colorName) {
+            console.error("colorId hoặc colorName không hợp lệ");
+            return;
+        }
+
+        // Lưu thông tin màu đã chọn vào sessionStorage
+        sessionStorage.setItem('selectedColor', JSON.stringify({ colorId, colorName }));
+
+        // Bỏ lớp 'selected' khỏi tất cả các tùy chọn màu
+        document.querySelectorAll('.color-option').forEach(option => {
+            option.classList.remove('selected');
+        });
+
+        // Thêm lớp 'selected' vào tùy chọn màu được chọn
+        const selectedOption = document.querySelector(`[data-color-id="${colorId}"]`);
+        if (selectedOption) {
+            selectedOption.classList.add('selected');
+        } else {
+            console.warn("Không tìm thấy tùy chọn màu với colorId:", colorId);
+        }
+
+        // Hiển thị màu đã chọn trong console
+        console.log('Selected color:', colorId, colorName);
+    }
+
+    // Hàm chọn kích cỡ
+    function selectSize(sizeId, sizeName) {
+        if (!sizeId || !sizeName) {
+            console.error("sizeId hoặc sizeName không hợp lệ");
+            return;
+        }
+
+        // Lưu thông tin kích cỡ đã chọn vào sessionStorage
+        sessionStorage.setItem('selectedSize', JSON.stringify({ sizeId, sizeName }));
+
+        // Bỏ lớp 'selected' khỏi tất cả các tùy chọn kích cỡ
+        document.querySelectorAll('.size-option').forEach(option => {
+            option.classList.remove('selected');
+        });
+
+        // Thêm lớp 'selected' vào tùy chọn kích cỡ được chọn
+        const selectedOption = document.querySelector(`[data-size-id="${sizeId}"]`);
+        if (selectedOption) {
+            selectedOption.classList.add('selected');
+        } else {
+            console.warn("Không tìm thấy tùy chọn kích cỡ với sizeId:", sizeId);
+        }
+
+        // Hiển thị kích cỡ đã chọn trong console
+        console.log('Selected size:', sizeId, sizeName);
+    }
+
+
+    $(document).ready(function () {
         // Xử lý set-bg cho hình ảnh
-        $('.set-bg').each(function() {
+        $('.set-bg').each(function () {
             var bg = $(this).data('setbg');
             $(this).css('background-image', 'url(' + bg + ')');
         });
 
         // Xử lý tab
-        $('.nav-link').on('click', function(e) {
+        $('.nav-link').on('click', function (e) {
             e.preventDefault();
             $(this).tab('show');
         });
     });
+
+    // JavaScript
+   
+      
+
 </script>
+
 
 
 <style>
@@ -512,32 +597,26 @@
             color: #ff0000;
             margin-left: 10px;
         }
-</style>
-<script>
-    $(document).ready(function () {
-        // Xử lý chọn size
-        $('.size-option input[type="radio"]').on('change', function () {
-            const $label = $(this).closest('label');
-            const sizeId = $label.data('size-id');
-            const price = $label.data('price');
 
-            // Cập nhật active class
-            $('.size-option').removeClass('active');
-            $label.addClass('active');
+    .size-box, .color-box {
+        cursor: pointer;
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin: 5px;
+        display: inline-block;
+    }
 
-            // Cập nhật giá hiển thị
-            $('#product-price').text(formatPrice(price) + ' VNĐ');
-
-            // Cập nhật hidden input cho form (nếu cần)
-            $('#SelectedSizeId').val(sizeId);
-        });
-
-        // Format giá tiền
-        function formatPrice(price) {
-            return new Intl.NumberFormat('vi-VN').format(price);
+        .size-box.selected, .color-box.selected {
+            background-color: #f0f0f0;
+            border-color: #333;
+            font-weight: bold;
         }
 
-        // Tự động chọn size đầu tiên
-        $('.size-option input[type="radio"]:first').prop('checked', true).trigger('change');
-    });
-</script>
+        .size-box:hover, .color-box:hover {
+            background-color: #f9f9f9;
+        }
+
+</style>
+
+
+

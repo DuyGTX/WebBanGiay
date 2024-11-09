@@ -1,5 +1,7 @@
 ﻿
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
+
     ViewData["Title"] = "ShoppingCart";
     Layout = "~/Views/Shared/header-footer.cshtml";
 }
@@ -71,80 +73,23 @@
                                         <img src="img/shopping-cart/cart-1.jpg" alt="">
                                     </div>
                                     <div class="product__cart__item__text">
-                                        <h6>T-shirt Contrast Pocket</h6>
-                                        <h5>$98.49</h5>
+                                        <h6>ShoeName: <span id="product-name"></span></h6>
+                                        <h7>Size: <span id="selected-size">${selectedSize.sizeName}</span></h7>
+                                        <h7>Colour: <span id="selected-color">${selectedColor.colorName}</span></h7>
+                                        <h5>Price: <span id="product-price"></span></h5>
                                     </div>
                                 </td>
                                 <td class="quantity__item">
                                     <div class="quantity">
                                         <div class="pro-qty-2">
-                                            <input type="text" value="1">
+                                            <input type="text" value="${savedQuantity}">
                                         </div>
                                     </div>
                                 </td>
                                 <td class="cart__price">$ 30.00</td>
                                 <td class="cart__close"><i class="fa fa-close"></i></td>
                             </tr>
-                            <tr>
-                                <td class="product__cart__item">
-                                    <div class="product__cart__item__pic">
-                                        <img src="img/shopping-cart/cart-2.jpg" alt="">
-                                    </div>
-                                    <div class="product__cart__item__text">
-                                        <h6>Diagonal Textured Cap</h6>
-                                        <h5>$98.49</h5>
-                                    </div>
-                                </td>
-                                <td class="quantity__item">
-                                    <div class="quantity">
-                                        <div class="pro-qty-2">
-                                            <input type="text" value="1">
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="cart__price">$ 32.50</td>
-                                <td class="cart__close"><i class="fa fa-close"></i></td>
-                            </tr>
-                            <tr>
-                                <td class="product__cart__item">
-                                    <div class="product__cart__item__pic">
-                                        <img src="img/shopping-cart/cart-3.jpg" alt="">
-                                    </div>
-                                    <div class="product__cart__item__text">
-                                        <h6>Basic Flowing Scarf</h6>
-                                        <h5>$98.49</h5>
-                                    </div>
-                                </td>
-                                <td class="quantity__item">
-                                    <div class="quantity">
-                                        <div class="pro-qty-2">
-                                            <input type="text" value="1">
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="cart__price">$ 47.00</td>
-                                <td class="cart__close"><i class="fa fa-close"></i></td>
-                            </tr>
-                            <tr>
-                                <td class="product__cart__item">
-                                    <div class="product__cart__item__pic">
-                                        <img src="img/shopping-cart/cart-4.jpg" alt="">
-                                    </div>
-                                    <div class="product__cart__item__text">
-                                        <h6>Basic Flowing Scarf</h6>
-                                        <h5>$98.49</h5>
-                                    </div>
-                                </td>
-                                <td class="quantity__item">
-                                    <div class="quantity">
-                                        <div class="pro-qty-2">
-                                            <input type="text" value="1">
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="cart__price">$ 30.00</td>
-                                <td class="cart__close"><i class="fa fa-close"></i></td>
-                            </tr>
+                            
                         </tbody>
                     </table>
                 </div>
@@ -182,14 +127,35 @@
     </div>
 </section>
 <!-- Shopping Cart Section End -->
-<!-- Js Plugins -->
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.nice-select.min.js"></script>
-<script src="js/jquery.nicescroll.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/jquery.countdown.min.js"></script>
-<script src="js/jquery.slicknav.js"></script>
-<script src="js/mixitup.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/main.js"></script>
+<!-- ~/template/js Plugins -->
+<script src="~/template/js/jquery-3.3.1.min.js"></script>
+<script src="~/template/js/bootstrap.min.js"></script>
+<script src="~/template/js/jquery.nice-select.min.js"></script>
+<script src="~/template/js/jquery.nicescroll.min.js"></script>
+<script src="~/template/js/jquery.magnific-popup.min.js"></script>
+<script src="~/template/js/jquery.countdown.min.js"></script>
+<script src="~/template/js/jquery.slicknav.js"></script>
+<script src="~/template/js/mixitup.min.js"></script>
+<script src="~/template/js/owl.carousel.min.js"></script>
+<script src="~/template/js/main.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        // Get the saved data from the session
+        var shoeName = sessionStorage.getItem('shoeName');
+        var shoeImage = sessionStorage.getItem('shoeImage');
+        var shoeQuantity = sessionStorage.getItem('shoeQuantity');
+        var shoePrice = sessionStorage.getItem('shoePrice');
+        var shoeSizeName = sessionStorage.getItem('shoeSizeName');
+        var shoeColorName = sessionStorage.getItem('shoeColorName');
+
+        // Update the HTML elements with the saved data
+        $('#product-name').text(shoeName);
+        $('#selected-size').text(shoeSizeName);
+        $('#selected-color').text(shoeColorName);
+        $('#product-price').text(shoePrice);
+        $('.pro-qty-2 input').val(shoeQuantity);
+        $('.product__cart__item__pic img').attr('src', shoeImage);
+    });
+</script>

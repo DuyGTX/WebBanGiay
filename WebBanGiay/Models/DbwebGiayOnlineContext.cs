@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace WebBanGiay.Models;
 
-public partial class DBWebGiayOnlineContext : DbContext
+public partial class DbwebGiayOnlineContext : DbContext
 {
-    public DBWebGiayOnlineContext()
+    public DbwebGiayOnlineContext()
     {
     }
 
-    public DBWebGiayOnlineContext(DbContextOptions<DBWebGiayOnlineContext> options)
+    public DbwebGiayOnlineContext(DbContextOptions<DbwebGiayOnlineContext> options)
         : base(options)
     {
     }
@@ -47,13 +47,11 @@ public partial class DBWebGiayOnlineContext : DbContext
 
     public virtual DbSet<ShoeCategory> ShoeCategories { get; set; }
 
+    public virtual DbSet<ShoeColour> ShoeColours { get; set; }
+
     public virtual DbSet<ShoeImage> ShoeImages { get; set; }
 
-    public virtual DbSet<ShoeItem> ShoeItems { get; set; }
-
-    public virtual DbSet<ShoeItemColour> ShoeItemColours { get; set; }
-
-    public virtual DbSet<ShoeItemSize> ShoeItemSizes { get; set; }
+    public virtual DbSet<ShoeSize> ShoeSizes { get; set; }
 
     public virtual DbSet<Size> Sizes { get; set; }
 
@@ -218,10 +216,6 @@ public partial class DBWebGiayOnlineContext : DbContext
             entity.HasOne(d => d.Order).WithMany(p => p.OrderItems)
                 .HasForeignKey(d => d.OrderId)
                 .HasConstraintName("FK__order_ite__order__6C190EBB");
-
-            entity.HasOne(d => d.ShoeItem).WithMany(p => p.OrderItems)
-                .HasForeignKey(d => d.ShoeItemId)
-                .HasConstraintName("FK__order_ite__shoe___6D0D32F4");
         });
 
         modelBuilder.Entity<OrderNote>(entity =>
@@ -338,10 +332,19 @@ public partial class DBWebGiayOnlineContext : DbContext
             entity.Property(e => e.BrandId).HasColumnName("brand_id");
             entity.Property(e => e.CareInstructions).HasColumnName("care_instructions");
             entity.Property(e => e.CategoryId).HasColumnName("category_id");
+            entity.Property(e => e.Price)
+                .HasColumnType("decimal(10, 2)")
+                .HasColumnName("price");
+            entity.Property(e => e.SalePrice)
+                .HasColumnType("decimal(10, 2)")
+                .HasColumnName("sale_price");
             entity.Property(e => e.ShoeDescription).HasColumnName("shoe_description");
             entity.Property(e => e.ShoeName)
                 .HasMaxLength(255)
                 .HasColumnName("shoe_name");
+            entity.Property(e => e.Sku)
+                .HasMaxLength(50)
+                .HasColumnName("sku");
 
             entity.HasOne(d => d.Brand).WithMany(p => p.Shoes)
                 .HasForeignKey(d => d.BrandId)
@@ -392,6 +395,27 @@ public partial class DBWebGiayOnlineContext : DbContext
                 .HasConstraintName("FK__shoe_cate__brand__398D8EEE");
         });
 
+        modelBuilder.Entity<ShoeColour>(entity =>
+        {
+            entity.HasKey(e => new { e.ShoeId, e.ColourId }).HasName("PK__shoe_col__0949644C695F25A2");
+
+            entity.ToTable("shoe_colour");
+
+            entity.Property(e => e.ShoeId).HasColumnName("shoe_id");
+            entity.Property(e => e.ColourId).HasColumnName("colour_id");
+            entity.Property(e => e.StockQuantity).HasColumnName("stock_quantity");
+
+            entity.HasOne(d => d.Colour).WithMany(p => p.ShoeColours)
+                .HasForeignKey(d => d.ColourId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__shoe_colo__colou__7C1A6C5A");
+
+            entity.HasOne(d => d.Shoe).WithMany(p => p.ShoeColours)
+                .HasForeignKey(d => d.ShoeId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__shoe_colo__shoe___7D0E9093");
+        });
+
         modelBuilder.Entity<ShoeImage>(entity =>
         {
             entity.HasKey(e => e.ImageId).HasName("PK__shoe_ima__DC9AC955AFF94A72");
@@ -409,71 +433,25 @@ public partial class DBWebGiayOnlineContext : DbContext
                 .HasConstraintName("FK__shoe_imag__shoe___48CFD27E");
         });
 
-        modelBuilder.Entity<ShoeItem>(entity =>
+        modelBuilder.Entity<ShoeSize>(entity =>
         {
-            entity.HasKey(e => e.ShoeItemId).HasName("PK__shoe_ite__9ECD427BA415457D");
-            entity.ToTable("shoe_item");
+            entity.HasKey(e => new { e.ShoeId, e.SizeId }).HasName("PK__shoe_siz__3A1C9DAD0EBF47AA");
 
-            entity.Property(e => e.ShoeItemId).HasColumnName("shoe_item_id");
-            entity.Property(e => e.ShoeId).HasColumnName("shoe_id"); // Thêm dòng này
-            entity.Property(e => e.Price)
-                .HasColumnType("decimal(10, 2)")
-                .HasColumnName("price");
-            entity.Property(e => e.SalePrice)
-                .HasColumnType("decimal(10, 2)")
-                .HasColumnName("sale_price");
-            entity.Property(e => e.Sku)
-                .HasMaxLength(50)
-                .HasColumnName("sku");
+            entity.ToTable("shoe_size");
 
-            // Thêm relationship với Shoe
-            entity.HasOne(d => d.Shoe)
-                .WithMany(p => p.ShoeItems)
-                .HasForeignKey(d => d.ShoeId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__shoe_item__shoe___44FF419A");
-        });
-
-        modelBuilder.Entity<ShoeItemColour>(entity =>
-        {
-            entity.HasKey(e => new { e.ShoeItemId, e.ColourId }).HasName("PK__shoe_ite__AD441779031EC862");
-
-            entity.ToTable("shoe_item_colour");
-
-            entity.Property(e => e.ShoeItemId).HasColumnName("shoe_item_id");
-            entity.Property(e => e.ColourId).HasColumnName("colour_id");
-            entity.Property(e => e.StockQuantity).HasColumnName("stock_quantity");
-
-            entity.HasOne(d => d.Colour).WithMany(p => p.ShoeItemColours)
-                .HasForeignKey(d => d.ColourId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__shoe_item__colou__3D2915A8");
-
-            entity.HasOne(d => d.ShoeItem).WithMany(p => p.ShoeItemColours)
-                .HasForeignKey(d => d.ShoeItemId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__shoe_item__shoe___3C34F16F");
-        });
-
-        modelBuilder.Entity<ShoeItemSize>(entity =>
-        {
-            entity.HasKey(e => new { e.ShoeItemId, e.SizeId }).HasName("PK__shoe_ite__9E11EE98D3C88260");
-
-            entity.ToTable("shoe_item_size");
-
-            entity.Property(e => e.ShoeItemId).HasColumnName("shoe_item_id");
+            entity.Property(e => e.ShoeId).HasColumnName("shoe_id");
             entity.Property(e => e.SizeId).HasColumnName("size_id");
             entity.Property(e => e.StockQuantity).HasColumnName("stock_quantity");
 
-            entity.HasOne(d => d.ShoeItem).WithMany(p => p.ShoeItemSizes)
-                .HasForeignKey(d => d.ShoeItemId)
+            entity.HasOne(d => d.Shoe).WithMany(p => p.ShoeSizes)
+                .HasForeignKey(d => d.ShoeId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__shoe_item__shoe___40058253");
+                .HasConstraintName("FK__shoe_size__shoe___00DF2177");
 
-            entity.HasOne(d => d.Size).WithMany(p => p.ShoeItemSizes)
+            entity.HasOne(d => d.Size).WithMany(p => p.ShoeSizes)
                 .HasForeignKey(d => d.SizeId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__shoe_item__size___40F9A68C");
+                .HasConstraintName("FK__shoe_size__size___7FEAFD3E");
         });
 
         modelBuilder.Entity<Size>(entity =>

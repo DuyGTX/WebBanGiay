@@ -1,4 +1,6 @@
-﻿
+﻿@using WebBanGiay.Models;
+@using System.Drawing.Drawing2D;
+@model List<Shoe>
 @{
     ViewData["Title"] = "Home";
     Layout = "~/Views/Shared/header-footer.cshtml";
@@ -175,7 +177,44 @@
                 </div>
             </div>
             <div class="row product__filter">
-                <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
+
+                @foreach (var shoe in Model)
+                {
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
+                        <div class="product__item">
+
+                            <div class="product__item__pic set-bg" data-setbg="@(shoe.ShoeImages.FirstOrDefault()?.ImageUrl)" alt="@shoe.ShoeName">
+
+                                <ul class="product__hover">
+                                    <li><a href="#"><img src="~/template/img/icon/heart.png" alt=""></a></li>
+                                    <li>
+                                        <a href="#"><img src="~/template/img/icon/compare.png" alt=""> <span>Compare</span></a>
+                                    </li>
+
+                                    <li>
+                                        <a asp-controller="Home" asp-action="ShopDetail" asp-route-id="@shoe.ShoeId"><img src="~/template/img/icon/search.png" alt=""></a>
+
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="product__item__text">
+                                <h6 asp-controller="Product" asp-action="ViewDetail" asp-route-id="@shoe.ShoeId">@shoe.ShoeName</h6>
+                                <a asp-controller="Cart" asp-action="Add" asp-route-id="@shoe.ShoeId" class="add-cart">+ Thêm vào giỏ hàng</a>
+                                <div class="rating">
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </div>
+                                <h5>@(shoe.Price?.ToString("N0") ?? "N/A")đ</h5>
+
+
+                            </div>
+                        </div>
+                    </div>
+                }
+                @* <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
                     <div class="product__item">
                         <div class="product__item__pic set-bg" data-setbg="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/9666574d-f12c-46c8-b04b-fc50b3581e91/AIR+JORDAN+1+MID.png">
                             <span class="label">New</span>
@@ -449,7 +488,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> *@
             </div>
         </div>
     </section>

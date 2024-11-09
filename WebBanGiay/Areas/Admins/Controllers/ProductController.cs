@@ -9,10 +9,10 @@ namespace WebBanGiay.Areas.Admins.Controllers
 	[Area("Admins")]
 	public class ProductController : Controller
 	{
-		private readonly DBWebGiayOnlineContext context;
+		private readonly DbwebGiayOnlineContext context;
 		private readonly IWebHostEnvironment environment;
 
-		public ProductController(DBWebGiayOnlineContext context, IWebHostEnvironment environment)
+		public ProductController(DbwebGiayOnlineContext context, IWebHostEnvironment environment)
 		{
 			this.context = context;
 			this.environment = environment;
@@ -21,7 +21,7 @@ namespace WebBanGiay.Areas.Admins.Controllers
 		public IActionResult Index()
 		{
 			var product = context.Shoes
-				.Include(s => s.ShoeItems)
+				
 				.Include(s => s.Brand)
 				.Include(s => s.ShoeImages)
 				
@@ -35,18 +35,12 @@ namespace WebBanGiay.Areas.Admins.Controllers
 			var shoe = context.Shoes
 				.Include(s => s.Brand)
 				.Include(s => s.Category)
-				.Include(s => s.ShoeItems)
-				 .ThenInclude(si => si.ShoeItemSizes)
+				
+				.Include(s => s.ShoeSizes)
 					.ThenInclude(sis => sis.Size)
-				.Include(s => s.ShoeItems)
-				 .ThenInclude(si => si.ShoeItemColours)
+				.Include(sc => sc.ShoeColours)
 					.ThenInclude(sic => sic.Colour)
-				.Include(s => s.ShoeItems)
-				 .ThenInclude(si => si.ShoeItemSizes)
-					.ThenInclude(sis => sis.StockQuantity)
-				.Include(s => s.ShoeItems)
-				 .ThenInclude(si => si.ShoeItemColours)
-					.ThenInclude(sic => sic.StockQuantity)
+
 
 				.Include(s => s.ShoeImages)
 				.FirstOrDefault(s => s.ShoeId == id);
@@ -64,27 +58,22 @@ namespace WebBanGiay.Areas.Admins.Controllers
 				CareInstructions = shoe.CareInstructions,
 				BrandId = shoe.BrandId,
 				CategoryId = shoe.CategoryId,
-				ShoeItems = shoe.ShoeItems.Select(si => new ShoeItemDetail
-				{
-					ShoeItemId = si.ShoeItemId,
-					Colours = si.ShoeItemColours.Select(sic => new ColourDetail
-					{
-						ColourId = sic.ColourId,
-						ColourName = sic.Colour?.ColourName,
-						
-						StockQuantity = sic.StockQuantity
-					}).ToList(),
-					Sizes = si.ShoeItemSizes.Select(sis => new SizeDetail
-					{
-						SizeId = sis.SizeId,
-						SizeName = sis.Size?.SizeName,
-						StockQuantity = sis.StockQuantity
-					}).ToList(),
-					Price = si.Price,
-					SalePrice = si.SalePrice,
-					Sku = si.Sku
-				}).ToList(),
-				ShoeImages = shoe.ShoeImages.Select(img => new ShoeImageDetail
+                Price = shoe.Price,
+                SalePrice = shoe.SalePrice,
+                Sku = shoe.Sku,
+                Colours = shoe.ShoeColours.Select(sic => new ColourDetail
+                {
+                    ColourId = sic.ColourId,
+                    ColourName = sic.Colour?.ColourName,
+                    StockQuantity = sic.StockQuantity
+                }).ToList(),
+                Sizes = shoe.ShoeSizes.Select(sis => new SizeDetail
+                {
+                    SizeId = sis.SizeId,
+                    SizeName = sis.Size?.SizeName,
+                    StockQuantity = sis.StockQuantity
+                }).ToList(),
+                ShoeImages = shoe.ShoeImages.Select(img => new ShoeImageDetail
 				{
 					ImageId = img.ImageId,
 					ImageUrl = img.ImageUrl
@@ -106,8 +95,7 @@ namespace WebBanGiay.Areas.Admins.Controllers
 
 			ViewBag.Brands = context.Brands.ToList();
 			ViewBag.Categories = context.ShoeCategories.ToList();
-			ViewBag.Colours = context.Colours.ToList();
-			ViewBag.Sizes = context.Sizes.ToList();
+
 			ViewBag.Images =context.ShoeImages.ToList();
 			return View();
 		}
@@ -124,27 +112,20 @@ namespace WebBanGiay.Areas.Admins.Controllers
 					ShoeDescription = model.ShoeDescription,
 					CareInstructions = model.CareInstructions,
 					BrandId = model.BrandId,
-					CategoryId = model.CategoryId
-				};
+					CategoryId = model.CategoryId,
+
+                    ShoeId = model.ShoeId,
+
+                    Price = model.Price,
+                    SalePrice = model.SalePrice,
+
+                    Sku = model.Sku,
+
+                };
 
 				// Thêm Shoe vào context
 				context.Shoes.Add(shoe);
 				context.SaveChanges();
-
-				// Thêm các ShoeItem
-				foreach (var item in model.ShoeItems)
-				{
-					var shoeItem = new ShoeItem
-					{
-						ShoeId = shoe.ShoeId,
-						
-						Price = item.Price,
-						SalePrice = item.SalePrice,
-						
-						Sku = item.Sku
-					};
-					context.ShoeItems.Add(shoeItem);
-				}
 
 				// Thêm các hình ảnh
 				if (model.ImageUrls != null && model.ImageUrls.Any())
@@ -170,8 +151,7 @@ namespace WebBanGiay.Areas.Admins.Controllers
 			// Nếu có lỗi, load lại các dropdown
 			ViewBag.Brands = context.Brands.ToList();
 			ViewBag.Categories = context.ShoeCategories.ToList();
-			ViewBag.Colours = context.Colours.ToList();
-			ViewBag.Sizes = context.Sizes.ToList();
+			
 			return View(model);
 		}
 		[HttpGet]
@@ -190,8 +170,6 @@ namespace WebBanGiay.Areas.Admins.Controllers
 			var shoe = context.Shoes
 				.Include(s => s.Brand)
 				.Include(s => s.Category)
-				.Include(s => s.ShoeItems)
-		
 				.Include(s => s.ShoeImages)
 				.FirstOrDefault(s => s.ShoeId == id);
 
@@ -208,16 +186,11 @@ namespace WebBanGiay.Areas.Admins.Controllers
 				ShoeDescription = shoe.ShoeDescription,
 				CareInstructions = shoe.CareInstructions,
 				BrandId = shoe.BrandId,
-				CategoryId = shoe.CategoryId,
-				ShoeItems = shoe.ShoeItems.Select(si => new ShoeItemDetail
-				{
-					
-					
-					Price = si.Price,
-					SalePrice = si.SalePrice,
+				CategoryId = shoe.CategoryId,				
+				Price = shoe.Price,
+				SalePrice = shoe.SalePrice,
+				Sku = shoe.Sku,
 				
-					Sku = si.Sku
-				}).ToList(),
 				ShoeImages = shoe.ShoeImages.Select(si => new ShoeImageDetail
 				{
 					ImageUrl = si.ImageUrl,
@@ -225,11 +198,9 @@ namespace WebBanGiay.Areas.Admins.Controllers
 				}).ToList()
 			};
 
-			// Load dropdown lists for Brands, Categories, Colours, and Sizes
+			// Load dropdown lists for Brands and Categories
 			ViewBag.Brands = context.Brands.ToList();
 			ViewBag.Categories = context.ShoeCategories.ToList();
-			ViewBag.Colours = context.Colours.ToList();
-			ViewBag.Sizes = context.Sizes.ToList();
 
 			return View(productDto);
 		}
@@ -241,7 +212,7 @@ namespace WebBanGiay.Areas.Admins.Controllers
 			{
 				// Retrieve the existing Shoe entry
 				var shoe = context.Shoes
-					.Include(s => s.ShoeItems)
+					//.Include(sc=>sc.ShoeSizes)
 					.Include(s => s.ShoeImages)
 					.FirstOrDefault(s => s.ShoeId == model.ShoeId);
 
@@ -256,36 +227,22 @@ namespace WebBanGiay.Areas.Admins.Controllers
 				shoe.CareInstructions = model.CareInstructions;
 				shoe.BrandId = model.BrandId;
 				shoe.CategoryId = model.CategoryId;
-
-				// Update ShoeItems (clear existing and add new ones)
-				context.ShoeItems.RemoveRange(shoe.ShoeItems);
-				foreach (var item in model.ShoeItems)
-				{
-					var shoeItem = new ShoeItem
-					{
-						ShoeId = shoe.ShoeId,
-						
-					
-						Price = item.Price,
-						SalePrice = item.SalePrice,
-						
-						Sku = item.Sku
-					};
-					context.ShoeItems.Add(shoeItem);
-				}
+				shoe.Price = model.Price;
+				shoe.SalePrice = model.SalePrice;
+				shoe.Sku = model.Sku;
 
 				// Update ShoeImages (clear existing and add new ones)
 				context.ShoeImages.RemoveRange(shoe.ShoeImages);
-				if (model.ImageUrls != null && model.ImageUrls.Any())
+				if (model.ShoeImages != null && model.ShoeImages.Any())
 				{
-					foreach (var imageUrl in model.ImageUrls)
+					foreach (var image in model.ShoeImages)
 					{
-						if (!string.IsNullOrEmpty(imageUrl))
+						if (!string.IsNullOrEmpty(image.ImageUrl))
 						{
 							var shoeImage = new ShoeImage
 							{
 								ShoeId = shoe.ShoeId,
-								ImageUrl = imageUrl
+								ImageUrl = image.ImageUrl
 							};
 							context.ShoeImages.Add(shoeImage);
 						}
@@ -299,17 +256,16 @@ namespace WebBanGiay.Areas.Admins.Controllers
 			// Reload dropdown lists in case of validation error
 			ViewBag.Brands = context.Brands.ToList();
 			ViewBag.Categories = context.ShoeCategories.ToList();
-			ViewBag.Colours = context.Colours.ToList();
-			ViewBag.Sizes = context.Sizes.ToList();
 			return View(model);
 		}
+
 		public IActionResult Delete(int id)
 		{
 			try
 			{
 				// Tìm sản phẩm kèm theo các bảng liên quan
 				var shoe = context.Shoes
-					.Include(s => s.ShoeItems)
+					
 					.Include(s => s.ShoeImages)
 					.FirstOrDefault(s => s.ShoeId == id);
 
@@ -317,12 +273,6 @@ namespace WebBanGiay.Areas.Admins.Controllers
 				{
 					TempData["ErrorMessage"] = "Không tìm thấy sản phẩm.";
 					return RedirectToAction("Index");
-				}
-
-				// Xóa các ShoeItems liên quan
-				if (shoe.ShoeItems != null && shoe.ShoeItems.Any())
-				{
-					context.ShoeItems.RemoveRange(shoe.ShoeItems);
 				}
 
 				// Xóa các ShoeImages và file ảnh tương ứng

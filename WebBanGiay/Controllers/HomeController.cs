@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using System.Diagnostics;
 using WebBanGiay.Models;
 using WebBanGiay.Models.Dto;
@@ -8,10 +9,10 @@ namespace WebBanGiay.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly DBWebGiayOnlineContext context;
+        private readonly DbwebGiayOnlineContext context;
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger, DBWebGiayOnlineContext context)
+        public HomeController(ILogger<HomeController> logger, DbwebGiayOnlineContext context)
         {
             _logger = logger;
             this.context = context;
@@ -23,14 +24,24 @@ namespace WebBanGiay.Controllers
         }
         public IActionResult Home()
         {
-            return View();
+            var product = context.Shoes
+
+                .Include(s => s.Brand)
+                .Include(s => s.ShoeImages)
+
+                .Include(s => s.ShoeImages)
+                .OrderBy(s => s.ShoeId)
+                .ToList();
+            return View(product);
         }
         public IActionResult Shop()
         {
             var product = context.Shoes
-                .Include(s => s.ShoeItems)
+
                 .Include(s => s.Brand)
-                .Include(s => s.ShoeImages) // Thêm Include ShoeImages
+                .Include(s => s.ShoeImages)
+
+                .Include(s => s.ShoeImages)
                 .OrderBy(s => s.ShoeId)
                 .ToList();
             return View(product);
@@ -38,12 +49,17 @@ namespace WebBanGiay.Controllers
         public IActionResult ShopDetail( int id)
         {
             var shoe = context.Shoes
-                 .Include(s => s.Brand)
-                 .Include(s => s.Category)
-                 .Include(s => s.ShoeItems)
-               
-                 .Include(s => s.ShoeImages)
-                 .FirstOrDefault(s => s.ShoeId == id);
+                .Include(s => s.Brand)
+                .Include(s => s.Category)
+
+                .Include(s => s.ShoeSizes)
+                    .ThenInclude(sis => sis.Size)
+                .Include(sc => sc.ShoeColours)
+                    .ThenInclude(sic => sic.Colour)
+
+
+                .Include(s => s.ShoeImages)
+                .FirstOrDefault(s => s.ShoeId == id);
 
             if (shoe == null)
             {
@@ -58,19 +74,27 @@ namespace WebBanGiay.Controllers
                 CareInstructions = shoe.CareInstructions,
                 BrandId = shoe.BrandId,
                 CategoryId = shoe.CategoryId,
-                ShoeItems = shoe.ShoeItems.Select(si => new ShoeItemDetail
+                Price = shoe.Price,
+                SalePrice = shoe.SalePrice,
+                Sku = shoe.Sku,
+                Colours = shoe.ShoeColours.Select(sic => new ColourDetail
                 {
-                   
-                    Price = si.Price,
-                    SalePrice = si.SalePrice,
-            
-                    Sku = si.Sku
+                    ColourId = sic.ColourId,
+                    ColourName = sic.Colour?.ColourName,
+                    StockQuantity = sic.StockQuantity
                 }).ToList(),
-                ShoeImages = shoe.ShoeImages.Select(si => new ShoeImageDetail
+                Sizes = shoe.ShoeSizes.Select(sis => new SizeDetail
                 {
-                    ImageUrl = si.ImageUrl,
-                    ImageId = si.ImageId
-                }).ToList()
+                    SizeId = sis.SizeId,
+                    SizeName = sis.Size?.SizeName,
+                    StockQuantity = sis.StockQuantity
+                }).ToList(),
+                ShoeImages = shoe.ShoeImages.Select(img => new ShoeImageDetail
+                {
+                    ImageId = img.ImageId,
+                    ImageUrl = img.ImageUrl
+                }).ToList(),
+                ImageUrls = shoe.ShoeImages.Select(img => img.ImageUrl).ToList()
             };
 
             // Thêm thông tin bổ sung vào ViewBag
@@ -80,6 +104,7 @@ namespace WebBanGiay.Controllers
 
             return View(productDto);
         }
+
         public IActionResult ShoppingCart()
         {
             return View();
@@ -104,6 +129,11 @@ namespace WebBanGiay.Controllers
         {
             return View();
         }
+        //public ActionResult GetImageName(string ShoeName) //dùng để lấy ra tên hình ảnh trong session  lưu bảng tạm trong giỏ hàng 
+        //{
+        //    var product = context.Shoes.FirstOrDefault(p => p.ShoeName == ShoeName);
+        //    return Content(JsonConvert.SerializeObject(product.ProImage), "application/json");
+        //}
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

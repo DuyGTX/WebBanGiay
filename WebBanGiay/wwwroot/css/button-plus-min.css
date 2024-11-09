@@ -1,0 +1,49 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+.quantity {
+    display: flex;
+    border: 2px solid black;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+    .quantity a {
+        background-color: black; /* Màu nền nút là đen */
+        color: #fff; /* Màu chữ là trắng */
+        border: 2px solid black; /* Đặt khung viền màu đen */
+        cursor: pointer;
+        font-size: 20px;
+        width: 34px;
+        height: 43px; /* Đảm bảo chiều cao cố định */
+        text-align: center;
+        line-height: 30px; /* Căn giữa chữ theo chiều dọc */
+        transition: background-color 0.2s, border-color 0.2s; /* Thêm hiệu ứng chuyển đổi cho viền */
+    }
+
+        .quantity a:hover {
+            background-color: white; /* Đổi màu nền khi hover thành trắng */
+            color: black; /* Đổi màu chữ thành đen khi hover */
+            border-color: black; /* Đảm bảo khung viền màu đen khi hover */
+        }
+
+.input-box {
+    width: 40px;
+    text-align: center;
+    border: 1px solid black; /* Khung viền input có màu */
+    padding: 8px 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+    .input-box::-webkit-inner-spin-button,
+    .input-box::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .input-box[type="number"] {
+        -moz-appearance: textfield;
+    }

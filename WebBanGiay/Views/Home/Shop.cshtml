@@ -267,7 +267,7 @@
                                 </div>
                                 <div class="product__item__text">
                                     <h6 asp-controller="Product" asp-action="ViewDetail" asp-route-id="@shoe.ShoeId">@shoe.ShoeName</h6>
-                                    <a href="#" class="add-cart">+ Add To Cart</a>
+                                    <a asp-controller="Cart" asp-action="Add" asp-route-id="@shoe.ShoeId" class="add-cart">+ Thêm vào giỏ hàng</a>
                                     <div class="rating">
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
@@ -275,18 +275,9 @@
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                     </div>
-                                    <h5>@(shoe.ShoeItems.FirstOrDefault()?.Price?.ToString("N0") ?? "N/A")đ</h5>
-                                    <div class="product__color__select">
-                                        <label for="pc-4">
-                                            <input type="radio" id="pc-4">
-                                        </label>
-                                        <label class="active black" for="pc-5">
-                                            <input type="radio" id="pc-5">
-                                        </label>
-                                        <label class="grey" for="pc-6">
-                                            <input type="radio" id="pc-6">
-                                        </label>
-                                    </div>
+                                    <h5>@(shoe.Price?.ToString("N0") ?? "N/A")đ</h5>
+
+                                    
                                 </div>
                             </div>
                         </div>
