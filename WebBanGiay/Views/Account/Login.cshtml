@@ -1,6 +1,6 @@
 ﻿@{
 	ViewData["Title"] = "Login";
-	Layout = "~/Views/Shared/header-footer.cshtml";
+	Layout = "";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -29,8 +29,12 @@
 		<div class="col-12 col-md-7 col-lg-6 auth-main-col text-center p-5">
 			<div class="d-flex flex-column align-content-end">
 				<div class="app-auth-body mx-auto">
-					<div class="app-auth-branding mb-4"><a class="app-logo" href="index.html"><img class="logo-icon me-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/T1_esports_logo.svg/450px-T1_esports_logo.svg.png?20220724144411" alt="logo"></a></div>
-					<h2 class="auth-heading text-center mb-5">Log in</h2>
+					<div class="app-auth-branding mb-4">
+						<a class="app-logo" style="    width: auto;height:40px" href="index.html">
+							<img style="    width: auto;height:40px" class="logo-icon me-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/T1_esports_logo.svg/450px-T1_esports_logo.svg.png?20220724144411" alt="logo">
+						</a>
+					</div>
+					<h2 class="auth-heading text-center mb-5">Đăng nhập</h2>
 					<div class="auth-form-container text-start">
 						<form class="auth-form login-form" method="post" action="/Account/Login">
 							<div class="email mb-3">
@@ -70,16 +74,16 @@
 			</div><!--//flex-column-->
 		</div><!--//auth-main-col-->
 		<div class="col-12 col-md-5 col-lg-6 h-100 auth-background-col">
-			<div class="auth-background-holder">
+			<div class="auth-background-holder" style="background-image: url('https://i.pinimg.com/1200x/26/19/a5/2619a59d268b7acb5edfbbca805e0b4a.jpg'); background-size: cover; background-position: center;">
 			</div>
 			<div class="auth-background-mask"></div>
 			<div class="auth-background-overlay p-3 p-lg-5">
 				<div class="d-flex flex-column align-content-end h-100">
 					<div class="h-100"></div>
-
 				</div>
 			</div><!--//auth-background-overlay-->
 		</div><!--//auth-background-col-->
+
 
 	</div><!--//row-->
 

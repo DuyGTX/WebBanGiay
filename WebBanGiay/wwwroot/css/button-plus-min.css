@@ -47,3 +47,23 @@
     .input-box[type="number"] {
         -moz-appearance: textfield;
     }
+.remove-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Đặt kích thước cho hình tròn */
+    height: 40px;
+    border-radius: 50%; /* Tạo hình tròn */
+    background-color: #f7f7f7; /* Màu nền cho hình tròn */
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+    .remove-button:hover {
+        background-color: #ddd; /* Màu khi hover */
+    }
+
+    .remove-button .fa-close {
+        font-size: 20px; /* Kích thước biểu tượng */
+    }

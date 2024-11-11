@@ -68,16 +68,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFByb2R1Y3RcVmlld0RldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Areas/Admins/Views/ShoeItemSize/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFNob2VJdGVtU2l6ZVxDcmVhdGUuY3NodG1s
+[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Areas/Admins/Views/ShoeSize/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFNob2VTaXplXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Areas/Admins/Views/ShoeItemSize/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFNob2VJdGVtU2l6ZVxFZGl0LmNzaHRtbA==
+[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Areas/Admins/Views/ShoeSize/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFNob2VTaXplXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Areas/Admins/Views/ShoeItemSize/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFNob2VJdGVtU2l6ZVxJbmRleC5jc2h0bWw=
+[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Areas/Admins/Views/ShoeSize/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFNob2VTaXplXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Areas/Admins/Views/Size/Create.cshtml]
@@ -134,6 +134,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Views/Shared/header-footer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGhlYWRlci1mb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Views/Shared/_NotificationPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb25QYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Views/Shared/_ValidationScriptsPartial.cshtml]

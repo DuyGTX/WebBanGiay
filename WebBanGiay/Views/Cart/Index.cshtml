@@ -52,6 +52,7 @@
     </div>
 </section>
 <!-- Breadcrumb Section End -->
+@Html.Partial("_NotificationPartial")
 <!-- Shopping Cart Section Begin -->
 <section class="shopping-cart spad">
     <div class="container">
@@ -74,20 +75,14 @@
                                 {
                                     <tr>
                                         <td class="product__cart__item">
-                                            <div class="product__cart__item__pic" style="width: 25%">
+                                            <div class="product__cart__item__pic" style="width: 25%; position: relative; padding-top: 25%;">
                                                 @if (!string.IsNullOrEmpty(item.ImageUrl))
                                                 {
-                                                    <img src="@item.ImageUrl" alt="@item.ShoeName">
+                                                    <img src="@Url.Content(item.ImageUrl)" alt="@item.ShoeName" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
                                                 }
                                                 else
                                                 {
-                                                    <img src="~/template/img/no-image-icon-0.jpg" alt="No image available">
-                                                }
-
-                                                <!-- Hiển thị tất cả các hình ảnh -->
-                                                @foreach (var imageUrl in item.ImageUrls)
-                                                {
-                                                    <img src="@imageUrl" alt="@item.ShoeName" style="max-width: 100px; max-height: 100px; margin: 5px;">
+                                                    <img src="@Url.Content("~/template/img/no-image-icon-0.jpg")" alt="No image available" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
                                                 }
                                             </div>
                                             <div class="product__cart__item__text">
@@ -100,9 +95,9 @@
                                         </td>
                                         <td class="quantity__item">
                                             <div class="quantity" style="width: 110px;height: 37px">
-                                                <a asp-controller="Cart" asp-action="Decrease" asp-route-id="@item.ShoeId" class="minus" >&minus;</a>
+                                                <a asp-controller="Cart" asp-action="Decrease" asp-route-id="@item.ShoeId" class="minus" style="height: 34px;">&minus;</a>
                                                 <input type="number" class="input-box" value="@item.Quantity" min="1" max="10">
-                                                <a asp-controller="Cart" asp-action="Increase" asp-route-id="@item.ShoeId" class="plus" >&plus;</a>
+                                                <a asp-controller="Cart" asp-action="Increase" asp-route-id="@item.ShoeId" class="plus" style="height: 34px;">&plus;</a>
                                             </div>
                                         </td>
                                         <td class="cart__price">
@@ -110,7 +105,14 @@
                                                 .Sum(x => x.Quantity * x.Price)).ToString("N0")) VND
                                         </td>
 
-                                        <td class="cart__close"><a asp-controller="Cart" asp-action="Remove" asp-route-id="@item.ShoeId" class="fa fa-close"></a></td>
+                                        <td style="text-align:center;" class="cart__close">
+                                            <a asp-controller="Cart"
+                                               asp-action="Remove"
+                                               asp-route-id="@item.ShoeId"
+                                               class="remove-button">
+                                                <i class="fa fa-close"></i>
+                                            </a>
+                                        </td>
                                     </tr>
                                 
 

@@ -32,7 +32,7 @@ namespace WebBanGiay.Controllers
                 .Include(s => s.ShoeImages)
                 .OrderBy(s => s.ShoeId)
                 .ToList();
-            return View(product);
+            return View(product);   
         }
         public IActionResult Shop()
         {

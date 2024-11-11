@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WebBanGiay.Models;
 using WebBanGiay.Models.ViewModels;
 using WebBanGiay.Repository;
@@ -30,22 +31,28 @@ namespace WebBanGiay.Controllers
         {
             return View("~/Views/Home/Checkout.cshtml");
         }
-        public async Task<IActionResult>Add(int id)
+        public async Task<IActionResult> Add(int id)
         {
-            Shoe shoes = await _dataContext.Shoes.FindAsync(id);
-            List<CartItemModel> cart = HttpContext.Session.GetJson<List<CartItemModel>>("Cart") ?? new List<CartItemModel>();
-            CartItemModel cartItems = cart.Where(c=>c.ShoeId==id).FirstOrDefault();
+            var shoes = await _dataContext.Shoes
+                .Include(s => s.ShoeImages)
+                .FirstOrDefaultAsync(s => s.ShoeId == id) ?? throw new ArgumentException("Không tìm thấy sản phẩm");
 
-            if(cartItems == null)
+            List<CartItemModel> cart = HttpContext.Session.GetJson<List<CartItemModel>>("Cart") ?? new List<CartItemModel>();
+            CartItemModel cartItems = cart.Where(c => c.ShoeId == id).FirstOrDefault();
+
+            if (cartItems == null)
             {
                 cart.Add(new CartItemModel(shoes));
-            } else
+            }
+            else
             {
                 cartItems.Quantity += 1;
             }
 
             HttpContext.Session.SetJson("Cart", cart);
-            return Redirect(Request.Headers["Referer"].ToString());
+            TempData["SuccessMessage"] = "Thêm sản phẩm vào giỏ hàng thành công.";
+
+			return Redirect(Request.Headers["Referer"].ToString());
         }
         public async Task<IActionResult> Decrease(int id)
         {
@@ -106,7 +113,8 @@ namespace WebBanGiay.Controllers
                 HttpContext.Session.SetJson("Cart", cart);
             }
 
-            return RedirectToAction("Index");
+			TempData["SuccessMessage"] = "Xóa sản phẩm khỏi giỏ hàng thành công.";
+			return RedirectToAction("Index");
         }
     }
 }
