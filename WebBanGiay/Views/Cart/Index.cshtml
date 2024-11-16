@@ -164,7 +164,11 @@
                         <li>Total: @string.Format("{0:N0}", Model.GrandTotal) VND</li>
 
                     </ul>
-                    <a asp-area="" asp-controller="Home" asp-action="Checkout" class="primary-btn">Proceed to checkout</a>
+                    @if(User.Identity?.IsAuthenticated ?? false)
+                    {
+                        <a asp-area="" asp-controller="Home" asp-action="Checkout" class="primary-btn">Proceed to checkout</a>
+                    }
+                    
                 </div>
             </div>
         </div>

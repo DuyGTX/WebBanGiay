@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Drawing;
 using WebBanGiay.Models;
@@ -7,7 +8,8 @@ using WebBanGiay.Models.Dto;
 namespace WebBanGiay.Areas.Admins.Controllers
 {
 	[Area("Admins")]
-	public class ProductController : Controller
+    [Authorize]
+    public class ProductController : Controller
 	{
 		private readonly DbwebGiayOnlineContext context;
 		private readonly IWebHostEnvironment environment;

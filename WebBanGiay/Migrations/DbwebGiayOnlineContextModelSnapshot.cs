@@ -22,6 +22,170 @@ namespace WebBanGiay.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NormalizedName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Roles");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RoleId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("RoleClaims");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserClaims");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProviderDisplayName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProviderKey")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.ToTable("UserLogins");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.Property<string>("RoleId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.ToTable("UserRoles");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.ToTable("UserTokens");
+                });
+
+            modelBuilder.Entity("WebBanGiay.Models.AppUserModel", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Occupation")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+                });
+
             modelBuilder.Entity("WebBanGiay.Models.Attribute", b =>
                 {
                     b.Property<int>("AttributeId")
@@ -273,8 +437,6 @@ namespace WebBanGiay.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.HasIndex("ShoeItemId");
-
                     b.ToTable("order_item", (string)null);
                 });
 
@@ -463,6 +625,14 @@ namespace WebBanGiay.Migrations
                         .HasColumnType("int")
                         .HasColumnName("category_id");
 
+                    b.Property<decimal?>("Price")
+                        .HasColumnType("decimal(10, 2)")
+                        .HasColumnName("price");
+
+                    b.Property<decimal?>("SalePrice")
+                        .HasColumnType("decimal(10, 2)")
+                        .HasColumnName("sale_price");
+
                     b.Property<string>("ShoeDescription")
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("shoe_description");
@@ -471,6 +641,11 @@ namespace WebBanGiay.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)")
                         .HasColumnName("shoe_name");
+
+                    b.Property<string>("Sku")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("sku");
 
                     b.HasKey("ShoeId")
                         .HasName("PK__shoe__3AC0314EB0506C92");
@@ -531,6 +706,28 @@ namespace WebBanGiay.Migrations
                     b.ToTable("shoe_category", (string)null);
                 });
 
+            modelBuilder.Entity("WebBanGiay.Models.ShoeColour", b =>
+                {
+                    b.Property<int>("ShoeId")
+                        .HasColumnType("int")
+                        .HasColumnName("shoe_id");
+
+                    b.Property<int>("ColourId")
+                        .HasColumnType("int")
+                        .HasColumnName("colour_id");
+
+                    b.Property<int?>("StockQuantity")
+                        .HasColumnType("int")
+                        .HasColumnName("stock_quantity");
+
+                    b.HasKey("ShoeId", "ColourId")
+                        .HasName("PK__shoe_col__0949644C695F25A2");
+
+                    b.HasIndex("ColourId");
+
+                    b.ToTable("shoe_colour", (string)null);
+                });
+
             modelBuilder.Entity("WebBanGiay.Models.ShoeImage", b =>
                 {
                     b.Property<int>("ImageId")
@@ -557,67 +754,11 @@ namespace WebBanGiay.Migrations
                     b.ToTable("shoe_image", (string)null);
                 });
 
-            modelBuilder.Entity("WebBanGiay.Models.ShoeItem", b =>
+            modelBuilder.Entity("WebBanGiay.Models.ShoeSize", b =>
                 {
-                    b.Property<int>("ShoeItemId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("shoe_item_id");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ShoeItemId"));
-
-                    b.Property<decimal?>("Price")
-                        .HasColumnType("decimal(10, 2)")
-                        .HasColumnName("price");
-
-                    b.Property<decimal?>("SalePrice")
-                        .HasColumnType("decimal(10, 2)")
-                        .HasColumnName("sale_price");
-
                     b.Property<int>("ShoeId")
                         .HasColumnType("int")
                         .HasColumnName("shoe_id");
-
-                    b.Property<string>("Sku")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasColumnName("sku");
-
-                    b.HasKey("ShoeItemId")
-                        .HasName("PK__shoe_ite__9ECD427BA415457D");
-
-                    b.HasIndex("ShoeId");
-
-                    b.ToTable("shoe_item", (string)null);
-                });
-
-            modelBuilder.Entity("WebBanGiay.Models.ShoeItemColour", b =>
-                {
-                    b.Property<int>("ShoeItemId")
-                        .HasColumnType("int")
-                        .HasColumnName("shoe_item_id");
-
-                    b.Property<int>("ColourId")
-                        .HasColumnType("int")
-                        .HasColumnName("colour_id");
-
-                    b.Property<int?>("StockQuantity")
-                        .HasColumnType("int")
-                        .HasColumnName("stock_quantity");
-
-                    b.HasKey("ShoeItemId", "ColourId")
-                        .HasName("PK__shoe_ite__AD441779031EC862");
-
-                    b.HasIndex("ColourId");
-
-                    b.ToTable("shoe_item_colour", (string)null);
-                });
-
-            modelBuilder.Entity("WebBanGiay.Models.ShoeItemSize", b =>
-                {
-                    b.Property<int>("ShoeItemId")
-                        .HasColumnType("int")
-                        .HasColumnName("shoe_item_id");
 
                     b.Property<int>("SizeId")
                         .HasColumnType("int")
@@ -627,12 +768,12 @@ namespace WebBanGiay.Migrations
                         .HasColumnType("int")
                         .HasColumnName("stock_quantity");
 
-                    b.HasKey("ShoeItemId", "SizeId")
-                        .HasName("PK__shoe_ite__9E11EE98D3C88260");
+                    b.HasKey("ShoeId", "SizeId")
+                        .HasName("PK__shoe_siz__3A1C9DAD0EBF47AA");
 
                     b.HasIndex("SizeId");
 
-                    b.ToTable("shoe_item_size", (string)null);
+                    b.ToTable("shoe_size", (string)null);
                 });
 
             modelBuilder.Entity("WebBanGiay.Models.Size", b =>
@@ -700,14 +841,7 @@ namespace WebBanGiay.Migrations
                         .HasForeignKey("OrderId")
                         .HasConstraintName("FK__order_ite__order__6C190EBB");
 
-                    b.HasOne("WebBanGiay.Models.ShoeItem", "ShoeItem")
-                        .WithMany("OrderItems")
-                        .HasForeignKey("ShoeItemId")
-                        .HasConstraintName("FK__order_ite__shoe___6D0D32F4");
-
                     b.Navigation("Order");
-
-                    b.Navigation("ShoeItem");
                 });
 
             modelBuilder.Entity("WebBanGiay.Models.OrderNote", b =>
@@ -795,6 +929,25 @@ namespace WebBanGiay.Migrations
                     b.Navigation("Brand");
                 });
 
+            modelBuilder.Entity("WebBanGiay.Models.ShoeColour", b =>
+                {
+                    b.HasOne("WebBanGiay.Models.Colour", "Colour")
+                        .WithMany("ShoeColours")
+                        .HasForeignKey("ColourId")
+                        .IsRequired()
+                        .HasConstraintName("FK__shoe_colo__colou__7C1A6C5A");
+
+                    b.HasOne("WebBanGiay.Models.Shoe", "Shoe")
+                        .WithMany("ShoeColours")
+                        .HasForeignKey("ShoeId")
+                        .IsRequired()
+                        .HasConstraintName("FK__shoe_colo__shoe___7D0E9093");
+
+                    b.Navigation("Colour");
+
+                    b.Navigation("Shoe");
+                });
+
             modelBuilder.Entity("WebBanGiay.Models.ShoeImage", b =>
                 {
                     b.HasOne("WebBanGiay.Models.Shoe", "Shoe")
@@ -805,51 +958,21 @@ namespace WebBanGiay.Migrations
                     b.Navigation("Shoe");
                 });
 
-            modelBuilder.Entity("WebBanGiay.Models.ShoeItem", b =>
+            modelBuilder.Entity("WebBanGiay.Models.ShoeSize", b =>
                 {
                     b.HasOne("WebBanGiay.Models.Shoe", "Shoe")
-                        .WithMany("ShoeItems")
+                        .WithMany("ShoeSizes")
                         .HasForeignKey("ShoeId")
                         .IsRequired()
-                        .HasConstraintName("FK__shoe_item__shoe___44FF419A");
-
-                    b.Navigation("Shoe");
-                });
-
-            modelBuilder.Entity("WebBanGiay.Models.ShoeItemColour", b =>
-                {
-                    b.HasOne("WebBanGiay.Models.Colour", "Colour")
-                        .WithMany("ShoeItemColours")
-                        .HasForeignKey("ColourId")
-                        .IsRequired()
-                        .HasConstraintName("FK__shoe_item__colou__3D2915A8");
-
-                    b.HasOne("WebBanGiay.Models.ShoeItem", "ShoeItem")
-                        .WithMany("ShoeItemColours")
-                        .HasForeignKey("ShoeItemId")
-                        .IsRequired()
-                        .HasConstraintName("FK__shoe_item__shoe___3C34F16F");
-
-                    b.Navigation("Colour");
-
-                    b.Navigation("ShoeItem");
-                });
-
-            modelBuilder.Entity("WebBanGiay.Models.ShoeItemSize", b =>
-                {
-                    b.HasOne("WebBanGiay.Models.ShoeItem", "ShoeItem")
-                        .WithMany("ShoeItemSizes")
-                        .HasForeignKey("ShoeItemId")
-                        .IsRequired()
-                        .HasConstraintName("FK__shoe_item__shoe___40058253");
+                        .HasConstraintName("FK__shoe_size__shoe___00DF2177");
 
                     b.HasOne("WebBanGiay.Models.Size", "Size")
-                        .WithMany("ShoeItemSizes")
+                        .WithMany("ShoeSizes")
                         .HasForeignKey("SizeId")
                         .IsRequired()
-                        .HasConstraintName("FK__shoe_item__size___40F9A68C");
+                        .HasConstraintName("FK__shoe_size__size___7FEAFD3E");
 
-                    b.Navigation("ShoeItem");
+                    b.Navigation("Shoe");
 
                     b.Navigation("Size");
                 });
@@ -868,7 +991,7 @@ namespace WebBanGiay.Migrations
 
             modelBuilder.Entity("WebBanGiay.Models.Colour", b =>
                 {
-                    b.Navigation("ShoeItemColours");
+                    b.Navigation("ShoeColours");
                 });
 
             modelBuilder.Entity("WebBanGiay.Models.Coupon", b =>
@@ -916,9 +1039,11 @@ namespace WebBanGiay.Migrations
                 {
                     b.Navigation("ShoeAttributes");
 
+                    b.Navigation("ShoeColours");
+
                     b.Navigation("ShoeImages");
 
-                    b.Navigation("ShoeItems");
+                    b.Navigation("ShoeSizes");
                 });
 
             modelBuilder.Entity("WebBanGiay.Models.ShoeCategory", b =>
@@ -926,18 +1051,9 @@ namespace WebBanGiay.Migrations
                     b.Navigation("Shoes");
                 });
 
-            modelBuilder.Entity("WebBanGiay.Models.ShoeItem", b =>
-                {
-                    b.Navigation("OrderItems");
-
-                    b.Navigation("ShoeItemColours");
-
-                    b.Navigation("ShoeItemSizes");
-                });
-
             modelBuilder.Entity("WebBanGiay.Models.Size", b =>
                 {
-                    b.Navigation("ShoeItemSizes");
+                    b.Navigation("ShoeSizes");
                 });
 #pragma warning restore 612, 618
         }

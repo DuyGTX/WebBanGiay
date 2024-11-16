@@ -1,6 +1,9 @@
-﻿namespace WebBanGiay.Models
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace WebBanGiay.Models
 {
-	public class IdentityUser
+	public class AppUserModel : IdentityUser
 	{
+		public string? Occupation {get; set;}
 	}
 }

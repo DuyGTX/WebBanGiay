@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Drawing.Drawing2D;
 using WebBanGiay.Models;
@@ -7,7 +8,8 @@ using WebBanGiay.Models.Dto;
 namespace WebBanGiay.Areas.Admins.Controllers
 {
 	[Area("Admins")]
-	public class SizeController : Controller
+    [Authorize]
+    public class SizeController : Controller
 	{
 		private readonly DbwebGiayOnlineContext context;
 		private readonly IWebHostEnvironment environment;

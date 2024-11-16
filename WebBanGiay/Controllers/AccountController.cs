@@ -2,96 +2,118 @@
 using WebBanGiay.Models;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 using System.Linq;
+using Microsoft.AspNetCore.Identity;
+using WebBanGiay.Models.ViewModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebBanGiay.Controllers
 {
-    public class AccountController : Controller
-    {
-        private readonly DbwebGiayOnlineContext context;
+	public class AccountController : Controller
+	{
+		private UserManager<AppUserModel> _userManager;
+		private SignInManager<AppUserModel> _signInManager;
 
-        public AccountController(DbwebGiayOnlineContext context)
-        {
-            this.context = context;
-        }
 
-        // Hiển thị trang đăng nhập
-        public IActionResult Login()
-        {
-            return View();
-        }
+		public AccountController(SignInManager<AppUserModel> signInManager, UserManager<AppUserModel> userManager)
+		{
+			_userManager = userManager;
+			_signInManager = signInManager;
+		}
 
-        // Hiển thị trang đăng ký
-        public IActionResult Register()
-        {
-            return View();
-        }
+		public IActionResult Login(string returnUrl = "/")
+		{
+			ViewBag.ReturnUrl = returnUrl;
+			return View(new LoginViewModel { ReturnUrl = returnUrl });
+		}
 
-        // Xử lý đăng nhập
-        [HttpPost]
-        public IActionResult Login(string email, string password)
-        {
-            // Tìm người dùng trong cơ sở dữ liệu
-            var user = context.Customers.FirstOrDefault(u => u.Email == email);
 
-            if (user == null)
-            {
-                ModelState.AddModelError("", "Email không tồn tại.");
-                return View();
-            }
 
-            // Kiểm tra mật khẩu (so sánh với mật khẩu đã mã hóa)
-            if (user.Password != HashPassword(password))
-            {
-                ModelState.AddModelError("", "Mật khẩu không đúng.");
-                return View();
-            }
 
-            // Đăng nhập thành công, lưu thông tin vào session hoặc cookie
-            // Ví dụ: TempData["User"] = user;
-            return RedirectToAction("Home", "Home");
-        }
+		[HttpPost]
+		public async Task<IActionResult> Login(LoginViewModel loginVM, string returnUrl = "/")
+		{
+			if (ModelState.IsValid)
+			{
+				Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(loginVM.UserName, loginVM.Password, false, false);
+				if (result.Succeeded)
+				{
+					return Redirect(returnUrl);
+				}
+				ModelState.AddModelError("", "Tài khoản hoặc mật khẩu không chính xác");
+			}
+			// Đảm bảo ViewBag có giá trị ReturnUrl khi tải lại View
+			ViewBag.ReturnUrl = returnUrl;
+			return View(loginVM);
+		}
 
-        // Xử lý đăng ký
-        [HttpPost]
-        public IActionResult Register(Customer customer, string confirmPassword)
-        {
-            // Kiểm tra thông tin nhập vào
-            if (customer.Password != confirmPassword)
-            {
-                ModelState.AddModelError("", "Mật khẩu không khớp.");
-                return View();
-            }
 
-            // Kiểm tra email đã tồn tại chưa
-            if (context.Customers.Any(u => u.Email == customer.Email))
-            {
-                ModelState.AddModelError("", "Email đã tồn tại.");
-                return View();
-            }
+		public IActionResult Register()
+		{
+			return View();
+		}
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public async Task<IActionResult> Register(UserModel model)
+		{
+			if (!ModelState.IsValid)
+			{
+				return View(model);
+			}
 
-            // Mã hóa mật khẩu trước khi lưu
-            customer.Password = HashPassword(customer.Password);
-            customer.CreatedAt = DateTime.Now;
-            customer.Status = true; // mặc định là đã kích hoạt
+			// Kiểm tra xem tên người dùng đã tồn tại chưa
+			var isUserNameTaken = await _userManager.Users.AnyAsync(u => u.UserName == model.UserName);
+			if (isUserNameTaken)
+			{
+				ModelState.AddModelError("UserName", $"Tên người dùng '{model.UserName}' đã được sử dụng.");
+			}
 
-            // Lưu thông tin người dùng vào cơ sở dữ liệu
-            context.Customers.Add(customer);
-            context.SaveChanges();
+			// Kiểm tra xem email đã tồn tại chưa
+			var isEmailTaken = await _userManager.Users.AnyAsync(u => u.Email == model.Email);
+			if (isEmailTaken)
+			{
+				ModelState.AddModelError("Email", "Email này đã được đăng ký.");
+			}
 
-            // Đăng ký thành công, chuyển hướng về trang đăng nhập
-            return RedirectToAction("Login");
-        }
+			// Nếu có lỗi, trả về view với thông báo lỗi
+			if (!ModelState.IsValid)
+			{
+				return View(model);
+			}
 
-        // Hàm mã hóa mật khẩu (bạn có thể sử dụng phương pháp mã hóa khác như bcrypt)
-        private string HashPassword(string password)
-        {
-            // Sử dụng phương pháp mã hóa cơ bản (KeyDerivation) cho mật khẩu
-            return Convert.ToBase64String(KeyDerivation.Pbkdf2(
-                password: password,
-                salt: new byte[] { 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07 },
-                prf: KeyDerivationPrf.HMACSHA256,
-                iterationCount: 10000,
-                numBytesRequested: 256 / 8));
-        }
+			// Sử dụng AppUserModel thay vì IdentityUser
+			var user = new AppUserModel
+			{
+				UserName = model.UserName,
+				Email = model.Email
+			};
+
+			// Tạo người dùng với UserManager sử dụng AppUserModel
+			var result = await _userManager.CreateAsync(user, model.Password);
+
+			if (result.Succeeded)
+			{
+				// Đăng nhập người dùng sau khi đăng ký thành công (nếu cần)
+				await _signInManager.SignInAsync(user, isPersistent: false);
+				TempData["SuccessMessage"] = "Tạo tài khoản thành công.";
+				return RedirectToAction("Login", "Account");
+			}
+
+			// Thêm lỗi nếu quá trình đăng ký không thành công
+			foreach (var error in result.Errors)
+			{
+				ModelState.AddModelError(string.Empty, error.Description);
+			}
+
+			return View(model);
+		}
+        public async Task<IActionResult> Logout(string returnUrl = "/")
+		{
+			await _signInManager.SignOutAsync();
+			return Redirect(returnUrl);
+		}
+
+
+
+
     }
 }

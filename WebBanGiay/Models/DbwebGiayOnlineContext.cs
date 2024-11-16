@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace WebBanGiay.Models;
 
-public partial class DbwebGiayOnlineContext : DbContext
+public partial class DbwebGiayOnlineContext : IdentityDbContext<AppUserModel>
 {
     public DbwebGiayOnlineContext()
     {
@@ -61,7 +63,10 @@ public partial class DbwebGiayOnlineContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Attribute>(entity =>
+		modelBuilder.Entity<IdentityUserLogin<string>>().HasNoKey();
+		modelBuilder.Entity<IdentityUserRole<string>>().HasNoKey();
+		modelBuilder.Entity<IdentityUserToken<string>>().HasNoKey();
+		modelBuilder.Entity<Attribute>(entity =>
         {
             entity.HasKey(e => e.AttributeId).HasName("PK__attribut__9090C9BB6D03B184");
 
@@ -465,6 +470,7 @@ public partial class DbwebGiayOnlineContext : DbContext
                 .HasMaxLength(10)
                 .HasColumnName("size_name");
         });
+
 
         OnModelCreatingPartial(modelBuilder);
     }

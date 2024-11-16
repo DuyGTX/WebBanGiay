@@ -68,8 +68,27 @@
                     <div class="col-lg-6 col-md-5">
                         <div class="header__top__right">
                             <div class="header__top__links">
-                                <a asp-area="" asp-controller="Account" asp-action="Login">Đăng nhập</a>
                                 
+                                @if(User.Identity?.IsAuthenticated ?? false)
+                                {
+
+                                    <a asp-area="" asp-controller="Account" asp-action="Info">Xin chào, @User.Identity.Name</a>
+                                    <ul class="dropdown-menu-login" style="left: 54%;    top: 94%;">
+                                        <li><a asp-area="" asp-controller="" asp-action="">Đơn hàng</a></li>
+                                        <li><a asp-area="" asp-controller="Account" asp-action="Logout">Đăng Xuất</a></li>
+                                    </ul>
+
+
+                                  
+                                    
+                                   
+                                    
+                                }
+                                else
+                                {
+                                    <a asp-area="" asp-controller="Account" asp-action="Login">Đăng nhập</a>
+                                }
+
                             </div>
                             
                         </div>
@@ -208,8 +227,12 @@
     <script src="~/template/js/mixitup.min.js"></script>
     <script src="~/template/js/owl.carousel.min.js"></script>
     <script src="~/template/js/main.js"></script>
+    
 
-
+    @await RenderSectionAsync("Scripts",required:false)
+   
+        
+   
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -230,8 +253,43 @@
                 }
             });
         });
-    </script>
+       
 
+    </script>
+    <style>
+        /* Ẩn dropdown mặc định */
+        .dropdown-menu-login {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            /* Hiển thị dropdown khi hover vào phần tử cha */
+        a:hover + .dropdown-menu-login,
+            .dropdown-menu-login:hover {
+                display: block;
+            }
+
+            /* Một số kiểu tùy chọn cho menu */
+            .dropdown-menu-login li {
+                list-style: none;
+                padding: 8px 16px;
+            }
+
+                .dropdown-menu-login li a {
+                    text-decoration: none;
+                    color: black;
+                }
+
+                    .dropdown-menu li a:hover {
+                        background-color: #ddd;
+                    }
+
+
+    </style>
 </body>
 
 </html>

@@ -3,11 +3,13 @@ using WebBanGiay.Models.Dto;
 using WebBanGiay.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Drawing.Drawing2D;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebBanGiay.Areas.Admins.Controllers
 {
 	[Area("Admins")]
-	public class ColourController : Controller
+    [Authorize]
+    public class ColourController : Controller
 	{
 		private readonly DbwebGiayOnlineContext context;
 		private readonly IWebHostEnvironment environment;

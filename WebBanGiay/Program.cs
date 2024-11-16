@@ -1,3 +1,4 @@
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using WebBanGiay.Models;
 
@@ -21,6 +22,29 @@ builder.Services.AddSession(options =>
     //options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
+builder.Services.AddIdentity<AppUserModel,IdentityRole>()
+	.AddEntityFrameworkStores<DbwebGiayOnlineContext>().AddDefaultTokenProviders();
+
+
+builder.Services.Configure<IdentityOptions>(options =>
+{
+	// Password settings.
+	options.Password.RequireDigit = true;
+	options.Password.RequireLowercase = true;
+	options.Password.RequireNonAlphanumeric = true;
+	options.Password.RequireUppercase = true;
+	options.Password.RequiredLength = 6;
+	options.Password.RequiredUniqueChars = 1;
+
+});
+builder.Services.ConfigureApplicationCookie(options =>
+{
+	options.LoginPath = "/Account/Login"; // Trang đăng nhập
+	options.AccessDeniedPath = "/Account/AccessDenied"; // Trang khi truy cập bị từ chối
+	options.ExpireTimeSpan = TimeSpan.FromMinutes(60); // Thời gian hết hạn cookie
+	options.SlidingExpiration = true; // Gia hạn cookie nếu người dùng hoạt động
+	options.LogoutPath = "/Account/Logout"; // Trang đăng xuất
+});
 
 
 var app = builder.Build();
@@ -37,7 +61,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseSession(); // Enable session middleware
+app.UseSession();
+app.UseAuthentication();
 app.UseAuthorization();
 
 // Routing configuration for Areas
