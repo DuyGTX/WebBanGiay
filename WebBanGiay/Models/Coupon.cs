@@ -19,5 +19,5 @@ public partial class Coupon
 
     public bool? IsActive { get; set; }
 
-    public virtual ICollection<Order> Orders { get; } = new List<Order>();
+    
 }

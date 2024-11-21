@@ -78,12 +78,20 @@ namespace WebBanGiay.Controllers
         }
         public async Task<IActionResult> Increase(int id)
         {
+
+            Shoe shoe = await _dataContext.Shoes.Where(p=>p.ShoeId==id).FirstOrDefaultAsync()
+                ;
             List<CartItemModel> cart = HttpContext.Session.GetJson<List<CartItemModel>>("Cart");
 
             CartItemModel cartItem = cart.FirstOrDefault(c => c.ShoeId == id);
-            if (cartItem != null && cartItem.Quantity < 10) // Max quantity is 10
+            if (cartItem.Quantity >= 1 && shoe.Quantity>cartItem.Quantity) // Max quantity is 10
             {
                 ++cartItem.Quantity;
+            }
+            else
+            {
+                cartItem.Quantity = shoe.Quantity;
+                TempData["SuccessMessage"] = "Đã đạt đến số lượng tối đa của sản phẩm.";
             }
 
             if (cart.Count == 0)

@@ -86,12 +86,12 @@
                     <div class="product__details__text">
                         <h4>@Model.ShoeName</h4>
                         <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                            <span> - 0 Reviews</span>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <span> - 0 Đánh giá</span>
                         </div>
                        
                         <h5 class="product-price">
@@ -169,14 +169,24 @@
                                     <input type="text" value="1">
                                 </div>
                             </div>
-                            <a asp-controller="Cart" asp-action="Add" asp-route-id="@Model.ShoeId" id="add-to-cart" class="primary-btn">Thêm vào giỏ hàng</a>
+                            @if (Model.Quantity > 0)
+                            {
+                                <a asp-controller="Cart" asp-action="Add" asp-route-id="@Model.ShoeId" id="add-to-cart" class="primary-btn">Thêm vào Giỏ Hàng</a>
+                            }
+                            else
+                            {
+                                <a style="color: WHITE;" class="primary-btn">Hết hàng</a>
+                            }
+
+                           
                         </div>
-                       @*  <div class="product__details__btns__option">
-                            <a href="#"><i class="fa fa-heart"></i> add to wishlist</a>
-                            <a href="#"><i class="fa fa-exchange"></i> Add To Compare</a>
-                        </div> *@
+                         <div class="product__details__btns__option">
+                            
+                            <a data-shoe_id="@Model.ShoeId" class="add-to-wishlist" href="#"><i class="fa fa-heart "></i> Thêm vào Yêu Thích</a>
+                            
+                        </div> 
                         <div class="product__details__last__option">
-                            <h5><span>Đảm bao thanh toán an toàn</span></h5>
+                            <h5><span>Đảm bảo thanh toán an toàn</span></h5>
                             <div style="max-width:30%;    place-self: center;">
                                 <a><img style="max-width:30%;" src="~/template/img/vietqr.png" alt=""></a>
                                 <a><img style="max-width:20%;" src="https://upload.wikimedia.org/wikipedia/vi/f/fe/MoMo_Logo.png" alt=""></a>
@@ -329,148 +339,64 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h3 class="related-title">Related Product</h3>
+                <h3 class="related-title">Sản phẩm tương tự</h3>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6 col-sm-6">
-                <div class="product__item">
-                    <div class="product__item__pic set-bg" data-setbg="img/product/product-1.jpg">
-                        <span class="label">New</span>
-                        <ul class="product__hover">
-                            <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
-                            <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
-                            <li><a href="#"><img src="img/icon/search.png" alt=""></a></li>
-                        </ul>
-                    </div>
-                    <div class="product__item__text">
-                        <h6>Piqué Biker Jacket</h6>
-                        <a href="#" class="add-cart">+ Add To Cart</a>
-                        <div class="rating">
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
+            @foreach (ProductDto relatedProduct in (List<ProductDto>)ViewBag.RelatedProducts)
+            {
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="@(relatedProduct.ShoeImages.FirstOrDefault()?.ImageUrl)" alt="@relatedProduct.ShoeName">
+                            <ul class="product__hover">
+                                <li><a href="#"><img src="~/template/img/icon/heart.png" alt=""></a></li>
+                                <li>
+                                    <a href="#"><img src="~/template/img/icon/compare.png" alt=""> <span>Compare</span></a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Home" asp-action="ShopDetail" asp-route-id="@relatedProduct.ShoeId">
+                                        <img src="~/template/img/icon/search.png" alt="">
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                        <h5>$67.24</h5>
-                        <div class="product__color__select">
-                            <label for="pc-1">
-                                <input type="radio" id="pc-1">
-                            </label>
-                            <label class="active black" for="pc-2">
-                                <input type="radio" id="pc-2">
-                            </label>
-                            <label class="grey" for="pc-3">
-                                <input type="radio" id="pc-3">
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-sm-6">
-                <div class="product__item">
-                    <div class="product__item__pic set-bg" data-setbg="img/product/product-2.jpg">
-                        <ul class="product__hover">
-                            <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
-                            <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
-                            <li><a href="#"><img src="img/icon/search.png" alt=""></a></li>
-                        </ul>
-                    </div>
-                    <div class="product__item__text">
-                        <h6>Piqué Biker Jacket</h6>
-                        <a href="#" class="add-cart">+ Add To Cart</a>
-                        <div class="rating">
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                        </div>
-                        <h5>$67.24</h5>
-                        <div class="product__color__select">
-                            <label for="pc-4">
-                                <input type="radio" id="pc-4">
-                            </label>
-                            <label class="active black" for="pc-5">
-                                <input type="radio" id="pc-5">
-                            </label>
-                            <label class="grey" for="pc-6">
-                                <input type="radio" id="pc-6">
-                            </label>
+                        <div class="product__item__text">
+                            <h6 asp-controller="Product" asp-action="ViewDetail" asp-route-id="@relatedProduct.ShoeId">@relatedProduct.ShoeName</h6>
+                            @if (relatedProduct.Quantity > 0)
+                            {
+                                
+
+                                <a asp-controller="Cart" asp-action="Add" asp-route-id="@relatedProduct.ShoeId" class="add-cart">+ Thêm vào Giỏ Hàng</a>
+                            }
+                            else
+                            {
+                                <a class="add-cart">Hết hàng</a>
+
+                            }
+                            
+                           
+                            <div class="rating">
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            @if (relatedProduct.SalePrice.HasValue && relatedProduct.SalePrice > 0)
+                            {
+                                <h5>
+                                    <span class="text-danger">@(relatedProduct.SalePrice?.ToString("N0"))đ</span>
+                                    <small class="text-muted text-decoration-line-through">@(relatedProduct.Price?.ToString("N0"))đ</small>
+                                </h5>
+                            }
+                            else
+                            {
+                                <h5>@(relatedProduct.Price?.ToString("N0") ?? "N/A")đ</h5>
+                            }
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-sm-6">
-                <div class="product__item sale">
-                    <div class="product__item__pic set-bg" data-setbg="img/product/product-3.jpg">
-                        <span class="label">Sale</span>
-                        <ul class="product__hover">
-                            <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
-                            <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
-                            <li><a href="#"><img src="img/icon/search.png" alt=""></a></li>
-                        </ul>
-                    </div>
-                    <div class="product__item__text">
-                        <h6>Multi-pocket Chest Bag</h6>
-                        <a href="#" class="add-cart">+ Add To Cart</a>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-o"></i>
-                        </div>
-                        <h5>$43.48</h5>
-                        <div class="product__color__select">
-                            <label for="pc-7">
-                                <input type="radio" id="pc-7">
-                            </label>
-                            <label class="active black" for="pc-8">
-                                <input type="radio" id="pc-8">
-                            </label>
-                            <label class="grey" for="pc-9">
-                                <input type="radio" id="pc-9">
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-sm-6">
-                <div class="product__item">
-                    <div class="product__item__pic set-bg" data-setbg="img/product/product-4.jpg">
-                        <ul class="product__hover">
-                            <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
-                            <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
-                            <li><a href="#"><img src="img/icon/search.png" alt=""></a></li>
-                        </ul>
-                    </div>
-                    <div class="product__item__text">
-                        <h6>Diagonal Textured Cap</h6>
-                        <a href="#" class="add-cart">+ Add To Cart</a>
-                        <div class="rating">
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                        </div>
-                        <h5>$60.9</h5>
-                        <div class="product__color__select">
-                            <label for="pc-10">
-                                <input type="radio" id="pc-10">
-                            </label>
-                            <label class="active black" for="pc-11">
-                                <input type="radio" id="pc-11">
-                            </label>
-                            <label class="grey" for="pc-12">
-                                <input type="radio" id="pc-12">
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </section>
@@ -569,7 +495,33 @@
       
 
 </script>
-
+<script>
+    $(document).ready(function () {
+        $('.add-to-wishlist').click(function (e) {
+            e.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+            var shoeId = $(this).data("shoe_id");
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("AddWishlist","Home")",
+                data: { Id: shoeId }, // Thay ShoeId bằng Id để khớp với action method
+                success: function (result) {
+                    if (result.success) {
+                        // Hiển thị thông báo thành công
+                        alert(result.message);
+                        // Có thể làm mới trang hoặc cập nhật giao diện
+                        location.reload();
+                    } else {
+                        // Hiển thị thông báo lỗi
+                        alert(result.message);
+                    }
+                },
+                error: function () {
+                    alert("Đã có lỗi xảy ra khi thêm sản phẩm vào danh sách yêu thích");
+                }
+            });
+        });
+    });
+</script>
 
 
 <style>

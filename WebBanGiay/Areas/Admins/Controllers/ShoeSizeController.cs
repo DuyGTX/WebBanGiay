@@ -9,8 +9,8 @@ using WebBanGiay.Models.Dto;
 namespace WebBanGiay.Areas.Admins.Controllers
 {
 	[Area("Admins")]
-    [Authorize]
-    public class ShoeSizeController : Controller
+	[Authorize(Roles = "Admin, Employee")]
+	public class ShoeSizeController : Controller
 	{
 		private readonly DbwebGiayOnlineContext context;
 		private readonly IWebHostEnvironment environment;
@@ -20,16 +20,34 @@ namespace WebBanGiay.Areas.Admins.Controllers
 			this.context = context;
 			this.environment = environment;
 		}
-		public IActionResult Index()
+		public IActionResult Index(int pg = 1)
 		{
 			// Lấy danh sách ShoeItemSize bao gồm thông tin về Size
 			var shoeSizes = context.ShoeSizes
 				.Include(s => s.Size) // Bao gồm Size để lấy dữ liệu từ bảng Size
 				.OrderBy(b => b.ShoeId) // Sắp xếp theo ShoeItemId
 				.ToList();
+			const int pageSize = 10; // 10 items/trang
 
+			// Nếu pg < 1 thì đặt pg = 1
+			if (pg < 1)
+			{
+				pg = 1;
+			}
+
+			int recsCount = shoeSizes.Count(); // Tổng số danh mục
+			var pager = new Paginate(recsCount, pg, pageSize);
+
+			// Số lượng cần bỏ qua
+			int recSkip = (pg - 1) * pageSize;
+
+			// Lấy dữ liệu đã phân trang
+			var data = shoeSizes.Skip(recSkip).Take(pageSize).ToList();
+
+			// Truyền dữ liệu phân trang vào View
+			ViewBag.Pager = pager;
 			// Trả về view với danh sách ShoeItemSizes
-			return View(shoeSizes);
+			return View(data);
 		}
 
 		public IActionResult Create()

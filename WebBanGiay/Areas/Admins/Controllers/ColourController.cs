@@ -8,8 +8,8 @@ using Microsoft.AspNetCore.Authorization;
 namespace WebBanGiay.Areas.Admins.Controllers
 {
 	[Area("Admins")]
-    [Authorize]
-    public class ColourController : Controller
+	[Authorize(Roles = "Admin, Employee")]
+	public class ColourController : Controller
 	{
 		private readonly DbwebGiayOnlineContext context;
 		private readonly IWebHostEnvironment environment;
@@ -19,13 +19,31 @@ namespace WebBanGiay.Areas.Admins.Controllers
 			this.context = context;
 			this.environment = environment;
 		}
-		public IActionResult Index()
+		public IActionResult Index(int pg = 1)
 		{
 			var colours = context.Colours
 				.OrderBy(b => b.ColourId)
 				.ToList();
+			const int pageSize = 10; // 10 items/trang
 
-			return View(colours);
+			// Nếu pg < 1 thì đặt pg = 1
+			if (pg < 1)
+			{
+				pg = 1;
+			}
+
+			int recsCount = colours.Count(); // Tổng số danh mục
+			var pager = new Paginate(recsCount, pg, pageSize);
+
+			// Số lượng cần bỏ qua
+			int recSkip = (pg - 1) * pageSize;
+
+			// Lấy dữ liệu đã phân trang
+			var data = colours.Skip(recSkip).Take(pageSize).ToList();
+
+			// Truyền dữ liệu phân trang vào View
+			ViewBag.Pager = pager;
+			return View(data);
 		}
 		public IActionResult Create()
 		{

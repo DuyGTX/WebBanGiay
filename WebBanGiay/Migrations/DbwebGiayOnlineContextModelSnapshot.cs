@@ -17,10 +17,10 @@ namespace WebBanGiay.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.3")
+                .HasAnnotation("ProductVersion", "6.0.21")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
@@ -47,7 +47,7 @@ namespace WebBanGiay.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("ClaimType")
                         .HasColumnType("nvarchar(max)");
@@ -69,7 +69,7 @@ namespace WebBanGiay.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("ClaimType")
                         .HasColumnType("nvarchar(max)");
@@ -160,7 +160,6 @@ namespace WebBanGiay.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Occupation")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PasswordHash")
@@ -171,6 +170,9 @@ namespace WebBanGiay.Migrations
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<string>("RoleId")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
@@ -186,26 +188,6 @@ namespace WebBanGiay.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("WebBanGiay.Models.Attribute", b =>
-                {
-                    b.Property<int>("AttributeId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("attribute_id");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AttributeId"));
-
-                    b.Property<string>("AttributeName")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)")
-                        .HasColumnName("attribute_name");
-
-                    b.HasKey("AttributeId")
-                        .HasName("PK__attribut__9090C9BB6D03B184");
-
-                    b.ToTable("attribute", (string)null);
-                });
-
             modelBuilder.Entity("WebBanGiay.Models.Brand", b =>
                 {
                     b.Property<int>("BrandId")
@@ -213,7 +195,7 @@ namespace WebBanGiay.Migrations
                         .HasColumnType("int")
                         .HasColumnName("brand_id");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BrandId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BrandId"), 1L, 1);
 
                     b.Property<string>("BrandName")
                         .HasMaxLength(255)
@@ -233,7 +215,7 @@ namespace WebBanGiay.Migrations
                         .HasColumnType("int")
                         .HasColumnName("colour_id");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ColourId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ColourId"), 1L, 1);
 
                     b.Property<string>("ColourName")
                         .HasMaxLength(50)
@@ -253,7 +235,7 @@ namespace WebBanGiay.Migrations
                         .HasColumnType("int")
                         .HasColumnName("coupon_id");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CouponId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CouponId"), 1L, 1);
 
                     b.Property<string>("CouponCode")
                         .HasMaxLength(50)
@@ -261,11 +243,11 @@ namespace WebBanGiay.Migrations
                         .HasColumnName("coupon_code");
 
                     b.Property<decimal?>("DiscountAmount")
-                        .HasColumnType("decimal(10, 2)")
+                        .HasColumnType("decimal(10,2)")
                         .HasColumnName("discount_amount");
 
                     b.Property<decimal?>("DiscountPercentage")
-                        .HasColumnType("decimal(5, 2)")
+                        .HasColumnType("decimal(5,2)")
                         .HasColumnName("discount_percentage");
 
                     b.Property<bool?>("IsActive")
@@ -290,318 +272,110 @@ namespace WebBanGiay.Migrations
                     b.ToTable("coupon", (string)null);
                 });
 
-            modelBuilder.Entity("WebBanGiay.Models.Customer", b =>
+            modelBuilder.Entity("WebBanGiay.Models.OrderDetail", b =>
                 {
-                    b.Property<int>("CustomerId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("customer_id");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CustomerId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<DateTime?>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime")
-                        .HasColumnName("created_at")
-                        .HasDefaultValueSql("(getdate())");
-
-                    b.Property<string>("CusAddress")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)")
-                        .HasColumnName("cus_address");
-
-                    b.Property<string>("Email")
+                    b.Property<string>("OrderCode")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)")
-                        .HasColumnName("email");
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasColumnName("first_name");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasColumnName("last_name");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)")
-                        .HasColumnName("password");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)")
-                        .HasColumnName("phone_number");
-
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit")
-                        .HasColumnName("status");
-
-                    b.HasKey("CustomerId")
-                        .HasName("PK__customer__CD65CB85B82E4FE8");
-
-                    b.HasIndex(new[] { "Email" }, "UQ__customer__AB6E61644AEADEE4")
-                        .IsUnique();
-
-                    b.ToTable("customer", (string)null);
-                });
-
-            modelBuilder.Entity("WebBanGiay.Models.Order", b =>
-                {
-                    b.Property<int>("OrderId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("order_id");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderId"));
-
-                    b.Property<int?>("CouponId")
-                        .HasColumnType("int")
-                        .HasColumnName("coupon_id");
-
-                    b.Property<int?>("CustomerId")
-                        .HasColumnType("int")
-                        .HasColumnName("customer_id");
-
-                    b.Property<DateTime?>("OrderDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime")
-                        .HasColumnName("order_date")
-                        .HasDefaultValueSql("(getdate())");
-
-                    b.Property<int?>("PaymentMethodId")
-                        .HasColumnType("int")
-                        .HasColumnName("payment_method_id");
-
-                    b.Property<int?>("ShippingAddressId")
-                        .HasColumnType("int")
-                        .HasColumnName("shipping_address_id");
-
-                    b.Property<int?>("StatusId")
-                        .HasColumnType("int")
-                        .HasColumnName("status_id");
-
-                    b.Property<decimal?>("TotalAmount")
-                        .HasColumnType("decimal(10, 2)")
-                        .HasColumnName("total_amount");
-
-                    b.HasKey("OrderId")
-                        .HasName("PK__order__4659622958D90153");
-
-                    b.HasIndex("CouponId");
-
-                    b.HasIndex("CustomerId");
-
-                    b.HasIndex("PaymentMethodId");
-
-                    b.HasIndex("ShippingAddressId");
-
-                    b.HasIndex("StatusId");
-
-                    b.ToTable("order", (string)null);
-                });
-
-            modelBuilder.Entity("WebBanGiay.Models.OrderItem", b =>
-                {
-                    b.Property<int>("OrderItemId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("order_item_id");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderItemId"));
-
-                    b.Property<int?>("OrderId")
-                        .HasColumnType("int")
-                        .HasColumnName("order_id");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal?>("Price")
-                        .HasColumnType("decimal(10, 2)")
-                        .HasColumnName("price");
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int?>("Quantity")
-                        .HasColumnType("int")
-                        .HasColumnName("quantity");
-
-                    b.Property<int?>("ShoeItemId")
-                        .HasColumnType("int")
-                        .HasColumnName("shoe_item_id");
-
-                    b.HasKey("OrderItemId")
-                        .HasName("PK__order_it__3764B6BC5E06BAA7");
-
-                    b.HasIndex("OrderId");
-
-                    b.ToTable("order_item", (string)null);
-                });
-
-            modelBuilder.Entity("WebBanGiay.Models.OrderNote", b =>
-                {
-                    b.Property<int>("NoteId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("note_id");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("NoteId"));
-
-                    b.Property<DateTime?>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime")
-                        .HasColumnName("created_at")
-                        .HasDefaultValueSql("(getdate())");
-
-                    b.Property<string>("NoteText")
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("note_text");
-
-                    b.Property<int?>("OrderId")
-                        .HasColumnType("int")
-                        .HasColumnName("order_id");
-
-                    b.HasKey("NoteId")
-                        .HasName("PK__order_no__CEDD0FA4EFC50179");
-
-                    b.HasIndex("OrderId");
-
-                    b.ToTable("order_notes", (string)null);
-                });
-
-            modelBuilder.Entity("WebBanGiay.Models.OrderStatus", b =>
-                {
-                    b.Property<int>("StatusId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("status_id");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("StatusId"));
-
-                    b.Property<string>("StatusName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasColumnName("status_name");
-
-                    b.HasKey("StatusId")
-                        .HasName("PK__order_st__3683B531643A7DD2");
-
-                    b.ToTable("order_status", (string)null);
-                });
-
-            modelBuilder.Entity("WebBanGiay.Models.PaymentMethod", b =>
-                {
-                    b.Property<int>("PaymentMethodId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("payment_method_id");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PaymentMethodId"));
-
-                    b.Property<string>("MethodName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasColumnName("method_name");
-
-                    b.HasKey("PaymentMethodId")
-                        .HasName("PK__payment___8A3EA9EB458D075A");
-
-                    b.ToTable("payment_method", (string)null);
-                });
-
-            modelBuilder.Entity("WebBanGiay.Models.Role", b =>
-                {
-                    b.Property<int>("RoleId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("role_id");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RoleId"));
-
-                    b.Property<string>("RoleName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasColumnName("role_name");
-
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit")
-                        .HasColumnName("status");
-
-                    b.HasKey("RoleId")
-                        .HasName("PK__role__760965CCED52F0EC");
-
-                    b.ToTable("role", (string)null);
-                });
-
-            modelBuilder.Entity("WebBanGiay.Models.RoleAccount", b =>
-                {
-                    b.Property<int>("RoleId")
                         .HasColumnType("int");
 
-                    b.Property<int>("AccountId")
+                    b.Property<int>("ShoeId")
                         .HasColumnType("int");
 
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit")
-                        .HasColumnName("status");
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("RoleId", "AccountId")
-                        .HasName("PK__RoleAcco__F9B314400B671812");
+                    b.HasKey("Id");
 
-                    b.HasIndex("AccountId");
+                    b.HasIndex("ShoeId");
 
-                    b.ToTable("RoleAccount", (string)null);
+                    b.ToTable("OrderDetails");
                 });
 
-            modelBuilder.Entity("WebBanGiay.Models.ShippingAddress", b =>
+            modelBuilder.Entity("WebBanGiay.Models.OrderModel", b =>
                 {
-                    b.Property<int>("AddressId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("address_id");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AddressId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("OrderCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("WebBanGiay.Models.ProductQuantityModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ShoeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProductQuantities");
+                });
+
+            modelBuilder.Entity("WebBanGiay.Models.Shipping", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("City")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)")
-                        .HasColumnName("city");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Country")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)")
-                        .HasColumnName("country");
+                    b.Property<string>("District")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("CustomerId")
-                        .HasColumnType("int")
-                        .HasColumnName("customer_id");
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("PostalCode")
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)")
-                        .HasColumnName("postal_code");
+                    b.Property<string>("Ward")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("State")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)")
-                        .HasColumnName("state");
+                    b.HasKey("Id");
 
-                    b.Property<string>("StreetAddress")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)")
-                        .HasColumnName("street_address");
-
-                    b.HasKey("AddressId")
-                        .HasName("PK__shipping__CAA247C82568C55C");
-
-                    b.HasIndex("CustomerId");
-
-                    b.ToTable("shipping_address", (string)null);
+                    b.ToTable("Shippings");
                 });
 
             modelBuilder.Entity("WebBanGiay.Models.Shoe", b =>
@@ -611,7 +385,7 @@ namespace WebBanGiay.Migrations
                         .HasColumnType("int")
                         .HasColumnName("shoe_id");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ShoeId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ShoeId"), 1L, 1);
 
                     b.Property<int?>("BrandId")
                         .HasColumnType("int")
@@ -626,11 +400,14 @@ namespace WebBanGiay.Migrations
                         .HasColumnName("category_id");
 
                     b.Property<decimal?>("Price")
-                        .HasColumnType("decimal(10, 2)")
+                        .HasColumnType("decimal(10,2)")
                         .HasColumnName("price");
 
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
                     b.Property<decimal?>("SalePrice")
-                        .HasColumnType("decimal(10, 2)")
+                        .HasColumnType("decimal(10,2)")
                         .HasColumnName("sale_price");
 
                     b.Property<string>("ShoeDescription")
@@ -647,6 +424,9 @@ namespace WebBanGiay.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasColumnName("sku");
 
+                    b.Property<int>("Sold")
+                        .HasColumnType("int");
+
                     b.HasKey("ShoeId")
                         .HasName("PK__shoe__3AC0314EB0506C92");
 
@@ -657,29 +437,6 @@ namespace WebBanGiay.Migrations
                     b.ToTable("shoe", (string)null);
                 });
 
-            modelBuilder.Entity("WebBanGiay.Models.ShoeAttribute", b =>
-                {
-                    b.Property<int>("ShoeId")
-                        .HasColumnType("int")
-                        .HasColumnName("shoe_id");
-
-                    b.Property<int>("AttributeId")
-                        .HasColumnType("int")
-                        .HasColumnName("attribute_id");
-
-                    b.Property<string>("AttributeValue")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)")
-                        .HasColumnName("attribute_value");
-
-                    b.HasKey("ShoeId", "AttributeId")
-                        .HasName("PK__shoe_att__93C93DD5E2782B71");
-
-                    b.HasIndex("AttributeId");
-
-                    b.ToTable("shoe_attribute", (string)null);
-                });
-
             modelBuilder.Entity("WebBanGiay.Models.ShoeCategory", b =>
                 {
                     b.Property<int>("CategoryId")
@@ -687,7 +444,7 @@ namespace WebBanGiay.Migrations
                         .HasColumnType("int")
                         .HasColumnName("category_id");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryId"), 1L, 1);
 
                     b.Property<int?>("BrandId")
                         .HasColumnType("int")
@@ -735,7 +492,7 @@ namespace WebBanGiay.Migrations
                         .HasColumnType("int")
                         .HasColumnName("image_id");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ImageId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ImageId"), 1L, 1);
 
                     b.Property<string>("ImageUrl")
                         .HasMaxLength(255)
@@ -783,7 +540,7 @@ namespace WebBanGiay.Migrations
                         .HasColumnType("int")
                         .HasColumnName("size_id");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SizeId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SizeId"), 1L, 1);
 
                     b.Property<string>("SizeName")
                         .HasMaxLength(10)
@@ -796,91 +553,37 @@ namespace WebBanGiay.Migrations
                     b.ToTable("size", (string)null);
                 });
 
-            modelBuilder.Entity("WebBanGiay.Models.Order", b =>
+            modelBuilder.Entity("WebBanGiay.Models.WishList", b =>
                 {
-                    b.HasOne("WebBanGiay.Models.Coupon", "Coupon")
-                        .WithMany("Orders")
-                        .HasForeignKey("CouponId")
-                        .HasConstraintName("FK__order__coupon_id__693CA210");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.HasOne("WebBanGiay.Models.Customer", "Customer")
-                        .WithMany("Orders")
-                        .HasForeignKey("CustomerId")
-                        .HasConstraintName("FK__order__customer___656C112C");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.HasOne("WebBanGiay.Models.PaymentMethod", "PaymentMethod")
-                        .WithMany("Orders")
-                        .HasForeignKey("PaymentMethodId")
-                        .HasConstraintName("FK__order__payment_m__66603565");
+                    b.Property<int>("ShoeId")
+                        .HasColumnType("int");
 
-                    b.HasOne("WebBanGiay.Models.ShippingAddress", "ShippingAddress")
-                        .WithMany("Orders")
-                        .HasForeignKey("ShippingAddressId")
-                        .HasConstraintName("FK__order__shipping___68487DD7");
-
-                    b.HasOne("WebBanGiay.Models.OrderStatus", "Status")
-                        .WithMany("Orders")
-                        .HasForeignKey("StatusId")
-                        .HasConstraintName("FK__order__status_id__6754599E");
-
-                    b.Navigation("Coupon");
-
-                    b.Navigation("Customer");
-
-                    b.Navigation("PaymentMethod");
-
-                    b.Navigation("ShippingAddress");
-
-                    b.Navigation("Status");
-                });
-
-            modelBuilder.Entity("WebBanGiay.Models.OrderItem", b =>
-                {
-                    b.HasOne("WebBanGiay.Models.Order", "Order")
-                        .WithMany("OrderItems")
-                        .HasForeignKey("OrderId")
-                        .HasConstraintName("FK__order_ite__order__6C190EBB");
-
-                    b.Navigation("Order");
-                });
-
-            modelBuilder.Entity("WebBanGiay.Models.OrderNote", b =>
-                {
-                    b.HasOne("WebBanGiay.Models.Order", "Order")
-                        .WithMany("OrderNotes")
-                        .HasForeignKey("OrderId")
-                        .HasConstraintName("FK__order_not__order__70DDC3D8");
-
-                    b.Navigation("Order");
-                });
-
-            modelBuilder.Entity("WebBanGiay.Models.RoleAccount", b =>
-                {
-                    b.HasOne("WebBanGiay.Models.Customer", "Account")
-                        .WithMany("RoleAccounts")
-                        .HasForeignKey("AccountId")
+                    b.Property<string>("UserId")
                         .IsRequired()
-                        .HasConstraintName("FK__RoleAccou__Accou__5812160E");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasOne("WebBanGiay.Models.Role", "Role")
-                        .WithMany("RoleAccounts")
-                        .HasForeignKey("RoleId")
-                        .IsRequired()
-                        .HasConstraintName("FK__RoleAccou__RoleI__571DF1D5");
+                    b.HasKey("Id");
 
-                    b.Navigation("Account");
+                    b.HasIndex("ShoeId");
 
-                    b.Navigation("Role");
+                    b.ToTable("WishLists");
                 });
 
-            modelBuilder.Entity("WebBanGiay.Models.ShippingAddress", b =>
+            modelBuilder.Entity("WebBanGiay.Models.OrderDetail", b =>
                 {
-                    b.HasOne("WebBanGiay.Models.Customer", "Customer")
-                        .WithMany("ShippingAddresses")
-                        .HasForeignKey("CustomerId")
-                        .HasConstraintName("FK__shipping___custo__5EBF139D");
+                    b.HasOne("WebBanGiay.Models.Shoe", "shoe")
+                        .WithMany()
+                        .HasForeignKey("ShoeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("Customer");
+                    b.Navigation("shoe");
                 });
 
             modelBuilder.Entity("WebBanGiay.Models.Shoe", b =>
@@ -898,25 +601,6 @@ namespace WebBanGiay.Migrations
                     b.Navigation("Brand");
 
                     b.Navigation("Category");
-                });
-
-            modelBuilder.Entity("WebBanGiay.Models.ShoeAttribute", b =>
-                {
-                    b.HasOne("WebBanGiay.Models.Attribute", "Attribute")
-                        .WithMany("ShoeAttributes")
-                        .HasForeignKey("AttributeId")
-                        .IsRequired()
-                        .HasConstraintName("FK__shoe_attr__attri__4E88ABD4");
-
-                    b.HasOne("WebBanGiay.Models.Shoe", "Shoe")
-                        .WithMany("ShoeAttributes")
-                        .HasForeignKey("ShoeId")
-                        .IsRequired()
-                        .HasConstraintName("FK__shoe_attr__shoe___4D94879B");
-
-                    b.Navigation("Attribute");
-
-                    b.Navigation("Shoe");
                 });
 
             modelBuilder.Entity("WebBanGiay.Models.ShoeCategory", b =>
@@ -977,9 +661,15 @@ namespace WebBanGiay.Migrations
                     b.Navigation("Size");
                 });
 
-            modelBuilder.Entity("WebBanGiay.Models.Attribute", b =>
+            modelBuilder.Entity("WebBanGiay.Models.WishList", b =>
                 {
-                    b.Navigation("ShoeAttributes");
+                    b.HasOne("WebBanGiay.Models.Shoe", "Shoe")
+                        .WithMany()
+                        .HasForeignKey("ShoeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Shoe");
                 });
 
             modelBuilder.Entity("WebBanGiay.Models.Brand", b =>
@@ -994,51 +684,8 @@ namespace WebBanGiay.Migrations
                     b.Navigation("ShoeColours");
                 });
 
-            modelBuilder.Entity("WebBanGiay.Models.Coupon", b =>
-                {
-                    b.Navigation("Orders");
-                });
-
-            modelBuilder.Entity("WebBanGiay.Models.Customer", b =>
-                {
-                    b.Navigation("Orders");
-
-                    b.Navigation("RoleAccounts");
-
-                    b.Navigation("ShippingAddresses");
-                });
-
-            modelBuilder.Entity("WebBanGiay.Models.Order", b =>
-                {
-                    b.Navigation("OrderItems");
-
-                    b.Navigation("OrderNotes");
-                });
-
-            modelBuilder.Entity("WebBanGiay.Models.OrderStatus", b =>
-                {
-                    b.Navigation("Orders");
-                });
-
-            modelBuilder.Entity("WebBanGiay.Models.PaymentMethod", b =>
-                {
-                    b.Navigation("Orders");
-                });
-
-            modelBuilder.Entity("WebBanGiay.Models.Role", b =>
-                {
-                    b.Navigation("RoleAccounts");
-                });
-
-            modelBuilder.Entity("WebBanGiay.Models.ShippingAddress", b =>
-                {
-                    b.Navigation("Orders");
-                });
-
             modelBuilder.Entity("WebBanGiay.Models.Shoe", b =>
                 {
-                    b.Navigation("ShoeAttributes");
-
                     b.Navigation("ShoeColours");
 
                     b.Navigation("ShoeImages");

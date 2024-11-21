@@ -72,6 +72,7 @@
                                 @if(User.Identity?.IsAuthenticated ?? false)
                                 {
 
+                                    
                                     <a asp-area="" asp-controller="Account" asp-action="Info">Xin chào, @User.Identity.Name</a>
                                     <ul class="dropdown-menu-login" style="left: 54%;    top: 94%;">
                                         <li><a asp-area="" asp-controller="" asp-action="">Đơn hàng</a></li>
@@ -114,7 +115,7 @@
                                     <li><a asp-area="" asp-controller="Home" asp-action="About">About Us</a></li>
                                     <li><a asp-area="" asp-controller="Home" asp-action="ShopDetail">Shop Details</a></li>
                                     <li><a asp-area="" asp-controller="Cart" asp-action="Index">Shopping Cart</a></li>
-                                    <li><a asp-area="" asp-controller="Home" asp-action="Checkout">Check Out</a></li>
+                                    <li><a asp-area="" asp-controller="Checkout" asp-action="Checkout">Check Out</a></li>
                                     <li><a asp-area="" asp-controller="Home" asp-action="Blog">Blog Details</a></li>
                                 </ul>
                             </li>
@@ -127,7 +128,18 @@
                 <div class="col-lg-3 col-md-3">
                     <div class="header__nav__option">
                         <a href="#" class="search-switch"><img src="~/template/img/icon/search.png" alt=""></a>
-                        <a href="#"><img src="~/template/img/icon/heart.png" alt=""></a>
+                        @if (User.Identity?.IsAuthenticated ?? false)
+                        {
+
+                            <a asp-area ="" asp-controller="Home" asp-action="Wishlist"><img src="~/template/img/icon/heart.png" alt=""></a>
+
+                          
+
+
+
+
+                        }
+                        
                         <a asp-area="" asp-controller="Cart" asp-action="Index"><img src="~/template/img/icon/cart.png" alt=""> <span>0</span></a>
                         <div class="price">$0.00</div>
                     </div>
@@ -208,8 +220,8 @@
     <div class="search-model">
         <div class="h-100 d-flex align-items-center justify-content-center">
             <div class="search-close-switch">+</div>
-            <form class="search-model-form">
-                <input type="text" id="search-input" placeholder="Search here.....">
+            <form asp-controller="Home" asp-action="Search" method="post" class="search-model-form">
+                <input name="searchTerm" type="text" id="search-input" placeholder="Tìm kiếm...">
             </form>
         </div>
     </div>

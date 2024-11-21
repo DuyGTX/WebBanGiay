@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using WebBanGiay.Areas.Admins.Repository;
 using WebBanGiay.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,17 @@ builder.Services.AddDbContext<DbwebGiayOnlineContext>(options =>
     options.UseSqlServer(connectionString);
 });
 
+builder.Logging.AddConsole(); // Nếu sử dụng console logging
+builder.Logging.AddDebug(); // Thêm debug logging
+
+// Đăng ký services
+builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
+builder.Services.AddLogging();
+// Cấu hình các dịch vụ
+builder.Services.AddControllersWithViews();
+
+// Đăng ký dịch vụ IEmailSender
+builder.Services.AddTransient<IEmailSender, EmailSender>();
 // Add session services
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
@@ -40,7 +52,7 @@ builder.Services.Configure<IdentityOptions>(options =>
 builder.Services.ConfigureApplicationCookie(options =>
 {
 	options.LoginPath = "/Account/Login"; // Trang đăng nhập
-	options.AccessDeniedPath = "/Account/AccessDenied"; // Trang khi truy cập bị từ chối
+	
 	options.ExpireTimeSpan = TimeSpan.FromMinutes(60); // Thời gian hết hạn cookie
 	options.SlidingExpiration = true; // Gia hạn cookie nếu người dùng hoạt động
 	options.LogoutPath = "/Account/Logout"; // Trang đăng xuất

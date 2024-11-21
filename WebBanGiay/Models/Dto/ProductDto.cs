@@ -9,6 +9,8 @@ namespace WebBanGiay.Models.Dto
         public string? ShoeName { get; set; }
         public string? ShoeDescription { get; set; }
         public string? CareInstructions { get; set; }
+        public int Quantity { get; set; }
+        public int Sold { get; set; }
         public int? BrandId { get; set; }
         public int? CategoryId { get; set; }
         public decimal? Price { get; set; }
@@ -18,6 +20,16 @@ namespace WebBanGiay.Models.Dto
         public List<string?> ImageUrls { get; set; } = new List<string?>();
         public List<ColourDetail> Colours { get; set; } = new List<ColourDetail>();
         public List<SizeDetail> Sizes { get; set; } = new List<SizeDetail>();
+        // Tính toán tổng số lượng từ `Colours` và `Sizes`
+        //public int ComputedQuantity
+        //{
+        //    get
+        //    {
+        //        int colourStock = Colours.Sum(c => c.StockQuantity ?? 0);
+        //        int sizeStock = Sizes.Sum(s => s.StockQuantity ?? 0);
+        //        return colourStock + sizeStock;
+        //    }
+        //}
     }
 
 	public class ShoeImageDetail
@@ -40,4 +52,5 @@ namespace WebBanGiay.Models.Dto
         public string? SizeName { get; set; }
         public int? StockQuantity { get; set; }
     }
+
 }
