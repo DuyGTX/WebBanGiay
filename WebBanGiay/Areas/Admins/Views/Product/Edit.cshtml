@@ -1,6 +1,6 @@
-﻿@using WebBanGiay.Models.Dto;
+﻿@using WebBanGiay.Models;
 @using System.Drawing.Drawing2D;
-@model ProductDto
+@model Shoe
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
@@ -34,28 +34,12 @@
 					<div class="app-card app-card-settings shadow-sm p-4">
 
 						<div class="app-card-body">
-							<form class="settings-form" method="post" enctype="multipart/form-data">
-								<div class="row mb-3">
-									<label for="setting-input-1" class="form-label">
-										ID<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
-											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
-												<circle cx="8" cy="4.5" r="1" />
-											</svg>
-										</span>
-									</label>
-									<input value="@Model.ShoeId" class="form-control" readonly />
-
-									<!-- Input hidden để truyền giá trị -->
-									<input asp-for="ShoeId" type="hidden" />
-
-								</div>
+							<form asp-action="Edit"  class="settings-form" enctype="multipart/form-data">
 
 
 								<div class="row mb-3">
 									<label for="setting-input-1" class="form-label">
-										Shoe Name<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+										Name<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
 											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
 												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
@@ -64,13 +48,13 @@
 										</span>
 									</label>
 									<!-- Input readonly để hiển thị -->
-									<input asp-for="ShoeName" class="form-control" />
-									<span asp-validation-for="ShoeName" class="text-danger"></span>
-									
+
+									<input asp-for="ShoeName" type="text" class="form-control" id="setting-input-1" required>
+									<span asp-validation-for="ShoeName" class="text-danger" />
 								</div>
 								<div class="row mb-3">
 									<label for="setting-input-1" class="form-label">
-										Brand Name<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+										Brand <span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
 											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
 												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
@@ -79,11 +63,11 @@
 										</span>
 									</label>
 
-									<select asp-for="BrandId" class="form-select" asp-items="@(new SelectList(ViewBag.Brands, "BrandId", "BrandName"))">
+									<select asp-for="BrandId" asp-items="ViewBag.Brands" class="form-select">
 										<option value="">-- Chọn thương hiệu --</option>
 									</select>
-									<span asp-validation-for="BrandId" class="text-danger"></span>
-									
+
+
 
 
 
@@ -91,7 +75,7 @@
 
 								<div class="row mb-3">
 									<label for="CategoryId" class="form-label">
-										Category Name
+										Category
 										<span class="ms-2" data-bs-container="body" data-bs-toggle="popover"
 											  data-bs-trigger="hover focus" data-bs-placement="top"
 											  data-bs-content="Không vượt quá 100 ký tự.">
@@ -104,61 +88,28 @@
 											</svg>
 										</span>
 									</label>
-									<select asp-for="CategoryId" class="form-select" asp-items="@(new SelectList(ViewBag.Categories, "CategoryId", "CategoryName"))">
-										<option value="">-- Chọn danh mục --</option>
+									<select asp-for="CategoryId" asp-items="ViewBag.Categories" class="form-select">
+										<option value="">-- Chọn thương hiệu --</option>
 									</select>
-									<span asp-validation-for="CategoryId" class="text-danger"></span>
+
 								</div>
-								
 								<div class="row mb-3">
-									<label for="price" class="form-label">Price</label>
-									@if (Model.ShoeItems != null && Model.ShoeItems.Any())
-									{
-										
-										foreach (var item in Model.ShoeItems)
-										{
-											<div class="input-group mb-2">
-												<input asp-for="ShoeItems[0].Price" type="text" class="form-control" value="@(item.Price?.ToString("N0")) VNĐ" />
-												<input type="hidden" name="ShoeItems[].Price" value="@item.Price" />
-												<div class="input-group-text">
-													<i class="bi bi-currency-dollar"></i>
-												</div>
-											</div>
-										}
-									}
-									else
-									{
-										<p class="text-muted">Không có thông tin giá</p>
-									}
+									<label for="setting-input-1" class="form-label">
+										Price<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
+												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+												<circle cx="8" cy="4.5" r="1" />
+											</svg>
+										</span>
+									</label>
+									<input asp-for="Price" type="number" name="Price" class="form-control" placeholder="Price" />
+									<span asp-validation-for="Price" class="text-danger" />
 								</div>
-
-								<div class="row mb-3">
-									<label for="price" class="form-label">Sale Price</label>
-									@if (Model.ShoeItems != null && Model.ShoeItems.Any())
-									{
-
-										foreach (var item in Model.ShoeItems)
-										{
-											<div class="input-group mb-2">
-												<input asp-for="ShoeItems[0].SalePrice" type="text" class="form-control" value="@(item.SalePrice?.ToString("N0")) VNĐ" />
-												<input type="hidden" name="ShoeItems[].SalePrice" value="@item.SalePrice" />
-												<div class="input-group-text">
-													<i class="bi bi-currency-dollar"></i>
-												</div>
-											</div>
-										}
-									}
-									else
-									{
-										<p class="text-muted">Không có thông tin giá</p>
-									}
-								</div>
-
-
 
 								<div class="row mb-3">
 									<label for="setting-input-1" class="form-label">
-										Colour
+										Sale Price
 										<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
 											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
 												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
@@ -167,59 +118,15 @@
 											</svg>
 										</span>
 									</label>
-									<select asp-for="ShoeItems[0].ColourId" class="form-control"
-											asp-items="@(new SelectList(ViewBag.Colours, "ColourId", "ColourName"))">
-										<option value="">-- Chọn màu --</option>
-									</select>
-									<span asp-validation-for="ShoeItems[0].ColourId" class="text-danger"></span>
-
-									
+									<input asp-for="SalePrice" type="number" name="SalePrice" class="form-control" placeholder="SalePrice" />
+									<span asp-validation-for="SalePrice" class="text-danger" />
 
 								</div>
-								<div class="row mb-3">
-									<label for="setting-input-1" class="form-label">
-										Size
-										<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
-											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
-												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
-												<circle cx="8" cy="4.5" r="1" />
-											</svg>
-										</span>
-									</label>
-									<select asp-for="ShoeItems[0].SizeId" class="form-control" asp-items="@(new SelectList(ViewBag.Sizes, "SizeId", "SizeName"))">
-										<option value="">-- Chọn size --</option>
-									</select>
-									<span asp-validation-for="ShoeItems[0].SizeId" class="text-danger"></span>
-									
 
-								</div>
-								<div class="row mb-3">
-									<label for="setting-input-1" class="form-label">
-										Quantity
-										<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
-											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
-												<circle cx="8" cy="4.5" r="1" />
-											</svg>
-										</span>
-									</label>
-									@if (Model.ShoeItems != null && Model.ShoeItems.Any())
-									{
-										foreach (var item in Model.ShoeItems)
-										{
-											<div class="input-group mb-2">
-												<input asp-for="ShoeItems[0].StockQuantity" type="number" class="form-control" value="@item.StockQuantity" />
-												<input type="hidden" name="ShoeItems[].StockQuantity" value="@item.StockQuantity" />
-											</div>
-										}
-									}
-									else
-									{
-										<p class="text-muted">Không có thông tin</p>
-									}
-								</div>
+
+
+
+
 
 								<div class="row mb-3">
 									<label class="form-label">
@@ -234,9 +141,9 @@
 									</label>
 
 									<div id="imageUrlsContainer">
-										@if (Model.ImageUrls != null && Model.ImageUrls.Any())
+										@if (ViewBag.Images != null && ViewBag.Images.Count > 0)
 										{
-											foreach (var imageUrl in Model.ImageUrls)
+											@foreach (var imageUrl in ViewBag.Images)
 											{
 												<div class="image-url-group mb-2">
 													<div class="input-group">
@@ -247,11 +154,8 @@
 												</div>
 											}
 										}
-										else
-										{
-											<p class="text-muted">Không có hình ảnh nào.</p>
-										}
 									</div>
+
 
 									<div class="mt-2">
 										<button type="button" class="btn btn-primary" id="addImageUrl">Thêm hình ảnh</button>
@@ -261,22 +165,24 @@
 
 
 
+
 								<div class="row mb-3">
 									<label for="setting-input-1" class="form-label">
-										SKU<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
-											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										SKU
+										<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
 												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
 												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
 												<circle cx="8" cy="4.5" r="1" />
 											</svg>
 										</span>
 									</label>
-									<!-- Input readonly để hiển thị -->
-									<input asp-for="ShoeItems[0].Sku" class="form-control" />
-									<span asp-validation-for="ShoeItems[0].Sku" class="text-danger"></span>
 
+
+
+									<input asp-for="Sku" type="text" name="Sku" class="form-control" placeholder="SKU" />
+									<span asp-validation-for="Sku" class="text-danger" />
 								</div>
-								
 								<div class="row mb-3">
 									<label for="setting-input-1" class="form-label">
 										Description<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
@@ -287,7 +193,7 @@
 											</svg>
 										</span>
 									</label>
-									<input asp-for="ShoeDescription" type="text" class="form-control">
+									<input asp-for="ShoeDescription" type="text" class="form-control" id="setting-input-1" required>
 									<span asp-validation-for="ShoeDescription" class="text-danger" />
 
 
@@ -303,7 +209,7 @@
 										</span>
 									</label>
 									<!-- Input readonly để hiển thị -->
-									<input asp-for="CareInstructions" type="text" class="form-control">
+									<input asp-for="CareInstructions" type="text" class="form-control" id="setting-input-1" required>
 									<span asp-validation-for="CareInstructions" class="text-danger" />
 								</div>
 
@@ -398,24 +304,6 @@
 		});
 	</script>
 	<script>
-		$(document).ready(function () {
-			let variantCount = 0;
-
-			$("#addVariant").click(function () {
-				variantCount++;
-				let template = $(".shoe-item-template").first().clone();
-
-				// Update indices in name attributes
-				template.find("[name]").each(function () {
-					let name = $(this).attr("name");
-					$(this).attr("name", name.replace("[0]", `[${variantCount}]`));
-				});
-
-				$("#shoeItems").append(template);
-			});
-		});
-	</script>
-	<script>
 		document.addEventListener('DOMContentLoaded', function () {
 			const container = document.getElementById('imageUrlsContainer');
 			const addButton = document.getElementById('addImageUrl');
@@ -485,6 +373,8 @@
 			}
 		});
 	</script>
+	
+
 
 	<style>
 		.image-url-group {

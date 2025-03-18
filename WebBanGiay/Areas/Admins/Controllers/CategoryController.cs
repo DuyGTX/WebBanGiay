@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WebBanGiay.Models;
@@ -7,7 +8,8 @@ using WebBanGiay.Models.Dto;
 namespace WebBanGiay.Areas.Admins.Controllers
 {
     [Area("Admins")]
-    public class CategoryController : Controller
+	[Authorize(Roles = "Admin, Employee")]
+	public class CategoryController : Controller
     {
         private readonly DbwebGiayOnlineContext context;
 		private readonly IWebHostEnvironment environment;
@@ -17,15 +19,37 @@ namespace WebBanGiay.Areas.Admins.Controllers
             this.context =context;
 			this.environment = environment;
 		}
-		public IActionResult Index()
+		public IActionResult Index(int pg = 1)
 		{
+			// Lấy danh sách ShoeCategories và sắp xếp
 			var categoris = context.ShoeCategories
-				.Include(c => c.Brand) // Bao gồm Brand để lấy dữ liệu từ bảng Brand
+				.Include(c => c.Brand) // Bao gồm Brand
 				.OrderBy(c => c.CategoryId)
 				.ToList();
 
-			return View(categoris);
+			const int pageSize = 10; // 10 items/trang
+
+			// Nếu pg < 1 thì đặt pg = 1
+			if (pg < 1)
+			{
+				pg = 1;
+			}
+
+			int recsCount = categoris.Count(); // Tổng số danh mục
+			var pager = new Paginate(recsCount, pg, pageSize);
+
+			// Số lượng cần bỏ qua
+			int recSkip = (pg - 1) * pageSize;
+
+			// Lấy dữ liệu đã phân trang
+			var data = categoris.Skip(recSkip).Take(pageSize).ToList();
+
+			// Truyền dữ liệu phân trang vào View
+			ViewBag.Pager = pager;
+
+			return View(data); // Truyền `data` thay vì toàn bộ `categoris`
 		}
+
 		public IActionResult Create()
 		{
 			return View();

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Drawing.Drawing2D;
 using WebBanGiay.Models;
@@ -7,6 +8,7 @@ using WebBanGiay.Models.Dto;
 namespace WebBanGiay.Areas.Admins.Controllers
 {
 	[Area("Admins")]
+	[Authorize(Roles = "Admin, Employee")]
 	public class SizeController : Controller
 	{
 		private readonly DbwebGiayOnlineContext context;
@@ -17,13 +19,32 @@ namespace WebBanGiay.Areas.Admins.Controllers
 			this.context = context;
 			this.environment = environment;
 		}
-		public IActionResult Index()
+		public IActionResult Index(int pg = 1)
 		{
 			var sizes = context.Sizes
 				.OrderBy(b => b.SizeId)
 				.ToList();
+			const int pageSize = 10; // 10 items/trang
 
-			return View(sizes);
+			// Nếu pg < 1 thì đặt pg = 1
+			if (pg < 1)
+			{
+				pg = 1;
+			}
+
+			int recsCount = sizes.Count(); // Tổng số danh mục
+			var pager = new Paginate(recsCount, pg, pageSize);
+
+			// Số lượng cần bỏ qua
+			int recSkip = (pg - 1) * pageSize;
+
+			// Lấy dữ liệu đã phân trang
+			var data = sizes.Skip(recSkip).Take(pageSize).ToList();
+
+			// Truyền dữ liệu phân trang vào View
+			ViewBag.Pager = pager;
+
+			return View(data);
 		}
 		public IActionResult Create()
 		{
@@ -48,7 +69,7 @@ namespace WebBanGiay.Areas.Admins.Controllers
 			Size size = new Size()
 			{
 				SizeName = sizeDto.SizeName,
-				SortOrder = sizeDto.SortOrder,
+				
 			};
 			// Kiểm tra nếu đã tồn tại
 			var existingCategory = context.Sizes
@@ -121,7 +142,7 @@ namespace WebBanGiay.Areas.Admins.Controllers
 
 				// Cập nhật thông tin
 				size.SizeName = sizeDto.SizeName;
-				size.SortOrder = sizeDto.SortOrder;
+				
 
 				context.Sizes.Update(size);
 				context.SaveChanges();

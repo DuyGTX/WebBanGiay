@@ -1,0 +1,85 @@
+﻿@model LoginViewModel
+@{
+	ViewData["Title"] = "Đăng nhập";
+	Layout = "";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<meta name="author">
+
+
+	<!-- FontAwesome JS-->
+	<script defer src="~/assets/plugins/fontawesome/js/all.min.js"></script>
+
+	<!-- App CSS -->
+	<link id="theme-style" rel="stylesheet" href="~/assets/css/portal.css">
+
+</head>
+@Html.Partial("_NotificationPartial")
+<body class="app app-login p-0">
+	<div class="row g-0 app-auth-wrapper">
+		<div class="col-12 col-md-7 col-lg-6 auth-main-col text-center p-5">
+			<div class="d-flex flex-column align-content-end">
+				<div class="app-auth-body mx-auto">
+					<div class="app-auth-branding mb-4">
+						<a class="app-logo" style="    width: auto;height:40px" asp-area="" asp-controller="Home" asp-action="Home">
+							<img style="    width: auto;height:40px" class="logo-icon me-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/T1_esports_logo.svg/450px-T1_esports_logo.svg.png?20220724144411" alt="logo">
+						</a>
+					</div>
+					<h2 class="auth-heading text-center mb-5">Đăng nhập</h2>
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<div class="auth-form-container text-start">
+						<form asp-action="Login" method="post">
+							<input type="hidden" asp-for="ReturnUrl" />
+							<div class="email mb-3">
+								<input asp-for="UserName" class="form-control" placeholder="Tên tài khoản" />
+								<span asp-validation-for="UserName" class="text-danger"></span>
+							</div>
+							<div class="password mb-3">
+								<input asp-for="Password" type="password" class="form-control" placeholder="Mật khẩu" />
+								<span asp-validation-for="Password" class="text-danger"></span>
+							</div>
+							<button type="submit" class="btn app-btn-primary w-100">Đăng nhập</button>
+						</form>
+
+
+
+						<div class="auth-option text-center pt-5">Chưa có tài khoản? <a class="text-link" asp-area="" asp-controller="Account" asp-action="Register">Đăng ký ở đây</a>.</div>
+					</div><!--//auth-form-container-->
+
+				</div><!--//auth-body-->
+
+
+			</div><!--//flex-column-->
+		</div><!--//auth-main-col-->
+		<div class="col-12 col-md-5 col-lg-6 h-100 auth-background-col">
+			<div class="auth-background-holder" style="background-image: url('https://i.pinimg.com/1200x/26/19/a5/2619a59d268b7acb5edfbbca805e0b4a.jpg'); background-size: cover; background-position: center;">
+			</div>
+			<div class="auth-background-mask"></div>
+			<div class="auth-background-overlay p-3 p-lg-5">
+				<div class="d-flex flex-column align-content-end h-100">
+					<div class="h-100"></div>
+				</div>
+			</div><!--//auth-background-overlay-->
+		</div><!--//auth-background-col-->
+
+
+	</div><!--//row-->
+
+
+</body>
+</html>
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}

@@ -16,6 +16,7 @@
           rel="stylesheet">
 
     <!-- Css Styles -->
+
     <link rel="stylesheet" href="~/template/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="~/template/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="~/template/css/elegant-icons.css" type="text/css">
@@ -27,27 +28,20 @@
 </head>
 
 <body>
-    <!-- Page Preloder -->
+    @* <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
-    </div>
+    </div> *@
 
     <!-- Offcanvas Menu Begin -->
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
         <div class="offcanvas__option">
             <div class="offcanvas__links">
-                <a href="#">Sign in</a>
-                <a href="#">FAQs</a>
+                <a asp-area="" asp-controller="Account" asp-action="Login">Đăng nhập</a>
+                
             </div>
-            <div class="offcanvas__top__hover">
-                <span>Usd <i class="arrow_carrot-down"></i></span>
-                <ul>
-                    <li>USD</li>
-                    <li>EUR</li>
-                    <li>USD</li>
-                </ul>
-            </div>
+    
         </div>
         <div class="offcanvas__nav__option">
             <a href="#" class="search-switch"><img src="~/template/img/icon/search.png" alt=""></a>
@@ -57,7 +51,7 @@
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__text">
-            <p>Free shipping, 30-day return or refund guarantee.</p>
+            <p>Miễn phí giao hàng, hoàn trả trong vòng 15 ngày.</p>
         </div>
     </div>
     <!-- Offcanvas Menu End -->
@@ -68,23 +62,36 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-7">
                         <div class="header__top__left">
-                            <p>Free shipping, 30-day return or refund guarantee.</p>
+                            <p>Miễn phí giao hàng, hoàn trả trong vòng 15 ngày.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-5">
                         <div class="header__top__right">
                             <div class="header__top__links">
-                                <a href="#">Sign in</a>
-                                <a href="#">FAQs</a>
+                                
+                                @if(User.Identity?.IsAuthenticated ?? false)
+                                {
+
+                                    
+                                    <a asp-area="" asp-controller="Account" asp-action="Info">Xin chào, @User.Identity.Name</a>
+                                    <ul class="dropdown-menu-login" style="left: 54%;    top: 94%;">
+                                        <li><a asp-area="" asp-controller="" asp-action="">Đơn hàng</a></li>
+                                        <li><a asp-area="" asp-controller="Account" asp-action="Logout">Đăng Xuất</a></li>
+                                    </ul>
+
+
+                                  
+                                    
+                                   
+                                    
+                                }
+                                else
+                                {
+                                    <a asp-area="" asp-controller="Account" asp-action="Login">Đăng nhập</a>
+                                }
+
                             </div>
-                            <div class="header__top__hover">
-                                <span>Usd <i class="arrow_carrot-down"></i></span>
-                                <ul>
-                                    <li>USD</li>
-                                    <li>EUR</li>
-                                    <li>USD</li>
-                                </ul>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -94,7 +101,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-3">
                     <div class="header__logo">
-                        <a style="max-width: 28%;" href="/Home"><img src="~/template/img/logo_nike.png" alt=""></a>
+                        <a style="max-width: 28%;" href="/Home"><img src=https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/T1_esports_logo.svg/450px-T1_esports_logo.svg.png?20220724144411 alt="T1 Shop"></a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
@@ -107,8 +114,8 @@
                                 <ul class="dropdown">
                                     <li><a asp-area="" asp-controller="Home" asp-action="About">About Us</a></li>
                                     <li><a asp-area="" asp-controller="Home" asp-action="ShopDetail">Shop Details</a></li>
-                                    <li><a asp-area="" asp-controller="Home" asp-action="ShoppingCart">Shopping Cart</a></li>
-                                    <li><a asp-area="" asp-controller="Home" asp-action="Checkout">Check Out</a></li>
+                                    <li><a asp-area="" asp-controller="Cart" asp-action="Index">Shopping Cart</a></li>
+                                    <li><a asp-area="" asp-controller="Checkout" asp-action="Checkout">Check Out</a></li>
                                     <li><a asp-area="" asp-controller="Home" asp-action="Blog">Blog Details</a></li>
                                 </ul>
                             </li>
@@ -121,8 +128,19 @@
                 <div class="col-lg-3 col-md-3">
                     <div class="header__nav__option">
                         <a href="#" class="search-switch"><img src="~/template/img/icon/search.png" alt=""></a>
-                        <a href="#"><img src="~/template/img/icon/heart.png" alt=""></a>
-                        <a asp-area="" asp-controller="Home" asp-action="ShoppingCart"><img src="~/template/img/icon/cart.png" alt=""> <span>0</span></a>
+                        @if (User.Identity?.IsAuthenticated ?? false)
+                        {
+
+                            <a asp-area ="" asp-controller="Home" asp-action="Wishlist"><img src="~/template/img/icon/heart.png" alt=""></a>
+
+                          
+
+
+
+
+                        }
+                        
+                        <a asp-area="" asp-controller="Cart" asp-action="Index"><img src="~/template/img/icon/cart.png" alt=""> <span>0</span></a>
                         <div class="price">$0.00</div>
                     </div>
                 </div>
@@ -131,7 +149,7 @@
         </div>
     </header>
     <!-- Header Section End -->
-
+    
     @RenderBody()
     <!-- Footer Section Begin -->
     <footer class="footer">
@@ -140,9 +158,9 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__logo">
-                            <a style="max-width:50%;" href="#"><img src="https://www.edigitalagency.com.au/wp-content/uploads/Nike-logo-png-white.png" alt=""></a>
+                            <a style="max-width:50%;" href="#"><img src=https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/T1_esports_logo.svg/450px-T1_esports_logo.svg.png?20220724144411 alt="T1 Shop"></a>
                         </div>
-                        <p>The customer is at the heart of our unique business model, which includes design.</p>
+                        <p>Đây là trang bán giày trực tuyến.</p>
                         <a href="#"><img style="max-width:30%;" src="~/template/img/vietqr.png" alt=""></a>
                         <a href="#"><img style="max-width:20%;" src="https://upload.wikimedia.org/wikipedia/vi/f/fe/MoMo_Logo.png" alt=""></a>
                         
@@ -186,15 +204,12 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="footer__copyright__text">
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                       
                         <p>
-                            Copyright ©
-                            <script>
-                                document.write(new Date().getFullYear());
-                            </script>
-                            Magna Management Asia (MMA) Co., Ltd. All rights reserved.</a>
+                            <a>© Bản quyền thuộc về <span>Nhóm 15</span>
+                            </a>
                         </p>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
                     </div>
                 </div>
             </div>
@@ -205,13 +220,15 @@
     <div class="search-model">
         <div class="h-100 d-flex align-items-center justify-content-center">
             <div class="search-close-switch">+</div>
-            <form class="search-model-form">
-                <input type="text" id="search-input" placeholder="Search here.....">
+            <form asp-controller="Home" asp-action="Search" method="post" class="search-model-form">
+                <input name="searchTerm" type="text" id="search-input" placeholder="Tìm kiếm...">
             </form>
         </div>
     </div>
     <!-- Search End -->
     <!-- Js Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="~/template/js/jquery-3.3.1.min.js"></script>
     <script src="~/template/js/bootstrap.min.js"></script>
     <script src="~/template/js/jquery.nice-select.min.js"></script>
@@ -222,6 +239,12 @@
     <script src="~/template/js/mixitup.min.js"></script>
     <script src="~/template/js/owl.carousel.min.js"></script>
     <script src="~/template/js/main.js"></script>
+    
+
+    @await RenderSectionAsync("Scripts",required:false)
+   
+        
+   
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -242,8 +265,43 @@
                 }
             });
         });
-    </script>
+       
 
+    </script>
+    <style>
+        /* Ẩn dropdown mặc định */
+        .dropdown-menu-login {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            /* Hiển thị dropdown khi hover vào phần tử cha */
+        a:hover + .dropdown-menu-login,
+            .dropdown-menu-login:hover {
+                display: block;
+            }
+
+            /* Một số kiểu tùy chọn cho menu */
+            .dropdown-menu-login li {
+                list-style: none;
+                padding: 8px 16px;
+            }
+
+                .dropdown-menu-login li a {
+                    text-decoration: none;
+                    color: black;
+                }
+
+                    .dropdown-menu li a:hover {
+                        background-color: #ddd;
+                    }
+
+
+    </style>
 </body>
 
 </html>

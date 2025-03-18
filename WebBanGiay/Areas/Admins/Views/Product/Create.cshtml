@@ -1,9 +1,10 @@
-﻿@using WebBanGiay.Models.Dto;
+﻿@using WebBanGiay.Models;
 @using System.Drawing.Drawing2D;
-@model ProductDto
+@model Shoe
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
+	ViewData["title"] = "Create Product";
 	Layout = "~/Views/Shared/header-footer-admin.cshtml";
 	<script defer src="~/assets/plugins/fontawesome/js/all.min.js"></script>
 
@@ -39,7 +40,7 @@
 
 									<div class="row mb-3">
 										<label for="setting-input-1" class="form-label">
-											Shoe Name<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+											Name<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
 												<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 													<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
 													<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
@@ -54,7 +55,7 @@
 									</div>
 									<div class="row mb-3">
 										<label for="setting-input-1" class="form-label">
-											Brand Name<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
+											Brand <span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
 												<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 													<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
 													<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
@@ -67,9 +68,10 @@
 										<option value="">-- Chọn thương hiệu --</option>
 										@foreach (var brand in ViewBag.Brands)
 										{
-											<option value="@brand.BrandId">@brand.BrandName</option>
+											<option value="@brand.Value">@brand.Text</option>
 										}
 									</select>
+
 
 
 
@@ -77,7 +79,7 @@
 
 									<div class="row mb-3">
 										<label for="CategoryId" class="form-label">
-											Category Name
+											Category
 											<span class="ms-2" data-bs-container="body" data-bs-toggle="popover"
 												  data-bs-trigger="hover focus" data-bs-placement="top"
 												  data-bs-content="Không vượt quá 100 ký tự.">
@@ -104,8 +106,8 @@
 											</svg>
 										</span>
 									</label>
-									<input type="number" name="ShoeItems[0].Price" class="form-control" placeholder="Price" />
-									<span asp-validation-for="ShoeItems[0].Price" class="text-danger" />
+									<input type="number" name="Price" class="form-control" placeholder="Price" />
+									<span asp-validation-for="Price" class="text-danger" />
 								</div>        
 								
 								<div class="row mb-3">
@@ -119,63 +121,15 @@
 											</svg>
 										</span>
 									</label>
-									<input type="number" name="ShoeItems[0].SalePrice" class="form-control" placeholder="SalePrice" />
-									<span asp-validation-for="ShoeItems[0].SalePrice" class="text-danger" />
+									<input type="number" name="SalePrice" class="form-control" placeholder="SalePrice" />
+									<span asp-validation-for="SalePrice" class="text-danger" />
 
 								</div>
 
 
 
-								<div class="row mb-3">
-									<label for="setting-input-1" class="form-label">
-										Colour
-										<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
-											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
-												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
-												<circle cx="8" cy="4.5" r="1" />
-											</svg>
-										</span>
-									</label>
-									<select name="ShoeItems[0].ColourId" class="form-control"
-											asp-items="@(new SelectList(ViewBag.Colours, "ColourId", "ColourName"))">
-										<option value="">-- Chọn màu --</option>
-									</select>
-
-								</div>
-								<div class="row mb-3">
-									<label for="setting-input-1" class="form-label">
-										Size
-										<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
-											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
-												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
-												<circle cx="8" cy="4.5" r="1" />
-											</svg>
-										</span>
-									</label>
-									<select name="ShoeItems[0].SizeId" class="form-control"
-											asp-items="@(new SelectList(ViewBag.Sizes, "SizeId", "SizeName"))">
-										<option value="">-- Chọn size --</option>
-									</select>
 
 								
-								</div>
-								<div class="row mb-3">
-									<label for="setting-input-1" class="form-label">
-										Quantity
-										<span class="ms-2" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top" data-bs-content="Không vượt quá 100 ký tự.">
-											<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http:www.w3.org/2000/svg">
-												<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-												<path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
-												<circle cx="8" cy="4.5" r="1" />
-											</svg>
-										</span>
-									</label>
-									<input type="number" name="ShoeItems[0].StockQuantity" class="form-control" placeholder="Stock" />
-									<span asp-validation-for="ShoeItems[0].StockQuantity" class="text-danger" />
-
-								</div>
 
 								<div class="row mb-3">
 									<label class="form-label">
@@ -222,8 +176,8 @@
 
 									
 
-									<input type="text" name="ShoeItems[0].Sku" class="form-control" placeholder="SKU" />
-									<span asp-validation-for="ShoeItems[0].Sku" class="text-danger" />
+									<input type="text" name="Sku" class="form-control" placeholder="SKU" />
+									<span asp-validation-for="Sku" class="text-danger" />
 								</div>
 								<div class="row mb-3">
 									<label for="setting-input-1" class="form-label">
@@ -286,22 +240,23 @@
 @section Scripts {
 	<script>
 		$(document).ready(function () {
-			// Thêm loading spinner
+			// Hiển thị loading spinner
 			function showLoading(select) {
 				$(select).prop('disabled', true);
 				$(select).after('<div class="spinner-border spinner-border-sm ms-2" role="status"></div>');
 			}
 
+			// Ẩn loading spinner
 			function hideLoading(select) {
 				$(select).prop('disabled', false);
 				$(select).siblings('.spinner-border').remove();
 			}
 
 			$("#BrandId").change(function () {
-				var brandId = $(this).val();
-				var categorySelect = $("#CategoryId");
+				const brandId = $(this).val();
+				const categorySelect = $("#CategoryId");
 
-				// Reset category dropdown
+				// Reset dropdown danh mục
 				categorySelect.empty();
 				categorySelect.append('<option value="">-- Chọn danh mục --</option>');
 
@@ -313,7 +268,7 @@
 						type: 'GET',
 						data: { brandId: brandId },
 						success: function (data) {
-							if (data && data.length > 0) {
+							if (Array.isArray(data) && data.length > 0) {
 								$.each(data, function (index, item) {
 									categorySelect.append(
 										$('<option></option>')
@@ -330,11 +285,11 @@
 							}
 						},
 						error: function (xhr, status, error) {
-							console.error('Error:', error);
+							console.error('Lỗi khi tải danh mục:', error);
 							categorySelect.append(
 								$('<option></option>')
 									.val("")
-									.text("Lỗi khi tải danh mục")
+									.text("Đã xảy ra lỗi khi tải danh mục")
 							);
 						},
 						complete: function () {
@@ -344,6 +299,7 @@
 				}
 			});
 		});
+
 	</script>
 	<script>
 		$(document).ready(function () {

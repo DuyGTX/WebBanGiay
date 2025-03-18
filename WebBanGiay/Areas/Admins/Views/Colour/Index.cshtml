@@ -4,9 +4,10 @@
 @{
 
 	Layout = "~/Views/Shared/header-footer-admin.cshtml";
+	
 }
 <head>
-	<title>Admin</title>
+	<title>Colour</title>
 
 	<!-- Meta -->
 	<meta charset="utf-8">
@@ -70,7 +71,7 @@
 						<div class="app-card app-card-orders-table shadow-sm mb-5">
 							<div class="app-card-body">
 								<div class="table-responsive">
-									<table class="table app-table-hover mb-0 text-left">
+									<table id="myTable" class="table app-table-hover mb-0 text-left">
 										<thead>
 											<tr>
 												<th class="cell">ID</th>
@@ -90,7 +91,7 @@
 													<td class="cell">
 														@* <a class="btn-sm app-btn-primary" href="#">View</a> *@
 														<a asp-controller="Colour" asp-action="Edit" asp-route-id="@colours.ColourId" class="btn-sm app-btn-primary" style="background: #0d6efd; color: #fff; border-color: #0d6efd;">Edit</a>
-														<a asp-controller="Colour" asp-action="Delete" asp-route-id="@colours.ColourId" class="btn-sm app-btn-primary" style="background: #d26d69; color: #fff; border-color: #d26d69;" onclick="return confirm('Xóa danh mục này?')">Delete</a>
+														<a asp-controller="Colour" asp-action="Delete" asp-route-id="@colours.ColourId" class="btn-sm app-btn-primary" style="background: #d26d69; color: #fff; border-color: #d26d69;" onclick="return confirm('Bạn có chắc chắn muốn xóa màu này?')">Delete</a>
 
 
 
@@ -104,19 +105,7 @@
 
 							</div><!--//app-card-body-->
 						</div><!--//app-card-->
-						<nav class="app-pagination">
-							<ul class="pagination justify-content-center">
-								<li class="page-item disabled">
-									<a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-								</li>
-								<li class="page-item active"><a class="page-link" href="#">1</a></li>
-								<li class="page-item"><a class="page-link" href="#">2</a></li>
-								<li class="page-item"><a class="page-link" href="#">3</a></li>
-								<li class="page-item">
-									<a class="page-link" href="#">Next</a>
-								</li>
-							</ul>
-						</nav><!--//app-pagination-->
+				
 
 					</div><!--//tab-pane-->
 

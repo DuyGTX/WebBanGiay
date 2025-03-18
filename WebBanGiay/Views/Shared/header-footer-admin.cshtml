@@ -16,8 +16,10 @@
 	<script defer src="~/assets/plugins/fontawesome/js/all.min.js"></script>
 
 
+
 	<!-- App CSS -->
 	<link id="theme-style" rel="stylesheet" href="~/assets/css/portal.css">
+	<link id="theme-style" rel="stylesheet" href="//cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css">
 
 </head>
 
@@ -92,12 +94,12 @@
 										<path fill-rule="evenodd" d="M13.81 4H2.19a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4zM2.19 3A2 2 0 0 0 .198 5.181l.637 7A2 2 0 0 0 2.826 14h10.348a2 2 0 0 0 1.991-1.819l.637-7A2 2 0 0 0 13.81 3H2.19z" />
 									</svg>
 								</span>
-								<span class="nav-link-text">Product</span>
+								<span class="nav-link-text">Sản phẩm</span>
 							</a><!--//nav-link-->
 						</li><!--//nav-item-->
 						<li class="nav-item">
 							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-							<a class="nav-link" href="orders.html">
+							<a class="nav-link" asp-area="Admins" asp-controller="Order" asp-action="Index">
 								<span class="nav-icon">
 									<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-card-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" d="M14.5 3h-13a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
@@ -107,7 +109,7 @@
 										<circle cx="3.5" cy="10.5" r=".5" />
 									</svg>
 								</span>
-								<span class="nav-link-text">Orders</span>
+								<span class="nav-link-text">Đơn hàng</span>
 							</a><!--//nav-link-->
 						</li><!--//nav-item-->
 						<li class="nav-item has-submenu">
@@ -120,7 +122,7 @@
 										<path d="M6 0h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1H4a2 2 0 0 1 2-2z" />
 									</svg>
 								</span>
-								<span class="nav-link-text">Pages</span>
+								<span class="nav-link-text">Các trang khác</span>
 								<span class="submenu-arrow">
 									<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
@@ -129,10 +131,14 @@
 							</a><!--//nav-link-->
 							<div id="submenu-1" class="collapse submenu submenu-1" data-bs-parent="#menu-accordion">
 								<ul class="submenu-list list-unstyled">
-									<li class="submenu-item"><a class="submenu-link" asp-area="Admins" asp-controller="Category" asp-action="Index">Category</a></li>
-									<li class="submenu-item"><a class="submenu-link" asp-area="Admins" asp-controller="Brand" asp-action="Index">Brand</a></li>
-									<li class="submenu-item"><a class="submenu-link" asp-area="Admins" asp-controller="Colour" asp-action="Index">Colour</a></li>
+									<li class="submenu-item"><a class="submenu-link" asp-area="Admins" asp-controller="Category" asp-action="Index">Danh mục</a></li>
+									<li class="submenu-item"><a class="submenu-link" asp-area="Admins" asp-controller="Brand" asp-action="Index">Thương hiệu</a></li>
+									<li class="submenu-item"><a class="submenu-link" asp-area="Admins" asp-controller="Colour" asp-action="Index">Màu sắc</a></li>
 									<li class="submenu-item"><a class="submenu-link" asp-area="Admins" asp-controller="Size" asp-action="Index">Size</a></li>
+									<li class="submenu-item"><a class="submenu-link" asp-area="Admins" asp-controller="ShoeSize" asp-action="Index">Số lượng tồn kho theo Size</a></li>
+									<li class="submenu-item"><a class="submenu-link" asp-area="Admins" asp-controller="Role" asp-action="Index">Quyền</a></li>
+									<li class="submenu-item"><a class="submenu-link" asp-area="Admins" asp-controller="User" asp-action="Index">Tài khoản người dùng</a></li>
+									<li class="submenu-item"><a class="submenu-link" asp-area="Admins" asp-controller="Shipping" asp-action="Index">Giao hàng</a></li>
 									
 									<li class="submenu-item"><a class="submenu-link" href="account.html">Account</a></li>
 									
@@ -152,6 +158,7 @@
 			</div><!--//sidepanel-inner-->
 		</div><!--//app-sidepanel-->
 	</header><!--//app-header-->
+
 	@RenderBody();
 	<!-- Javascript -->
 	<script src="~/assets/plugins/popper.min.js"></script>
@@ -164,9 +171,12 @@
 	<!-- Page Specific JS -->
 	<script src="~/assets/js/app.js"></script>
 	<script src="~/lib/jquery/dist/jquery.min.js"></script>
-
+	<script src="//cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
+	<script>
+		let table = new DataTable('#myTable');
+	</script>
 	<!-- Render section Scripts -->
-	@RenderSection("Scripts", required: false)
+	@await RenderSectionAsync("Scripts",required:false)
 	
 </body>
 </html>

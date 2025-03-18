@@ -9,121 +9,201 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebBanGiay
 build_property.RootNamespace = WebBanGiay
-build_property.ProjectDir = D:\3.WebBanGiay\WebBanGiay\WebBanGiay\
+build_property.ProjectDir = G:\BAITAP\NAM 3 - HK2\TMDT\WebBanGiay\WebBanGiay\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\3.WebBanGiay\WebBanGiay\WebBanGiay
+build_property.MSBuildProjectDirectory = G:\BAITAP\NAM 3 - HK2\TMDT\WebBanGiay\WebBanGiay
 build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 6.0
+build_property.EnableCodeStyleSeverity = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Areas/Admins/Views/Brand/Create.cshtml]
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/Brand/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEJyYW5kXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Areas/Admins/Views/Brand/Edit.cshtml]
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/Brand/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEJyYW5kXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Areas/Admins/Views/Brand/Index.cshtml]
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/Brand/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEJyYW5kXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Areas/Admins/Views/Category/Create.cshtml]
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/Category/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXENhdGVnb3J5XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Areas/Admins/Views/Category/Edit.cshtml]
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/Category/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXENhdGVnb3J5XEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Areas/Admins/Views/Category/Index.cshtml]
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXENhdGVnb3J5XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Areas/Admins/Views/Colour/Create.cshtml]
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/Colour/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXENvbG91clxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Areas/Admins/Views/Colour/Edit.cshtml]
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/Colour/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXENvbG91clxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Areas/Admins/Views/Colour/Index.cshtml]
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/Colour/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXENvbG91clxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Areas/Admins/Views/Product/Create.cshtml]
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/Order/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXE9yZGVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/Order/View.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXE9yZGVyXFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/Product/AddQuantity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFByb2R1Y3RcQWRkUXVhbnRpdHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/Product/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFByb2R1Y3RcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Areas/Admins/Views/Product/Edit.cshtml]
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/Product/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFByb2R1Y3RcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Areas/Admins/Views/Product/Index.cshtml]
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFByb2R1Y3RcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Areas/Admins/Views/Product/ViewDetail.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFByb2R1Y3RcVmlld0RldGFpbC5jc2h0bWw=
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/Role/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFJvbGVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Areas/Admins/Views/Size/Create.cshtml]
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/Role/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFJvbGVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/Role/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFJvbGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/Shipping/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFNoaXBwaW5nXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/ShoeSize/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFNob2VTaXplXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/ShoeSize/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFNob2VTaXplXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/ShoeSize/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFNob2VTaXplXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/Size/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFNpemVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Areas/Admins/Views/Size/Edit.cshtml]
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/Size/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFNpemVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Areas/Admins/Views/Size/Index.cshtml]
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/Size/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFNpemVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Views/Home/Checkout.cshtml]
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/User/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFVzZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/User/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFVzZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Areas/Admins/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFVzZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Views/Cart/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Views/Home/Checkout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGVja291dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Views/Home/Home.cshtml]
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Views/Home/Home.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Views/Home/Shop.cshtml]
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Views/Home/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWFyY2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Views/Home/Shop.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaG9wLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Views/Home/ShopDetail.cshtml]
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Views/Home/ShopDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaG9wRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Views/Home/ShoppingCart.cshtml]
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Views/Home/ShoppingCart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaG9wcGluZ0NhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Views/Shared/Error.cshtml]
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Views/Home/Wishlist.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxXaXNobGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Views/Shared/header-footer-admin.cshtml]
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Views/Shared/header-footer-admin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGhlYWRlci1mb290ZXItYWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Views/Shared/header-footer.cshtml]
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Views/Shared/header-footer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGhlYWRlci1mb290ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Views/Shared/_ValidationScriptsPartial.cshtml]
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Views/Shared/_NotificationPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb25QYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Views/Shared/_Paging.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYWdpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Views/_ViewImports.cshtml]
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Views/_ViewStart.cshtml]
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/3.WebBanGiay/WebBanGiay/WebBanGiay/Views/Shared/_Layout.cshtml]
+[G:/BAITAP/NAM 3 - HK2/TMDT/WebBanGiay/WebBanGiay/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-78ja7rmcu6

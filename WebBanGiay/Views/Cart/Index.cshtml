@@ -1,0 +1,318 @@
+﻿@using WebBanGiay.Models.ViewModels;
+@model CartItemViewModel
+@{
+
+    ViewData["Title"] = "ShoppingCart";
+    Layout = "~/Views/Shared/header-footer.cshtml";
+}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Basic&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="~/css/button-plus-min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/button.css" type="text/css">
+    <link rel="stylesheet" href="~/template/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="~/template/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/template/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="~/template/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="~/template/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="~/template/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="~/template/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="~/template/css/style.css" type="text/css">
+</head>
+
+<!-- Breadcrumb Section Begin -->
+<section class="breadcrumb-option">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb__text">
+                    <h4>Shopping Cart</h4>
+                    <div class="breadcrumb__links">
+                        <a asp-area="" asp-controller="Home" asp-action="Home">Home</a>
+                        <a asp-area="" asp-controller="Home" asp-action="Shop">Shop</a>
+                        <span>Shopping Cart</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Breadcrumb Section End -->
+@Html.Partial("_NotificationPartial")
+<!-- Shopping Cart Section Begin -->
+<section class="shopping-cart spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="shopping__cart__table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model.CartItems.Count > 0)
+                            {
+                                foreach(var item in Model.CartItems)
+                                {
+                                    <tr>
+                                        <td class="product__cart__item">
+                                            <div class="product__cart__item__pic" style="width: 25%; position: relative; padding-top: 25%;">
+                                                @if (!string.IsNullOrEmpty(item.ImageUrl))
+                                                {
+                                                    <img src="@Url.Content(item.ImageUrl)" alt="@item.ShoeName" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                                                }
+                                                else
+                                                {
+                                                    <img src="@Url.Content("~/template/img/no-image-icon-0.jpg")" alt="No image available" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                                                }
+                                            </div>
+                                            <div class="product__cart__item__text">
+                                                <h6>@item.ShoeName</h6>
+                                                @* <h7>@item.Size </h7> *@
+                                                @* <h7>Colour: </h7> *@
+                                                <h5><span>@string.Format("{0:N0}", item.Price)</span> VND</h5>
+
+                                            </div>
+                                        </td>
+                                        <td class="quantity__item">
+                                            <div class="quantity" style="width: 110px;height: 37px">
+                                                <a asp-controller="Cart" asp-action="Decrease" asp-route-id="@item.ShoeId" class="minus" style="height: 34px;">&minus;</a>
+                                                <input type="number" class="input-box" value="@item.Quantity" min="1" max="10">
+                                                <a asp-controller="Cart" asp-action="Increase" asp-route-id="@item.ShoeId" class="plus" style="height: 34px;">&plus;</a>
+                                            </div>
+                                        </td>
+                                        <td class="cart__price">
+                                            @(Convert.ToDecimal(Model.CartItems.Where(x => x.ShoeId == item.ShoeId)
+                                                .Sum(x => x.Quantity * x.Price)).ToString("N0")) VND
+                                        </td>
+
+                                        <td style="text-align:center;" class="cart__close">
+                                            <a asp-controller="Cart"
+                                               asp-action="Remove"
+                                               asp-route-id="@item.ShoeId"
+                                               class="remove-button">
+                                                <i class="fa fa-close"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                
+
+                            
+                                }
+                                <tr>
+                                    <td colspan="6">
+
+                                    </td>
+                                </tr>
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="5">
+                                        <h4>Giỏ hàng trống</h4>
+                                    </td>
+                                </tr>
+                                
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        @* <div class="continue__btn">
+                            <a asp-area="" asp-controller="Home" asp-action="Shop">Continue Shopping</a>
+                        </div> *@
+                        <div class="css_select_div">
+                            <select class="css_select" id="tinh" name="tinh" title="Chọn Tỉnh Thành">
+                                <option value="0">Tỉnh Thành</option>
+                            </select>
+                            <select class="css_select" id="quan" name="quan" title="Chọn Quận Huyện">
+                                <option value="0">Quận Huyện</option>
+                            </select>
+                            <select class="css_select" id="phuong" name="phuong" title="Chọn Phường Xã">
+                                <option value="0">Phường Xã</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="continue__btn update__btn">
+                            <a href="#"><i class="fa fa-spinner"></i> Update cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="cart__discount">
+                    <h6>Discount codes</h6>
+                    <form action="#">
+                        <input type="text" placeholder="Coupon code">
+                        <button type="submit">Apply</button>
+                    </form>
+                </div>
+                <div class="cart__total">
+                    <h6>Cart total</h6>
+                    <ul>
+                        @* <li>Subtotal <span>$ 169.50</span></li> *@
+                        <li>Total: @string.Format("{0:N0}", Model.GrandTotal) VND</li>
+
+                    </ul>
+                    @if(User.Identity?.IsAuthenticated ?? false)
+                    {
+                        <a asp-area="" asp-controller="Checkout" asp-action="Checkout" class="primary-btn">Tiến hành thanh toán</a>
+                    }
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Shopping Cart Section End -->
+<!-- ~/template/js Plugins -->
+<script src="~/template/js/jquery-3.3.1.min.js"></script>
+<script src="~/template/js/bootstrap.min.js"></script>
+<script src="~/template/js/jquery.nice-select.min.js"></script>
+<script src="~/template/js/jquery.nicescroll.min.js"></script>
+<script src="~/template/js/jquery.magnific-popup.min.js"></script>
+<script src="~/template/js/jquery.countdown.min.js"></script>
+<script src="~/template/js/jquery.slicknav.js"></script>
+<script src="~/template/js/mixitup.min.js"></script>
+<script src="~/template/js/owl.carousel.min.js"></script>
+<script src="~/template/js/main.js"></script>
+<script src="https://esgoo.net/scripts/jquery.js"></script>
+<script>
+    (function () {
+        const quantityContainer = document.querySelector(".quantity");
+        const minusBtn = quantityContainer.querySelector(".minus");
+        const plusBtn = quantityContainer.querySelector(".plus");
+        const inputBox = quantityContainer.querySelector(".input-box");
+
+        updateButtonStates();
+
+        quantityContainer.addEventListener("click", handleButtonClick);
+        inputBox.addEventListener("input", handleQuantityChange);
+
+        function updateButtonStates() {
+            const value = parseInt(inputBox.value);
+            minusBtn.disabled = value <= 1;
+            plusBtn.disabled = value >= parseInt(inputBox.max);
+        }
+
+        function handleButtonClick(event) {
+            if (event.target.classList.contains("minus")) {
+                decreaseValue();
+            } else if (event.target.classList.contains("plus")) {
+                increaseValue();
+            }
+        }
+
+        function decreaseValue() {
+            let value = parseInt(inputBox.value);
+            value = isNaN(value) ? 1 : Math.max(value - 1, 1);
+            inputBox.value = value;
+            updateButtonStates();
+            handleQuantityChange();
+        }
+
+        function increaseValue() {
+            let value = parseInt(inputBox.value);
+            value = isNaN(value) ? 1 : Math.min(value + 1, parseInt(inputBox.max));
+            inputBox.value = value;
+            updateButtonStates();
+            handleQuantityChange();
+        }
+
+        function handleQuantityChange() {
+            let value = parseInt(inputBox.value);
+            value = isNaN(value) ? 1 : value;
+
+            // Execute your code here based on the updated quantity value
+            console.log("Quantity changed:", value);
+        }
+    })();
+    
+        @* function updateQuantity(shoeId, action) {
+            // Gửi AJAX request đến action Decrease hoặc Increase
+            $.ajax({
+                url: '/Cart/' + action + '/' + shoeId,  // Đảm bảo route đúng
+                type: 'POST',
+                success: function (response) {
+                    // Cập nhật lại giá trị của input sau khi giảm hoặc tăng số lượng
+                    let inputBox = $('#quantity-' + shoeId);
+                    let currentValue = parseInt(inputBox.val());
+
+                    // Cập nhật giá trị số lượng
+                    if (action === 'decrease' && currentValue > 1) {
+                        inputBox.val(currentValue - 1);
+                    } else if (action === 'increase' && currentValue < 10) {
+                        inputBox.val(currentValue + 1);
+                    }
+                },
+                error: function () {
+                    alert("Có lỗi xảy ra khi cập nhật số lượng.");
+                }
+            });
+        } *@
+
+
+</script>
+
+@section Script{
+    <script>
+        $(document).ready(function () {
+            //Lấy tỉnh thành
+            $.getJSON('https://esgoo.net/api-tinhthanh/1/0.htm', function (data_tinh) {
+                if (data_tinh.error == 0) {
+                    $.each(data_tinh.data, function (key_tinh, val_tinh) {
+                        $("#tinh").append('<option value="' + val_tinh.id + '">' + val_tinh.full_name + '</option>');
+                    });
+                    $("#tinh").change(function (e) {
+                        var idtinh = $(this).val();
+                        //Lấy quận huyện
+                        $.getJSON('https://esgoo.net/api-tinhthanh/2/' + idtinh + '.htm', function (data_quan) {
+                            if (data_quan.error == 0) {
+                                $("#quan").html('<option value="0">Quận Huyện</option>');
+                                $("#phuong").html('<option value="0">Phường Xã</option>');
+                                $.each(data_quan.data, function (key_quan, val_quan) {
+                                    $("#quan").append('<option value="' + val_quan.id + '">' + val_quan.full_name + '</option>');
+                                });
+                                //Lấy phường xã
+                                $("#quan").change(function (e) {
+                                    var idquan = $(this).val();
+                                    $.getJSON('https://esgoo.net/api-tinhthanh/3/' + idquan + '.htm', function (data_phuong) {
+                                        if (data_phuong.error == 0) {
+                                            $("#phuong").html('<option value="0">Phường Xã</option>');
+                                            $.each(data_phuong.data, function (key_phuong, val_phuong) {
+                                                $("#phuong").append('<option value="' + val_phuong.id + '">' + val_phuong.full_name + '</option>');
+                                            });
+                                        }
+                                    });
+                                });
+
+                            }
+                        });
+                    });
+
+                }
+            });
+        });
+    </script>
+}

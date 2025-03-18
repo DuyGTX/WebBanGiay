@@ -9329,6 +9329,18 @@
       "PackagePath": "staticwebassets\\assets\\scss\\portal.scss"
     },
     {
+      "Id": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\css\\button-plus-min.css",
+      "PackagePath": "staticwebassets\\css\\button-plus-min.css"
+    },
+    {
+      "Id": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\css\\button.css",
+      "PackagePath": "staticwebassets\\css\\button.css"
+    },
+    {
+      "Id": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\css\\select_s_c.css",
+      "PackagePath": "staticwebassets\\css\\select_s_c.css"
+    },
+    {
       "Id": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -9863,6 +9875,10 @@
     {
       "Id": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\logo_nike.png",
       "PackagePath": "staticwebassets\\template\\img\\logo_nike.png"
+    },
+    {
+      "Id": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\no-image-icon-0.jpg",
+      "PackagePath": "staticwebassets\\template\\img\\no-image-icon-0.jpg"
     },
     {
       "Id": "D:\\3.WebBanGiay\\WebBanGiay\\WebBanGiay\\wwwroot\\template\\img\\payment.png",

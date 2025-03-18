@@ -1,0 +1,110 @@
+﻿@model List<WishList>
+@{
+	ViewData["title"] = "Yêu thích";
+	Layout = "~/Views/Shared/header-footer.cshtml";
+	var key = 0;
+}
+<body class="app">
+
+
+	<div class="app-wrapper">
+
+		<div class="app-content pt-3 p-md-3 p-lg-4">
+			<div class="container-xl">
+
+				<div class="row g-3 mb-4 align-items-center justify-content-between">
+					<div class="col-auto">
+						<h1 class="app-page-title mb-0">Yêu thích</h1>
+					</div>
+					<div class="col-auto">
+						<div class="page-utilities">
+							<div class="row g-2 justify-content-start justify-content-md-end align-items-center">
+								<div class="col-auto">
+								</div><!--//col-->
+								
+
+
+							</div><!--//row-->
+						</div><!--//table-utilities-->
+					</div><!--//col-auto-->
+				</div><!--//row-->
+				<div class="tab-content" id="orders-table-tab-content">
+					<div class="tab-pane fade show active" id="orders-all" role="tabpanel" aria-labelledby="orders-all-tab">
+						<div class="app-card app-card-orders-table shadow-sm mb-5">
+							<div class="app-card-body">
+								<div class="table-responsive">
+									<table id="myTable" class="table app-table-hover mb-0 text-left">
+										<thead>
+											<tr>
+												<th class="cell">Id</th>
+												<th class="cell">Hình ảnh</th>
+												<th class="cell">Tên sản phẩm</th>
+												<th class="cell">Giá</th>
+											</tr>
+										</thead>
+										<tbody>
+											@foreach (var wishlist_product in Model)
+											{
+												key++;
+												<tr>
+													<td class="cell">@key</td>
+													<td class="cell">
+														@if (wishlist_product.ImageUrls != null && wishlist_product.ImageUrls.Any())
+														{
+															<img style="width: 100px;height: 100%;"
+																 class="thumb-image"
+																 src="@wishlist_product.ImageUrls.First()"
+																 alt="Shoe Image">
+														}
+														else
+														{
+															<img style="width: 100px;height: 100%;"
+																 class="thumb-image"
+																 src="/template/img/default-image.jpg"
+																 alt="No Image">
+														}
+													</td>
+													<td class="cell">
+														<span class="truncate">@wishlist_product.Shoe?.ShoeName</span>
+													</td>
+													<td class="cell">@(wishlist_product.Shoe?.Price?.ToString("#,##0 VND"))</td>
+													<td class="cell">
+														<a asp-controller="Home"
+														   asp-action="DeleteWishlist"
+														   asp-route-id="@wishlist_product.Id"
+														   class="btn-sm app-btn-primary"
+														   style="background: #d26d69; color: #fff; border-color: #d26d69;"
+														   onclick="return confirm('Xóa danh mục này?')">Delete</a>
+													</td>
+												</tr>
+											}
+										</tbody>
+									</table>
+								</div><!--//table-responsive-->
+
+							</div><!--//app-card-body-->
+						</div><!--//app-card-->
+
+
+					</div><!--//tab-pane-->
+
+
+				</div><!--//tab-content-->
+
+
+
+			</div><!--//container-fluid-->
+		</div><!--//app-content-->
+
+
+
+	</div><!--//app-wrapper-->
+	<!-- Javascript -->
+	<script src="~/assets/plugins/popper.min.js"></script>
+	<script src="~/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+	<!-- Page Specific JS -->
+	<script src="~/assets/js/app.js"></script>
+
+</body>

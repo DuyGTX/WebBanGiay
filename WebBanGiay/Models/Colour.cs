@@ -9,5 +9,5 @@ public partial class Colour
 
     public string? ColourName { get; set; }
 
-    public virtual ICollection<ShoeItem> ShoeItems { get; } = new List<ShoeItem>();
+    public virtual ICollection<ShoeColour> ShoeColours { get; } = new List<ShoeColour>();
 }

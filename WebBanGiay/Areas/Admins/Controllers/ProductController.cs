@@ -1,12 +1,17 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Hosting.Internal;
 using System.Drawing;
 using WebBanGiay.Models;
 using WebBanGiay.Models.Dto;
+using static NuGet.Packaging.PackagingConstants;
 
 namespace WebBanGiay.Areas.Admins.Controllers
 {
 	[Area("Admins")]
+	[Authorize(Roles = "Admin, Employee")]
 	public class ProductController : Controller
 	{
 		private readonly DbwebGiayOnlineContext context;
@@ -18,81 +23,51 @@ namespace WebBanGiay.Areas.Admins.Controllers
 			this.environment = environment;
 		}
 
-		public IActionResult Index()
+		public async Task<IActionResult> Index(int pg = 1)
 		{
-			var product = context.Shoes
-				.Include(s => s.ShoeItems).ThenInclude(si => si.Size)
-				.Include(s => s.Brand)
-				.Include(s => s.ShoeImages) // Thêm Include ShoeImages
-				.OrderBy(s => s.ShoeId)
-				.ToList();
-			return View(product);
-		}
-		public IActionResult ViewDetail(int id)
-		{
-			var shoe = context.Shoes
+			const int pageSize = 10; // Số mục mỗi trang
+
+			if (pg < 1) pg = 1; // Đảm bảo số trang >= 1
+
+			// Đếm tổng số mục
+			int recsCount = await context.Shoes.CountAsync();
+
+			// Tạo đối tượng phân trang
+			var pager = new Paginate(recsCount, pg, pageSize);
+
+			// Xác định số mục cần bỏ qua
+			int recSkip = (pg - 1) * pageSize;
+
+			var product = await context.Shoes
+				.OrderByDescending(s => s.ShoeId)
 				.Include(s => s.Brand)
 				.Include(s => s.Category)
-				.Include(s => s.ShoeItems)
-					.ThenInclude(si => si.Colour)
-				.Include(s => s.ShoeItems)
-					.ThenInclude(si => si.Size)
 				.Include(s => s.ShoeImages)
-				.FirstOrDefault(s => s.ShoeId == id);
 
-			if (shoe == null)
-			{
-				return NotFound();
-			}
+				.Skip(recSkip)
+				.Take(pageSize)
+				.ToListAsync();
+			// Truyền dữ liệu phân trang vào View
+			ViewBag.Pager = pager;
 
-			var productDto = new ProductDto
-			{
-				ShoeId = shoe.ShoeId,
-				ShoeName = shoe.ShoeName,
-				ShoeDescription = shoe.ShoeDescription,
-				CareInstructions = shoe.CareInstructions,
-				BrandId = shoe.BrandId,
-				CategoryId = shoe.CategoryId,
-				ShoeItems = shoe.ShoeItems.Select(si => new ShoeItemDetail
-				{
-					ColourId = si.ColourId,
-					ColourName = si.Colour?.ColourName,  // Thêm ColourName
-					SizeId = si.SizeId,
-					SizeName = si.Size?.SizeName,
-					Price = si.Price,
-					SalePrice = si.SalePrice,
-					StockQuantity = si.StockQuantity,
-					Sku = si.Sku
-				}).ToList(),
-				ShoeImages = shoe.ShoeImages.Select(si => new ShoeImageDetail
-				{
-					ImageUrl = si.ImageUrl,
-					ImageId = si.ImageId
-				}).ToList()
-			};
-
-			// Thêm thông tin bổ sung vào ViewBag
-			ViewBag.BrandName = shoe.Brand?.BrandName;
-			ViewBag.CategoryName = shoe.Category?.CategoryName;
-			
-
-			return View(productDto);
+			return View(product);
 		}
+		[HttpGet]
 
 
 		public IActionResult Create()
 		{
 
-			ViewBag.Brands = context.Brands.ToList();
-			ViewBag.Categories = context.ShoeCategories.ToList();
-			ViewBag.Colours = context.Colours.ToList();
-			ViewBag.Sizes = context.Sizes.ToList();
-			ViewBag.Images =context.ShoeImages.ToList();
+			ViewBag.Brands = new SelectList(context.Brands.ToList(), "BrandId", "BrandName");
+			ViewBag.Categories = new SelectList(context.ShoeCategories.ToList(), "CategoryId", "CategoryName");
+
+			ViewBag.Images = context.ShoeImages.ToList();
 			return View();
 		}
 
 		[HttpPost]
-		public IActionResult Create(ProductDto model)
+		[ValidateAntiForgeryToken]
+		public IActionResult Create(Shoe model)
 		{
 			if (ModelState.IsValid)
 			{
@@ -103,28 +78,20 @@ namespace WebBanGiay.Areas.Admins.Controllers
 					ShoeDescription = model.ShoeDescription,
 					CareInstructions = model.CareInstructions,
 					BrandId = model.BrandId,
-					CategoryId = model.CategoryId
+					CategoryId = model.CategoryId,
+
+					ShoeId = model.ShoeId,
+
+					Price = model.Price,
+					SalePrice = model.SalePrice,
+
+					Sku = model.Sku,
+
 				};
 
 				// Thêm Shoe vào context
 				context.Shoes.Add(shoe);
 				context.SaveChanges();
-
-				// Thêm các ShoeItem
-				foreach (var item in model.ShoeItems)
-				{
-					var shoeItem = new ShoeItem
-					{
-						ShoeId = shoe.ShoeId,
-						ColourId = item.ColourId,
-						SizeId = item.SizeId,
-						Price = item.Price,
-						SalePrice = item.SalePrice,
-						StockQuantity = item.StockQuantity,
-						Sku = item.Sku
-					};
-					context.ShoeItems.Add(shoeItem);
-				}
 
 				// Thêm các hình ảnh
 				if (model.ImageUrls != null && model.ImageUrls.Any())
@@ -144,14 +111,14 @@ namespace WebBanGiay.Areas.Admins.Controllers
 				}
 
 				context.SaveChanges();
+				TempData["SuccessMessage"] = "Tạo sản phẩm thành công.";
 				return RedirectToAction("Index");
 			}
 
 			// Nếu có lỗi, load lại các dropdown
-			ViewBag.Brands = context.Brands.ToList();
-			ViewBag.Categories = context.ShoeCategories.ToList();
-			ViewBag.Colours = context.Colours.ToList();
-			ViewBag.Sizes = context.Sizes.ToList();
+			ViewBag.Brands = new SelectList(context.Brands.ToList(), "BrandId", "BrandName");
+			ViewBag.Categories = new SelectList(context.ShoeCategories.ToList(), "CategoryId", "CategoryName");
+
 			return View(model);
 		}
 		[HttpGet]
@@ -163,137 +130,90 @@ namespace WebBanGiay.Areas.Admins.Controllers
 				.ToList();
 			return Json(categories);
 		}
-		[HttpGet]
-		public IActionResult Edit(int id)
+
+
+		public async Task<IActionResult> Edit(int id)
 		{
-			// Retrieve the product details based on the id
-			var shoe = context.Shoes
-				.Include(s => s.Brand)
-				.Include(s => s.Category)
-				.Include(s => s.ShoeItems)
-					.ThenInclude(si => si.Colour)
-				.Include(s => s.ShoeItems)
-					.ThenInclude(si => si.Size)
+			var shoe = await context.Shoes
 				.Include(s => s.ShoeImages)
-				.FirstOrDefault(s => s.ShoeId == id);
+				.FirstOrDefaultAsync(s => s.ShoeId == id);
 
 			if (shoe == null)
 			{
 				return NotFound();
 			}
 
-			// Map the retrieved product data to the ProductDto for editing
-			var productDto = new ProductDto
-			{
-				ShoeId = shoe.ShoeId,
-				ShoeName = shoe.ShoeName,
-				ShoeDescription = shoe.ShoeDescription,
-				CareInstructions = shoe.CareInstructions,
-				BrandId = shoe.BrandId,
-				CategoryId = shoe.CategoryId,
-				ShoeItems = shoe.ShoeItems.Select(si => new ShoeItemDetail
-				{
-					ColourId = si.ColourId,
-					ColourName = si.Colour?.ColourName,
-					SizeId = si.SizeId,
-					SizeName = si.Size?.SizeName,
-					Price = si.Price,
-					SalePrice = si.SalePrice,
-					StockQuantity = si.StockQuantity,
-					Sku = si.Sku
-				}).ToList(),
-				ShoeImages = shoe.ShoeImages.Select(si => new ShoeImageDetail
-				{
-					ImageUrl = si.ImageUrl,
-					ImageId = si.ImageId
-				}).ToList()
-			};
+			// Gán dữ liệu cho dropdown
+			ViewBag.Brands = new SelectList(context.Brands.ToList(), "BrandId", "BrandName", shoe.BrandId);
+			ViewBag.Categories = new SelectList(context.ShoeCategories.ToList(), "CategoryId", "CategoryName", shoe.CategoryId);
 
-			// Load dropdown lists for Brands, Categories, Colours, and Sizes
-			ViewBag.Brands = context.Brands.ToList();
-			ViewBag.Categories = context.ShoeCategories.ToList();
-			ViewBag.Colours = context.Colours.ToList();
-			ViewBag.Sizes = context.Sizes.ToList();
+			// Gán dữ liệu hình ảnh
+			ViewBag.Images = shoe.ShoeImages?.Select(img => img.ImageUrl).ToList();
 
-			return View(productDto);
+			return View(shoe);
 		}
+
 
 		[HttpPost]
-		public IActionResult Edit(ProductDto model)
+		public async Task<IActionResult> Edit(int id, Shoe model)
 		{
-			if (ModelState.IsValid)
+			if (!ModelState.IsValid)
 			{
-				// Retrieve the existing Shoe entry
-				var shoe = context.Shoes
-					.Include(s => s.ShoeItems)
-					.Include(s => s.ShoeImages)
-					.FirstOrDefault(s => s.ShoeId == model.ShoeId);
-
-				if (shoe == null)
-				{
-					return NotFound();
-				}
-
-				// Update the main product fields
-				shoe.ShoeName = model.ShoeName;
-				shoe.ShoeDescription = model.ShoeDescription;
-				shoe.CareInstructions = model.CareInstructions;
-				shoe.BrandId = model.BrandId;
-				shoe.CategoryId = model.CategoryId;
-
-				// Update ShoeItems (clear existing and add new ones)
-				context.ShoeItems.RemoveRange(shoe.ShoeItems);
-				foreach (var item in model.ShoeItems)
-				{
-					var shoeItem = new ShoeItem
-					{
-						ShoeId = shoe.ShoeId,
-						ColourId = item.ColourId,
-						SizeId = item.SizeId,
-						Price = item.Price,
-						SalePrice = item.SalePrice,
-						StockQuantity = item.StockQuantity,
-						Sku = item.Sku
-					};
-					context.ShoeItems.Add(shoeItem);
-				}
-
-				// Update ShoeImages (clear existing and add new ones)
-				context.ShoeImages.RemoveRange(shoe.ShoeImages);
-				if (model.ImageUrls != null && model.ImageUrls.Any())
-				{
-					foreach (var imageUrl in model.ImageUrls)
-					{
-						if (!string.IsNullOrEmpty(imageUrl))
-						{
-							var shoeImage = new ShoeImage
-							{
-								ShoeId = shoe.ShoeId,
-								ImageUrl = imageUrl
-							};
-							context.ShoeImages.Add(shoeImage);
-						}
-					}
-				}
-
-				context.SaveChanges();
-				return RedirectToAction("Index");
+				// Nếu có lỗi, load lại dropdown và hình ảnh
+				ViewBag.Brands = new SelectList(context.Brands.ToList(), "BrandId", "BrandName", model.BrandId);
+				ViewBag.Categories = new SelectList(context.ShoeCategories.ToList(), "CategoryId", "CategoryName", model.CategoryId);
+				ViewBag.Images = model.ImageUrls;
+				return View(model);
 			}
 
-			// Reload dropdown lists in case of validation error
-			ViewBag.Brands = context.Brands.ToList();
-			ViewBag.Categories = context.ShoeCategories.ToList();
-			ViewBag.Colours = context.Colours.ToList();
-			ViewBag.Sizes = context.Sizes.ToList();
-			return View(model);
+			var shoe = await context.Shoes
+				.Include(s => s.ShoeImages)
+				.FirstOrDefaultAsync(s => s.ShoeId == id);
+
+			if (shoe == null)
+			{
+				return NotFound();
+			}
+
+			// Cập nhật dữ liệu Shoe
+			shoe.ShoeName = model.ShoeName;
+			shoe.ShoeDescription = model.ShoeDescription;
+			shoe.CareInstructions = model.CareInstructions;
+			shoe.BrandId = model.BrandId;
+			shoe.CategoryId = model.CategoryId;
+			shoe.Price = model.Price;
+			shoe.SalePrice = model.SalePrice;
+			shoe.Sku = model.Sku;
+
+			// Cập nhật hình ảnh
+			if (model.ImageUrls != null)
+			{
+				// Xóa hình ảnh cũ
+				context.ShoeImages.RemoveRange(shoe.ShoeImages);
+
+				// Thêm hình ảnh mới
+				foreach (var imageUrl in model.ImageUrls)
+				{
+					if (!string.IsNullOrEmpty(imageUrl))
+					{
+						shoe.ShoeImages.Add(new ShoeImage { ImageUrl = imageUrl });
+					}
+				}
+			}
+
+			await context.SaveChangesAsync();
+			TempData["SuccessMessage"] = "Cập nhật sản phẩm thành công.";
+			return RedirectToAction("Index");
 		}
+
+
 		public IActionResult Delete(int id)
 		{
 			try
 			{
 				// Tìm sản phẩm kèm theo các bảng liên quan
 				var shoe = context.Shoes
-					.Include(s => s.ShoeItems)
+
 					.Include(s => s.ShoeImages)
 					.FirstOrDefault(s => s.ShoeId == id);
 
@@ -301,12 +221,6 @@ namespace WebBanGiay.Areas.Admins.Controllers
 				{
 					TempData["ErrorMessage"] = "Không tìm thấy sản phẩm.";
 					return RedirectToAction("Index");
-				}
-
-				// Xóa các ShoeItems liên quan
-				if (shoe.ShoeItems != null && shoe.ShoeItems.Any())
-				{
-					context.ShoeItems.RemoveRange(shoe.ShoeItems);
 				}
 
 				// Xóa các ShoeImages và file ảnh tương ứng
@@ -340,12 +254,37 @@ namespace WebBanGiay.Areas.Admins.Controllers
 			}
 		}
 
+		[Route("AddQuantity")]
+		[HttpGet]
+		public async Task<IActionResult> AddQuantity(int Id)
+		{
+			var productByQuantity = await context.ProductQuantities.Where(pq => pq.ShoeId == Id).ToListAsync();
+			ViewBag.ProductByQuantity = productByQuantity;
+			ViewBag.ShoeId = Id;
+			return View();
+		}
+		[Route("StoreProductQuantity")]
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public IActionResult StoreProductQuantity(ProductQuantityModel productQuantityModel)
+		{
+			var product = context.Shoes.Find(productQuantityModel.ShoeId);
+			if (product == null)
+			{
+				return NotFound();
+			}
+			product.Quantity += productQuantityModel.Quantity;
 
+			productQuantityModel.Quantity = productQuantityModel.Quantity;
+			productQuantityModel.ShoeId = productQuantityModel.ShoeId;
+			productQuantityModel.DateCreated = DateTime.Now;
+
+			context.Add(productQuantityModel);
+			context.SaveChangesAsync();
+			TempData["SuccessMessage"] = "Thêm số lượng sản phẩm thành công.";
+			return RedirectToAction("AddQuantity", "Product",new {Id = productQuantityModel.ShoeId});
+		}
 
 
 	}
-
-
-
-
 }
