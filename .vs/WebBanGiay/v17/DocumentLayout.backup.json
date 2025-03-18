@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "G:\\BAITAP\\NAM 3 - HK2\\TMDT\\WebBanGiay\\",
+  "WorkspaceRootPath": "C:\\Users\\trung\\source\\repos\\WebBanGiay\\",
   "Documents": [],
   "DocumentGroupContainers": [
     {
@@ -14,16 +14,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 1524,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }
